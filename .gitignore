@@ -55,6 +55,7 @@
 !/serverfiles/dod/addons/amxmodx/plugins/dod_fieldmedic.amxx
 !/serverfiles/dod/addons/amxmodx/plugins/dod_fieldmedic_h.amxx
 !/serverfiles/dod/addons/amxmodx/plugins/dod_killinfo.amxx
+!/serverfiles/dod/addons/amxmodx/plugins/zp_parachute.amxx
 
 # serverfiles/dod/addons/amxmodx/scripting/
 
@@ -64,6 +65,7 @@
 !/serverfiles/dod/addons/amxmodx/scripting/dod_fieldmedic.sma
 !/serverfiles/dod/addons/amxmodx/scripting/dod_fieldmedic_h.sma
 !/serverfiles/dod/addons/amxmodx/scripting/dod_killinfo.sma
+!/serverfiles/dod/addons/amxmodx/scripting/zp_parachute.sma
 
 # serverfiles/dod/addons/metamod/
 
@@ -72,4 +74,9 @@
 
 !/serverfiles/dod/addons/metamod/plugins.ini
 
+# serverfiles/dod/models/
 
+!/serverfiles/dod/models
+/serverfiles/dod/models/*
+
+!/serverfiles/dod/models/parachute.mdl
