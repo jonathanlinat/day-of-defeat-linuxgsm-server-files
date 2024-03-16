@@ -33,10 +33,12 @@
 !/serverfiles/dod/addons
 /serverfiles/dod/addons/*
 
-# serverfiles/dod/addons/amxmod/
+# serverfiles/dod/addons/amxmodx/
 
 !/serverfiles/dod/addons/amxmodx
 /serverfiles/dod/addons/amxmodx/*
+
+# serverfiles/dod/addons/amxmodx/configs/
 
 !/serverfiles/dod/addons/amxmodx/configs
 /serverfiles/dod/addons/amxmodx/configs/*
@@ -44,6 +46,22 @@
 !/serverfiles/dod/addons/amxmodx/configs/modules.ini
 !/serverfiles/dod/addons/amxmodx/configs/plugins.ini
 !/serverfiles/dod/addons/amxmodx/configs/users.ini
+
+# serverfiles/dod/addons/amxmodx/plugins/
+
+!/serverfiles/dod/addons/amxmodx/plugins
+/serverfiles/dod/addons/amxmodx/plugins/*
+
+!/serverfiles/dod/addons/amxmodx/plugins/dod_fieldmedic.amxx
+!/serverfiles/dod/addons/amxmodx/plugins/dod_killinfo.amxx
+
+# serverfiles/dod/addons/amxmodx/scripting/
+
+!/serverfiles/dod/addons/amxmodx/scripting
+/serverfiles/dod/addons/amxmodx/scripting/*
+
+!/serverfiles/dod/addons/amxmodx/scripting/dod_fieldmedic.sma
+!/serverfiles/dod/addons/amxmodx/scripting/dod_killinfo.sma
 
 # serverfiles/dod/addons/metamod/
 
