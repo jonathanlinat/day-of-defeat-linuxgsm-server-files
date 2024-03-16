@@ -43,6 +43,7 @@
 !/serverfiles/dod/addons/amxmodx/configs
 /serverfiles/dod/addons/amxmodx/configs/*
 
+!/serverfiles/dod/addons/amxmodx/configs/amxx.cfg
 !/serverfiles/dod/addons/amxmodx/configs/modules.ini
 !/serverfiles/dod/addons/amxmodx/configs/plugins.ini
 !/serverfiles/dod/addons/amxmodx/configs/users.ini
