@@ -48,20 +48,12 @@
 !/serverfiles/dod/addons/amxmodx/configs/plugins.ini
 !/serverfiles/dod/addons/amxmodx/configs/users.ini
 
-!/serverfiles/dod/addons/amxmodx/configs/h4c2r1ds_deaglesmapmanage
-/serverfiles/dod/addons/amxmodx/configs/h4c2r1ds_deaglesmapmanage/*
-
-!/serverfiles/dod/addons/amxmodx/configs/h4c2r1ds_deaglesmapmanage/mapchoice.ini
-!/serverfiles/dod/addons/amxmodx/configs/h4c2r1ds_deaglesmapmanage/mapstoban.ini
-!/serverfiles/dod/addons/amxmodx/configs/h4c2r1ds_deaglesmapmanage/standardmaps.ini
-
 ###### Plugins
 
 !/serverfiles/dod/addons/amxmodx/plugins
 /serverfiles/dod/addons/amxmodx/plugins/*
 
-!/serverfiles/dod/addons/amxmodx/plugins/h4c2r1ds_deaglesmapmanage.amxx
-!/serverfiles/dod/addons/amxmodx/plugins/h4c2r1ds_fieldmedic_h.amxx
+!/serverfiles/dod/addons/amxmodx/plugins/h4c2r1ds_fieldmedic.amxx
 !/serverfiles/dod/addons/amxmodx/plugins/h4c2r1ds_killinfo.amxx
 !/serverfiles/dod/addons/amxmodx/plugins/h4c2r1ds_parachute.amxx
 
@@ -72,8 +64,7 @@
 
 !/serverfiles/dod/addons/amxmodx/scripting/compile.sh
 
-!/serverfiles/dod/addons/amxmodx/scripting/h4c2r1ds_deaglesmapmanage.sma
-!/serverfiles/dod/addons/amxmodx/scripting/h4c2r1ds_fieldmedic_h.sma
+!/serverfiles/dod/addons/amxmodx/scripting/h4c2r1ds_fieldmedic.sma
 !/serverfiles/dod/addons/amxmodx/scripting/h4c2r1ds_killinfo.sma
 !/serverfiles/dod/addons/amxmodx/scripting/h4c2r1ds_parachute.sma
 

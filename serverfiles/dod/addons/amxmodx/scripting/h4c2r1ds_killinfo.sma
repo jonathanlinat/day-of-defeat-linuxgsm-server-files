@@ -1,49 +1,22 @@
-//////////////////////////////////////////////////////////////////////////////////
-//
-//	DoD Kill Info
-//		- Version 0.1
-//		- 08.06.2006
-//		- diamond-optic
-//
-//////////////////////////////////////////////////////////////////////////////////
-//
-// Information:
-//
-//	- Shows a hud message in upper left corner of screen that displays who you
-//	  just killed, from how far, with what weapon, and where you hit them.
-//	- If kill was a TK, it will also display that as well...
-//	- Can be set to display in either feet or meters
-//
-// CVARs & Commands:
-//
-//	dod_killinfo "1" 	//Turn on(1)/off(0)
-//	dod_killinfo_units "1"	//Set units: 1=feet / 2=meters
-//
-// Changelog:
-//
-//	- 08.06.2006 Version 0.1
-//		Initial release
-//
-//////////////////////////////////////////////////////////////////////////////////
-
 #include <amxmodx>
 #include <dodx>
 
+#define PLUGIN "Kill Info"
+#define VERSION "1.0"
+#define AUTHOR "h4c2r1.ds"
+
 new Float:units_meters = 76.0
 new Float:units_feet = 24.0
-
 new pKillinfo, pUnits
 
 public plugin_init()
 {
-	register_plugin("DoD Kill Info","0.1","AMXX DoD Team" )
-	
-	register_cvar("dod_killinfo_stats", "0.1", FCVAR_SERVER|FCVAR_SPONLY)
-	
+	register_plugin(PLUGIN, VERSION, AUTHOR)
+	register_cvar(PLUGIN, VERSION, FCVAR_SERVER|FCVAR_SPONLY)
 	register_statsfwd(XMF_DEATH)
 	
-	pKillinfo = register_cvar("dod_killinfo","1")
-	pUnits = register_cvar("dod_killinfo_units","1")
+	pKillinfo = register_cvar("h4c2r1ds_killinfo","1")
+	pUnits = register_cvar("h4c2r1ds_killinfo_units","1")
 }
 
 public client_death(killer,victim,wpnindex,hitplace,TK)

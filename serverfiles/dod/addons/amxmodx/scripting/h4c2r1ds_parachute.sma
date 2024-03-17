@@ -2,27 +2,22 @@
 #include <fakemeta>
 #include <hamsandwich>
 
-#define _PLUGIN         "[ZP] Parachute"
-#define _VERSION             "1.0"
-#define _AUTHOR           "H.RED.ZONE"
+#define PLUGIN "Parachute"
+#define VERSION "1.0"
+#define AUTHOR "h4c2r1.ds"
 
 #define PARACHUTE_MODEL "models/h4c2r1ds_parachute.mdl"
+#define MAX_PLAYERS 32
 
-#define MAX_PLAYERS    32
-
-#define MarkUserHasParachute(%0)	g_bitHasParachute |= (1<<(%0&31))
-#define ClearUserHasParachute(%0)	g_bitHasParachute &= ~(1<<(%0&31))
-#define HasUserParachute(%0)		g_bitHasParachute & (1<<(%0&31))
+#define MarkUserHasParachute(%0) g_bitHasParachute |= (1<<(%0&31))
+#define ClearUserHasParachute(%0) g_bitHasParachute &= ~(1<<(%0&31))
+#define HasUserParachute(%0) g_bitHasParachute & (1<<(%0&31))
 
 new g_bitHasParachute 
-
 new g_iUserParachute[MAX_PLAYERS+1]
-
 new Float:g_flEntityFrame[MAX_PLAYERS+1]
-
 new g_iModelIndex
 new g_pCvarFallSpeed
-
 new const PARACHUTE_CLASS[] = "parachute"
 
 enum {
@@ -32,11 +27,11 @@ enum {
 }
 
 public plugin_init() {
-	register_plugin(_PLUGIN, _VERSION, _AUTHOR)
+	register_plugin(PLUGIN, VERSION, AUTHOR)
 
 	g_pCvarFallSpeed = register_cvar("parachute_fallspeed", "30")
 
-	register_forward( FM_CmdStart, "fw_Start" )
+	register_forward(FM_CmdStart, "fw_Start")
 	
 	RegisterHam(Ham_Spawn, "player", "Ham_CBasePlayer_Spawn_Post", 1)
 	RegisterHam(Ham_Killed, "player", "Ham_CBasePlayer_Killed_Post", 1)
