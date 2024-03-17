@@ -48,38 +48,22 @@
 !/serverfiles/dod/addons/amxmodx/configs/plugins.ini
 !/serverfiles/dod/addons/amxmodx/configs/users.ini
 
-<<<<<<< HEAD
-!/serverfiles/dod/addons/amxmodx/configs/_deagles_map_manage
-/serverfiles/dod/addons/amxmodx/configs/_deagles_map_manage/*
-
-!/serverfiles/dod/addons/amxmodx/configs/_deagles_map_manage/mapchoice.ini
-!/serverfiles/dod/addons/amxmodx/configs/_deagles_map_manage/mapstoban.ini
-!/serverfiles/dod/addons/amxmodx/configs/_deagles_map_manage/standardmaps.ini
-=======
 !/serverfiles/dod/addons/amxmodx/configs/h4c2r1ds_deaglesmapmanage
 /serverfiles/dod/addons/amxmodx/configs/h4c2r1ds_deaglesmapmanage/*
 
 !/serverfiles/dod/addons/amxmodx/configs/h4c2r1ds_deaglesmapmanage/mapchoice.ini
 !/serverfiles/dod/addons/amxmodx/configs/h4c2r1ds_deaglesmapmanage/mapstoban.ini
 !/serverfiles/dod/addons/amxmodx/configs/h4c2r1ds_deaglesmapmanage/standardmaps.ini
->>>>>>> f08eb69a72921cbdbf60c22f94f0b4f37a958afd
 
 ###### Plugins
 
 !/serverfiles/dod/addons/amxmodx/plugins
 /serverfiles/dod/addons/amxmodx/plugins/*
 
-<<<<<<< HEAD
-!/serverfiles/dod/addons/amxmodx/plugins/_deagles_map_manage.amxx
-!/serverfiles/dod/addons/amxmodx/plugins/_field_medic_h.amxx
-!/serverfiles/dod/addons/amxmodx/plugins/_kill_info.amxx
-!/serverfiles/dod/addons/amxmodx/plugins/_parachute.amxx
-=======
 !/serverfiles/dod/addons/amxmodx/plugins/h4c2r1ds_deaglesmapmanage.amxx
 !/serverfiles/dod/addons/amxmodx/plugins/h4c2r1ds_fieldmedic_h.amxx
 !/serverfiles/dod/addons/amxmodx/plugins/h4c2r1ds_killinfo.amxx
 !/serverfiles/dod/addons/amxmodx/plugins/h4c2r1ds_parachute.amxx
->>>>>>> f08eb69a72921cbdbf60c22f94f0b4f37a958afd
 
 ###### Scripting
 
@@ -91,11 +75,7 @@
 !/serverfiles/dod/addons/amxmodx/scripting/source
 /serverfiles/dod/addons/amxmodx/scripting/source/*
 
-<<<<<<< HEAD
-!/serverfiles/dod/addons/amxmodx/scripting/source/_deagles_map_manage.sma
-=======
 !/serverfiles/dod/addons/amxmodx/scripting/source/h4c2r1ds_deaglesmapmanage.sma
->>>>>>> f08eb69a72921cbdbf60c22f94f0b4f37a958afd
 !/serverfiles/dod/addons/amxmodx/scripting/source/_field_medic_h.sma
 !/serverfiles/dod/addons/amxmodx/scripting/source/_kill_info.sma
 !/serverfiles/dod/addons/amxmodx/scripting/source/_parachute.sma
@@ -112,8 +92,4 @@
 !/serverfiles/dod/models
 /serverfiles/dod/models/*
 
-<<<<<<< HEAD
-!/serverfiles/dod/models/_parachute.mdl
-=======
 !/serverfiles/dod/models/h4c2r1ds_parachute.mdl
->>>>>>> f08eb69a72921cbdbf60c22f94f0b4f37a958afd
