@@ -72,13 +72,10 @@
 
 !/serverfiles/dod/addons/amxmodx/scripting/compile.sh
 
-!/serverfiles/dod/addons/amxmodx/scripting/source
-/serverfiles/dod/addons/amxmodx/scripting/source/*
-
-!/serverfiles/dod/addons/amxmodx/scripting/source/h4c2r1ds_deaglesmapmanage.sma
-!/serverfiles/dod/addons/amxmodx/scripting/source/h4c2r1ds_fieldmedic_h.sma
-!/serverfiles/dod/addons/amxmodx/scripting/source/h4c2r1ds_killinfo.sma
-!/serverfiles/dod/addons/amxmodx/scripting/source/h4c2r1ds_parachute.sma
+!/serverfiles/dod/addons/amxmodx/scripting/h4c2r1ds_deaglesmapmanage.sma
+!/serverfiles/dod/addons/amxmodx/scripting/h4c2r1ds_fieldmedic_h.sma
+!/serverfiles/dod/addons/amxmodx/scripting/h4c2r1ds_killinfo.sma
+!/serverfiles/dod/addons/amxmodx/scripting/h4c2r1ds_parachute.sma
 
 ##### Metamod-r
 
