@@ -6,7 +6,7 @@
 #define VERSION "1.0"
 #define AUTHOR "h4c2r1.ds"
 
-#define PARACHUTE_MODEL "models/h4c2r1ds_parachute.mdl"
+#define PARACHUTE_MODEL "models/h4c2r1ds/parachute.mdl"
 #define MAX_PLAYERS 32
 
 #define MarkUserHasParachute(%0) g_bitHasParachute |= (1<<(%0&31))
