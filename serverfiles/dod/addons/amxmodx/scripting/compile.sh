@@ -2,8 +2,8 @@
 # AMX Mod X Compilation Script
 # Compiles .sma files from the source directory to the plugins directory
 
-SOURCE_DIR="./"
-PLUGINS_DIR="./../plugins"
+SOURCE_DIR="./h4c2r1ds"
+PLUGINS_DIR="./../plugins/h4c2r1ds"
 
 if [ ! -d "$PLUGINS_DIR" ]; then
   mkdir -p "$PLUGINS_DIR"

@@ -53,9 +53,10 @@
 !/serverfiles/dod/addons/amxmodx/plugins
 /serverfiles/dod/addons/amxmodx/plugins/*
 
-!/serverfiles/dod/addons/amxmodx/plugins/h4c2r1ds_fieldmedic.amxx
-!/serverfiles/dod/addons/amxmodx/plugins/h4c2r1ds_killinfo.amxx
-!/serverfiles/dod/addons/amxmodx/plugins/h4c2r1ds_parachute.amxx
+####### h4c2r1ds
+
+!/serverfiles/dod/addons/amxmodx/plugins/h4c2r1ds
+!/serverfiles/dod/addons/amxmodx/plugins/h4c2r1ds/*
 
 ###### Scripting
 
@@ -64,9 +65,10 @@
 
 !/serverfiles/dod/addons/amxmodx/scripting/compile.sh
 
-!/serverfiles/dod/addons/amxmodx/scripting/h4c2r1ds_fieldmedic.sma
-!/serverfiles/dod/addons/amxmodx/scripting/h4c2r1ds_killinfo.sma
-!/serverfiles/dod/addons/amxmodx/scripting/h4c2r1ds_parachute.sma
+####### h4c2r1ds
+
+!/serverfiles/dod/addons/amxmodx/scripting/h4c2r1ds
+!/serverfiles/dod/addons/amxmodx/scripting/h4c2r1ds/*
 
 ##### Metamod-r
 
@@ -80,4 +82,7 @@
 !/serverfiles/dod/models
 /serverfiles/dod/models/*
 
-!/serverfiles/dod/models/h4c2r1ds_parachute.mdl
+##### h4c2r1ds
+
+!/serverfiles/dod/models/h4c2r1ds
+!/serverfiles/dod/models/h4c2r1ds/*
