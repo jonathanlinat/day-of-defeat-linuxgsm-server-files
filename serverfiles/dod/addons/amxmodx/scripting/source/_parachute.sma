@@ -6,7 +6,7 @@
 #define _VERSION             "1.0"
 #define _AUTHOR           "H.RED.ZONE"
 
-#define PARACHUTE_MODEL "models/parachute.mdl"
+#define PARACHUTE_MODEL "models/_parachute.mdl"
 
 #define MAX_PLAYERS    32
 
@@ -203,6 +203,3 @@ public fw_Start(id) {
 		RemoveUserParachute(id, iEnt)
 	}
 }
-/* AMXX-Studio Notes - DO NOT MODIFY BELOW HERE
-*{\\ rtf1\\ ansi\\ deff0{\\ fonttbl{\\ f0\\ fnil Tahoma;}}\n\\ viewkind4\\ uc1\\ pard\\ lang10266\\ f0\\ fs16 \n\\ par }
-*/
