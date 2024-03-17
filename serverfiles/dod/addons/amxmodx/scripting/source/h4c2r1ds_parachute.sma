@@ -6,7 +6,7 @@
 #define _VERSION             "1.0"
 #define _AUTHOR           "H.RED.ZONE"
 
-#define PARACHUTE_MODEL "models/_parachute.mdl"
+#define PARACHUTE_MODEL "models/h4c2r1ds_parachute.mdl"
 
 #define MAX_PLAYERS    32
 
