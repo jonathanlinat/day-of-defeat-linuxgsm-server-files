@@ -21,7 +21,7 @@ public plugin_init()
 
 public client_death(killer,victim,wpnindex,hitplace,TK)
 {
-    	if(get_pcvar_num(pKillinfo) != 1 || is_user_connected(killer) != 1 || is_user_connected(victim) != 1 || is_user_bot(killer) == 1|| killer == victim)
+  if(get_pcvar_num(pKillinfo) != 1 || is_user_connected(killer) != 1 || is_user_connected(victim) != 1 || is_user_bot(killer) == 1|| killer == victim)
 		return PLUGIN_CONTINUE
         
 	new name[33]

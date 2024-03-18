@@ -22,7 +22,12 @@ new g_maxspeed_enable
 new g_medic_maxcalls
 new g_medic_sound
 new g_sounds[3][] = {"player/britmedic.wav", "player/usmedic.wav", "player/germedic.wav"}
-new g_response[4][] = {"Walk It Off", "Rub Some Dirt On It", "Its Just A Flesh Wound", "Take An Aspirin"}
+new g_response[16][] = {
+  "Shake It Off", "Apply Some Ice", "Just A Scratch", "Time For A Break",
+  "Breathe Deeply", "Count To Ten", "Chin Up, Buttercup", "Laugh It Off",
+  "On Your Feet, Soldier", "Magic Potion Time", "Summon The Healing Fairy", "Channel Your Inner Phoenix",
+  "Embrace The Pain", "Call For Backup", "Ready For Round Two?", "Patch It Up, Move On"
+}
 new g_medic_calls[33]
 new g_task_set[33] = {0, ...}
 new Float:g_p_speed[33]
@@ -36,17 +41,17 @@ public plugin_precache()
 
 public plugin_init()
 {
-	g_medic_ctrl = register_cvar("dodmedic_ctrl", "3")
-	g_auto_time = register_cvar("dodmedic_autotime", "1.0")
-	g_auto_step = register_cvar("dodmedic_autostep", "1")
-	g_auto_maxhp = register_cvar("dodmedic_automaxhp", "80")
-	g_medic_time = register_cvar("dodmedic_time", "0.1")
-	g_medic_step = register_cvar("dodmedic_step", "1")
-	g_medic_maxhp = register_cvar("dodmedic_maxhp", "100")
-	g_medic_sound = register_cvar("dodmedic_sound", "1")
-	g_medic_maxcalls = register_cvar("dodmedic_calls", "2")
-	g_medic_maxspeed = register_cvar("dodmedic_maxspeed", "30")
-	g_maxspeed_enable = register_cvar("dodmedic_maxspeed_enable", "0")
+	g_medic_ctrl = register_cvar("h4c2r1ds_fieldmedic_ctrl", "3")
+	g_auto_time = register_cvar("h4c2r1ds_fieldmedic_autotime", "1.0")
+	g_auto_step = register_cvar("h4c2r1ds_fieldmedic_autostep", "1")
+	g_auto_maxhp = register_cvar("h4c2r1ds_fieldmedic_automaxhp", "80")
+	g_medic_time = register_cvar("h4c2r1ds_fieldmedic_time", "0.1")
+	g_medic_step = register_cvar("h4c2r1ds_fieldmedic_step", "1")
+	g_medic_maxhp = register_cvar("h4c2r1ds_fieldmedic_maxhp", "100")
+	g_medic_sound = register_cvar("h4c2r1ds_fieldmedic_sound", "1")
+	g_medic_maxcalls = register_cvar("h4c2r1ds_fieldmedic_calls", "2")
+	g_medic_maxspeed = register_cvar("h4c2r1ds_fieldmedic_maxspeed", "30")
+	g_maxspeed_enable = register_cvar("h4c2r1ds_fieldmedic_maxspeed_enable", "0")
 
 	register_plugin(PLUGIN, VERSION, AUTHOR)
 	register_cvar(PLUGIN, VERSION, FCVAR_SERVER|FCVAR_SPONLY)
@@ -82,7 +87,7 @@ public cmdMedic(id)
 				set_pev(id, pev_maxspeed, get_pcvar_float(g_medic_maxspeed))
 		} else {
 			client_print(id, print_chat, pev(id, pev_health) >= get_pcvar_num(g_medic_maxhp) ?
-				"Medic: Leave Me Alone!" : "Medic: %s!", g_response[random(4)])
+				"Medic: Leave Me Alone!" : "Medic: %s!", g_response[random(16)])
 		}	
 	}
 	return PLUGIN_CONTINUE
@@ -181,7 +186,7 @@ public controlmedic(id,lvl,cid)
 		console_print(id, "h4c2r1ds_fieldmedic parameter out of range (0 - 3)")
 		return PLUGIN_HANDLED
 	}
-	set_cvar_string("dodmedic_ctrl", tmpstr)
+	set_cvar_string("h4c2r1ds_fieldmedic_ctrl", tmpstr)
 	get_user_name(id, tmpstr, 31)
 	console_print(id, "h4c2r1ds_fieldmedic control changed to %d", tmpctrl)
 
