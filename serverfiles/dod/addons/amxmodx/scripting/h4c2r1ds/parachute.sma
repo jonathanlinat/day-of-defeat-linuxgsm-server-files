@@ -3,7 +3,7 @@
 #include <hamsandwich>
 
 #define PLUGIN "Parachute"
-#define VERSION "1.0"
+#define VERSION "1.0.0"
 #define AUTHOR "Jonathan Linat (https://github.com/jonathanlinat)"
 
 #define PARACHUTE_MODEL "models/h4c2r1ds/parachute.mdl"
@@ -140,7 +140,7 @@ create_parachute(id) {
 }
 
 public fw_start(id) {
-    if (!has_user_parachute(id) || !is_user_alive(id)) {
+    if (~has_user_parachute(id) || !is_user_alive(id)) {
         return;
     }
 

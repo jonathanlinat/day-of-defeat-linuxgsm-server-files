@@ -1,11 +1,11 @@
-#include <amxmodx>
 #include <amxmisc>
-#include <fakemeta>
+#include <amxmodx>
 #include <dodx>
+#include <fakemeta>
 #include <hamsandwich>
 
 #define PLUGIN "Field Medic"
-#define VERSION "1.0"
+#define VERSION "1.0.0"
 #define AUTHOR "Jonathan Linat (https://github.com/jonathanlinat)"
 
 #define BRITISH 0

@@ -1,7 +1,7 @@
 #include <amxmodx>
 
 #define PLUGIN "Random Map Cycle"
-#define VERSION "1.0"
+#define VERSION "1.0.0"
 #define AUTHOR "Jonathan Linat (https://github.com/jonathanlinat)"
 
 #define LOCAL_INFO "lastmaps"

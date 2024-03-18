@@ -2,7 +2,7 @@
 #include <dodx>
 
 #define PLUGIN "Kill Info"
-#define VERSION "1.0"
+#define VERSION "1.0.0"
 #define AUTHOR "Jonathan Linat (https://github.com/jonathanlinat)"
 
 new Float:units_meters = 76.0;
