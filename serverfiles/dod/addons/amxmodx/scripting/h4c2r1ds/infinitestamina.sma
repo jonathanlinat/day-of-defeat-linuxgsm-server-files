@@ -11,7 +11,7 @@
 public plugin_init() {
     register_plugin(PLUGIN, VERSION, AUTHOR);
 
-    set_task(0.1, "restore_stamina");
+    set_task(1.0, "restore_stamina");
 }
 
 public restore_stamina() {
