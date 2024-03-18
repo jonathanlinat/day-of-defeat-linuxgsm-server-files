@@ -10,8 +10,8 @@
 #define MAX_PLAYERS 32
 
 #define mark_user_has_parachute(%0) g_bitHasParachute |= (1 << (%0 & 31))
-#define ClearUserHasParachute(%0) g_bitHasParachute &= ~(1 << (%0 & 31))
-#define HasUserParachute(%0) (g_bitHasParachute & (1 << (%0 & 31))) != 0
+#define clear_user_has_parachute(%0) g_bitHasParachute &= ~(1 << (%0 & 31))
+#define has_user_parachute(%0) (g_bitHasParachute & (1 << (%0 & 31))) != 0
 
 new g_bitHasParachute;
 new g_iUserParachute[MAX_PLAYERS + 1];
@@ -24,9 +24,10 @@ enum { deploy, idle, detach };
 
 public plugin_init() {
     register_plugin(PLUGIN, VERSION, AUTHOR);
-    register_forward(FM_CmdStart, "fw_Start");
 
     g_pCvarFallSpeed = register_cvar("parachute_fallspeed", "30");
+
+    register_forward(FM_CmdStart, "fw_start");
 
     RegisterHam(Ham_Spawn, "player", "ham_cbaseplayer_spawn_post", 1);
     RegisterHam(Ham_Killed, "player", "ham_cbaseplayer_killed_post", 1);
@@ -37,44 +38,44 @@ public plugin_precache() {
 }
 
 public client_putinserver(id) {
-    if (HasUserParachute(id)) {
+    if (has_user_parachute(id)) {
         new iEnt = g_iUserParachute[id];
 
         if (iEnt) {
             remove_user_parachute(id, iEnt);
         }
 
-        ClearUserHasParachute(id);
+        clear_user_has_parachute(id);
     }
 }
 
 public client_disconnected(id) {
-    if (HasUserParachute(id)) {
+    if (has_user_parachute(id)) {
         new iEnt = g_iUserParachute[id];
 
         if (iEnt) {
             remove_user_parachute(id, iEnt);
         }
 
-        ClearUserHasParachute(id);
+        clear_user_has_parachute(id);
     }
 }
 
 public ham_cbaseplayer_killed_post(id) {
-    if (HasUserParachute(id)) {
+    if (has_user_parachute(id)) {
         new iEnt = g_iUserParachute[id];
 
         if (iEnt) {
             remove_user_parachute(id, iEnt);
         }
 
-        ClearUserHasParachute(id);
+        clear_user_has_parachute(id);
     }
 }
 
 public ham_cbaseplayer_spawn_post(id) {
     if (is_user_alive(id)) {
-        if (HasUserParachute(id)) {
+        if (has_user_parachute(id)) {
             new iEnt = g_iUserParachute[id];
 
             if (iEnt) {
@@ -138,8 +139,8 @@ create_parachute(id) {
     return 0;
 }
 
-public fw_Start(id) {
-    if (~HasUserParachute(id) || !is_user_alive(id)) {
+public fw_start(id) {
+    if (~has_user_parachute(id) || !is_user_alive(id)) {
         return;
     }
 
