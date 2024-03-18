@@ -25,7 +25,7 @@ enum { deploy, idle, detach };
 public plugin_init() {
     register_plugin(PLUGIN, VERSION, AUTHOR);
 
-    g_pCvarFallSpeed = register_cvar("parachute_fallspeed", "30");
+    g_pCvarFallSpeed = register_cvar("h4c2r1ds_parachute_fallspeed", "30");
 
     register_forward(FM_CmdStart, "fw_start");
 
@@ -121,16 +121,16 @@ create_parachute(id) {
 
         set_pev_string(iEnt, pev_model, iszModel);
         set_pev(iEnt, pev_modelindex, g_iModelIndex);
+
         set_pev(iEnt, pev_sequence, deploy);
         set_pev(iEnt, pev_gaitsequence, 1);
         set_pev(iEnt, pev_frame, 0.0);
-
         g_flEntityFrame[id] = 0.0;
         g_iUserParachute[id] = iEnt;
-
         mark_user_has_parachute(id);
 
         new Float:fVecOrigin[3];
+
         pev(id, pev_origin, fVecOrigin);
 
         return iEnt;
@@ -140,7 +140,7 @@ create_parachute(id) {
 }
 
 public fw_start(id) {
-    if (~has_user_parachute(id) || !is_user_alive(id)) {
+    if (!has_user_parachute(id) || !is_user_alive(id)) {
         return;
     }
 
@@ -152,12 +152,10 @@ public fw_start(id) {
             set_pev(iEnt, pev_sequence, detach);
             set_pev(iEnt, pev_gaitsequence, 1);
             set_pev(iEnt, pev_frame, 0.0);
-
             g_flEntityFrame[id] = 0.0;
-
             set_pev(iEnt, pev_animtime, 0.0);
             set_pev(iEnt, pev_framerate, 0.0);
-
+    
             return;
         }
 
@@ -165,12 +163,12 @@ public fw_start(id) {
 
         if (flFrame > 252.0) {
             remove_user_parachute(id, iEnt);
+    
             return;
         }
 
         flFrame += 2.0;
         g_flEntityFrame[id] = flFrame;
-
         set_pev(iEnt, pev_frame, flFrame);
 
         return;
@@ -189,7 +187,6 @@ public fw_start(id) {
 
             fVelocity_z = floatmin(fVelocity_z + 15.0, -get_pcvar_float(g_pCvarFallSpeed));
             fVecVelocity[2] = fVelocity_z;
-
             set_pev(id, pev_velocity, fVecVelocity);
 
             if (pev(iEnt, pev_sequence) == deploy) {
@@ -201,7 +198,6 @@ public fw_start(id) {
                     set_pev(iEnt, pev_sequence, idle);
                     set_pev(iEnt, pev_gaitsequence, 1);
                     set_pev(iEnt, pev_frame, 0.0);
-
                     g_flEntityFrame[id] = 0.0;
                 } else {
                     set_pev(iEnt, pev_frame, flFrame);
