@@ -6,7 +6,7 @@
 
 #define PLUGIN "Field Medic"
 #define VERSION "1.0.0"
-#define AUTHOR "Jonathan Linat (https://github.com/jonathanlinat)"
+#define AUTHOR "Jonathan Linat"
 
 #define BRITISH 0
 

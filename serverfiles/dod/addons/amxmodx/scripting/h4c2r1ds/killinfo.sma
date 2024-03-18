@@ -3,7 +3,7 @@
 
 #define PLUGIN "Kill Info"
 #define VERSION "1.0.0"
-#define AUTHOR "Jonathan Linat (https://github.com/jonathanlinat)"
+#define AUTHOR "Jonathan Linat"
 
 new Float:units_meters = 76.0;
 new Float:units_feet = 24.0;

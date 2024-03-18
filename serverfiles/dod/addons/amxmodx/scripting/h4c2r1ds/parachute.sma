@@ -4,7 +4,7 @@
 
 #define PLUGIN "Parachute"
 #define VERSION "1.0.0"
-#define AUTHOR "Jonathan Linat (https://github.com/jonathanlinat)"
+#define AUTHOR "Jonathan Linat"
 
 #define PARACHUTE_MODEL "models/h4c2r1ds/parachute.mdl"
 #define MAX_PLAYERS 32

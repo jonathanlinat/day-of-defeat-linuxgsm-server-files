@@ -15,30 +15,32 @@
 
 !/lgsm/config-lgsm/dodserver/dodserver.cfg
 
-## Server Files
+# Server Files
 
 !/serverfiles
 /serverfiles/*
 
-### Day of Defeat
+# Server Files > Day of Defeat
 
 !/serverfiles/dod
 /serverfiles/dod/*
 
+!/serverfiles/dod/armory.wad
 !/serverfiles/dod/dodserver.cfg
 !/serverfiles/dod/liblist.gam
+!/serverfiles/dod/mapcycle.txt
 
-#### Addons
+# Server Files > Day of Defeat > Addons
 
 !/serverfiles/dod/addons
 /serverfiles/dod/addons/*
 
-##### AMX Mod X
+# Server Files > Day of Defeat > Addons > AMX Mod X
 
 !/serverfiles/dod/addons/amxmodx
 /serverfiles/dod/addons/amxmodx/*
 
-###### Configs
+# Server Files > Day of Defeat > Addons > AMX Mod X > Configs
 
 !/serverfiles/dod/addons/amxmodx/configs
 /serverfiles/dod/addons/amxmodx/configs/*
@@ -48,41 +50,73 @@
 !/serverfiles/dod/addons/amxmodx/configs/plugins.ini
 !/serverfiles/dod/addons/amxmodx/configs/users.ini
 
-###### Plugins
+# Server Files > Day of Defeat > Addons > AMX Mod X > Plugins
 
 !/serverfiles/dod/addons/amxmodx/plugins
 /serverfiles/dod/addons/amxmodx/plugins/*
 
-####### h4c2r1ds
+# Server Files > Day of Defeat > Addons > AMX Mod X > Plugins > h4c2r1ds
 
 !/serverfiles/dod/addons/amxmodx/plugins/h4c2r1ds
 !/serverfiles/dod/addons/amxmodx/plugins/h4c2r1ds/*
 
-###### Scripting
+# Server Files > Day of Defeat > Addons > AMX Mod X > Scripting
 
 !/serverfiles/dod/addons/amxmodx/scripting
 /serverfiles/dod/addons/amxmodx/scripting/*
 
 !/serverfiles/dod/addons/amxmodx/scripting/compile.sh
 
-####### h4c2r1ds
+# Server Files > Day of Defeat > Addons > AMX Mod X > Scripting > h4c2r1ds
 
 !/serverfiles/dod/addons/amxmodx/scripting/h4c2r1ds
 !/serverfiles/dod/addons/amxmodx/scripting/h4c2r1ds/*
 
-##### Metamod-r
+# Server Files > Day of Defeat > Addons > Metamod-r
 
 !/serverfiles/dod/addons/metamod
 /serverfiles/dod/addons/metamod/*
 
 !/serverfiles/dod/addons/metamod/plugins.ini
 
-#### Models
+# Server Files > Day of Defeat > Maps
+
+!/serverfiles/dod/maps
+/serverfiles/dod/maps/*
+
+!/serverfiles/dod/maps/dod_armory_b6.bsp
+!/serverfiles/dod/maps/dod_armory_b6.res
+!/serverfiles/dod/maps/dod_saints_b6.bsp
+!/serverfiles/dod/maps/dod_saints_b6.res
+!/serverfiles/dod/maps/dod_solitude.bsp
+!/serverfiles/dod/maps/dod_solitude.res
+
+# Server Files > Day of Defeat > Models
 
 !/serverfiles/dod/models
 /serverfiles/dod/models/*
 
-##### h4c2r1ds
+# Server Files > Day of Defeat > Models > h4c2r1ds
 
 !/serverfiles/dod/models/h4c2r1ds
 !/serverfiles/dod/models/h4c2r1ds/*
+
+# Server Files > Day of Defeat > Models > Map Models
+
+!/serverfiles/dod/models/mapmodels
+/serverfiles/dod/models/mapmodels/*
+
+!/serverfiles/dod/models/mapmodels/ae_pole.mdl
+!/serverfiles/dod/models/mapmodels/arc_xer_tree2_scaled.mdl
+
+# Server Files > Day of Defeat > Overviews
+
+!/serverfiles/dod/overviews
+/serverfiles/dod/overviews/*
+
+!/serverfiles/dod/overviews/dod_armory_b6.bmp
+!/serverfiles/dod/overviews/dod_armory_b6.txt
+!/serverfiles/dod/overviews/dod_saints_b6.bmp
+!/serverfiles/dod/overviews/dod_saints_b6.txt
+!/serverfiles/dod/overviews/dod_solitude.bmp
+!/serverfiles/dod/overviews/dod_solitude.txt

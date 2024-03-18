@@ -2,7 +2,7 @@
 
 #define PLUGIN "Random Map Cycle"
 #define VERSION "1.0.0"
-#define AUTHOR "Jonathan Linat (https://github.com/jonathanlinat)"
+#define AUTHOR "Jonathan Linat"
 
 #define LOCAL_INFO "lastmaps"
 
