@@ -1,5 +1,3 @@
-// overview description file for dod_armory_b6
-
 global {
   ZOOM 1.21
   ORIGIN 8.0 -90 -425

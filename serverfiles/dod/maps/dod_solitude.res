@@ -3,4 +3,3 @@ models/mapmodels/ae_pole.mdl
 
 overviews/dod_solitude.bmp
 overviews/dod_solitude.txt
-
