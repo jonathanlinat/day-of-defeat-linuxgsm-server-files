@@ -1,5 +1,3 @@
-// overview description file for dod_saints_b6
-
 global {
   ZOOM 1.25
   ORIGIN -704 196 -96
