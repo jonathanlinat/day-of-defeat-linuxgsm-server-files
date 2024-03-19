@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DoD 1.3 Community MOTD</title>
+<style>
+body {
+margin: 8px;
+font-family: Verdana, Tahoma, sans-serif;
+font-size: 10pt;
+font-weight: normal;
+line-height: 200%;
+background: #000;
+color: #fff;
+}
+a {
+padding: 4px 6px;
+text-decoration: underline;
+background-color: #FB0;
+color: #000;
+}
+a:hover {
+text-decoration: none;
+background-color: #983;
+}
+h1 {
+font-size: 18pt;
+}
+h2 {
+margin-top: 32px;
+font-size: 14pt;
+}
+p {
+font-weight: 700;
+color: #FB0;
+}
+.normalized {
+font-size: 10pt;
+}
+</style>
+</head>
+<body>
+<h1>DoD 1.3 Community <span class="normalized"><a href="https://discord.gg/dodcommunity">https://discord.gg/dodcommunity</a></span></h1>
+<p>Welcome to this <i>Day of Defeat 1.3</i> public gaming server, powered by cutting-edge server technologies for optimal performance.</p>
+<h2>Server Characteristics</h2>
+<p>Our server runs on <a href="https://linuxgsm.com">LinuxGSM</a> for management, utilizes <a href="https://github.com/dreamstalker/rehlds">ReHLDS</a> for security and stability, features <a href="https://github.com/theAsmodai/metamod-r">Metamod-r</a> for functionality, and is equipped with <a href="https://www.amxmodx.org">AMX Mod X</a> for gameplay experience and administrative capabilities.</p>
+</body>    
+</html>

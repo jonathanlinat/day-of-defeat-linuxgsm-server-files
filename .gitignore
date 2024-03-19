@@ -28,6 +28,7 @@
 !/serverfiles/dod/dodserver.cfg
 !/serverfiles/dod/liblist.gam
 !/serverfiles/dod/mapcycle.txt
+!/serverfiles/dod/motd.txt
 
 # Server Files > Day of Defeat > Addons
 
@@ -54,22 +55,12 @@
 !/serverfiles/dod/addons/amxmodx/plugins
 /serverfiles/dod/addons/amxmodx/plugins/*
 
-# Server Files > Day of Defeat > Addons > AMX Mod X > Plugins > h4c2r1ds
-
-!/serverfiles/dod/addons/amxmodx/plugins/h4c2r1ds
-!/serverfiles/dod/addons/amxmodx/plugins/h4c2r1ds/*
-
 # Server Files > Day of Defeat > Addons > AMX Mod X > Scripting
 
 !/serverfiles/dod/addons/amxmodx/scripting
 /serverfiles/dod/addons/amxmodx/scripting/*
 
 !/serverfiles/dod/addons/amxmodx/scripting/compile.sh
-
-# Server Files > Day of Defeat > Addons > AMX Mod X > Scripting > h4c2r1ds
-
-!/serverfiles/dod/addons/amxmodx/scripting/h4c2r1ds
-!/serverfiles/dod/addons/amxmodx/scripting/h4c2r1ds/*
 
 # Server Files > Day of Defeat > Addons > Metamod-r
 
@@ -78,40 +69,31 @@
 
 !/serverfiles/dod/addons/metamod/plugins.ini
 
-# Server Files > Day of Defeat > Maps
+# Server Files > Day of Defeat > Sound
 
-!/serverfiles/dod/maps
-/serverfiles/dod/maps/*
+!/serverfiles/dod/sound
+/serverfiles/dod/sound/*
 
-!/serverfiles/dod/maps/dod_saints_b6.bsp
-!/serverfiles/dod/maps/dod_saints_b6.txt
-!/serverfiles/dod/maps/dod_solitude.bsp
-!/serverfiles/dod/maps/dod_solitude.txt
+# Server Files > Day of Defeat > Sound > Misc
 
-# Server Files > Day of Defeat > Models
+!/serverfiles/dod/sound/misc
+/serverfiles/dod/sound/misc/*
 
-!/serverfiles/dod/models
-/serverfiles/dod/models/*
-
-# Server Files > Day of Defeat > Models > h4c2r1ds
-
-!/serverfiles/dod/models/h4c2r1ds
-!/serverfiles/dod/models/h4c2r1ds/*
-
-# Server Files > Day of Defeat > Models > Map Models
-
-!/serverfiles/dod/models/mapmodels
-/serverfiles/dod/models/mapmodels/*
-
-!/serverfiles/dod/models/mapmodels/ae_pole.mdl
-!/serverfiles/dod/models/mapmodels/arc_xer_tree2_scaled.mdl
-
-# Server Files > Day of Defeat > Overviews
-
-!/serverfiles/dod/overviews
-/serverfiles/dod/overviews/*
-
-!/serverfiles/dod/overviews/dod_saints_b6.bmp
-!/serverfiles/dod/overviews/dod_saints_b6.txt
-!/serverfiles/dod/overviews/dod_solitude.bmp
-!/serverfiles/dod/overviews/dod_solitude.txt
+!/serverfiles/dod/sound/misc/doublekill.wav
+!/serverfiles/dod/sound/misc/firstblood.wav
+!/serverfiles/dod/sound/misc/godlike.wav
+!/serverfiles/dod/sound/misc/headshot.wav
+!/serverfiles/dod/sound/misc/humiliation.wav
+!/serverfiles/dod/sound/misc/impressive.wav
+!/serverfiles/dod/sound/misc/killingspree.wav
+!/serverfiles/dod/sound/misc/lostlead.wav
+!/serverfiles/dod/sound/misc/maytheforce.wav
+!/serverfiles/dod/sound/misc/monsterkill.wav
+!/serverfiles/dod/sound/misc/multikill.wav
+!/serverfiles/dod/sound/misc/oneandonly.wav
+!/serverfiles/dod/sound/misc/prepare.wav
+!/serverfiles/dod/sound/misc/rampage.wav
+!/serverfiles/dod/sound/misc/takenlead.wav
+!/serverfiles/dod/sound/misc/tiedlead.wav
+!/serverfiles/dod/sound/misc/ultrakill.wav
+!/serverfiles/dod/sound/misc/unstoppable.wav
