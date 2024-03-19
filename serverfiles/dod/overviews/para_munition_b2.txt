@@ -1,0 +1,14 @@
+// overview description file for para_munition_b2.bsp
+
+global
+{
+	ZOOM 1.04
+	ORIGIN -640 128 -384
+	ROTATED	0
+}
+
+layer
+{
+	IMAGE "overviews/para_munition_b2.bmp"
+	HEIGHT -384
+}

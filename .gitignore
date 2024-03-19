@@ -25,7 +25,6 @@
 !/serverfiles/dod
 /serverfiles/dod/*
 
-!/serverfiles/dod/armory.wad
 !/serverfiles/dod/dodserver.cfg
 !/serverfiles/dod/liblist.gam
 !/serverfiles/dod/mapcycle.txt
@@ -84,15 +83,12 @@
 !/serverfiles/dod/maps
 /serverfiles/dod/maps/*
 
-!/serverfiles/dod/maps/dod_armory_b6.bsp
-!/serverfiles/dod/maps/dod_armory_b6.res
-!/serverfiles/dod/maps/dod_armory_b6.txt
 !/serverfiles/dod/maps/dod_saints_b6.bsp
-!/serverfiles/dod/maps/dod_saints_b6.res
 !/serverfiles/dod/maps/dod_saints_b6.txt
 !/serverfiles/dod/maps/dod_solitude.bsp
-!/serverfiles/dod/maps/dod_solitude.res
 !/serverfiles/dod/maps/dod_solitude.txt
+!/serverfiles/dod/maps/para_munition_b2.bsp
+!/serverfiles/dod/maps/para_munition_b2.txt
 
 # Server Files > Day of Defeat > Models
 
@@ -112,14 +108,49 @@
 !/serverfiles/dod/models/mapmodels/ae_pole.mdl
 !/serverfiles/dod/models/mapmodels/arc_xer_tree2_scaled.mdl
 
+# Server Files > Day of Defeat > Models > paramunition
+
+!/serverfiles/dod/models/paramunition
+/serverfiles/dod/models/paramunition/*
+
+!/serverfiles/dod/models/paramunition/baum.mdl
+!/serverfiles/dod/models/paramunition/ben.mdl
+!/serverfiles/dod/models/paramunition/eimer.mdl
+!/serverfiles/dod/models/paramunition/hangingpara.mdl
+!/serverfiles/dod/models/paramunition/kerze.mdl
+!/serverfiles/dod/models/paramunition/light.mdl
+!/serverfiles/dod/models/paramunition/opel.mdl
+
 # Server Files > Day of Defeat > Overviews
 
 !/serverfiles/dod/overviews
 /serverfiles/dod/overviews/*
 
-!/serverfiles/dod/overviews/dod_armory_b6.bmp
-!/serverfiles/dod/overviews/dod_armory_b6.txt
 !/serverfiles/dod/overviews/dod_saints_b6.bmp
 !/serverfiles/dod/overviews/dod_saints_b6.txt
 !/serverfiles/dod/overviews/dod_solitude.bmp
 !/serverfiles/dod/overviews/dod_solitude.txt
+!/serverfiles/dod/overviews/para_munition_b2.bmp
+!/serverfiles/dod/overviews/para_munition_b2.txt
+
+# Server Files > Day of Defeat > Sound
+
+!/serverfiles/dod/sound
+/serverfiles/dod/sound/*
+
+# Server Files > Day of Defeat > Sounds > Map Sounds
+
+!/serverfiles/dod/sound/mapsounds
+/serverfiles/dod/sound/mapsounds/*
+
+!/serverfiles/dod/sound/mapsounds/alliesscore_short.wav
+!/serverfiles/dod/sound/mapsounds/axisscoreshort.wav
+!/serverfiles/dod/sound/mapsounds/bben1.wav
+!/serverfiles/dod/sound/mapsounds/birds9.wav
+!/serverfiles/dod/sound/mapsounds/burning1.wav
+!/serverfiles/dod/sound/mapsounds/dim_reaper_tankhit.wav
+!/serverfiles/dod/sound/mapsounds/dodambience2.wav
+!/serverfiles/dod/sound/mapsounds/erriewind.wav
+!/serverfiles/dod/sound/mapsounds/kami-bird1a.wav
+!/serverfiles/dod/sound/mapsounds/panzerlied.wav
+!/serverfiles/dod/sound/mapsounds/tree1.wav

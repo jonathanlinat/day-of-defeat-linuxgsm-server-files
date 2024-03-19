@@ -1,11 +1,14 @@
-global {
+// overview description file for dod_solitude.bsp
+
+global
+{
   ZOOM 1.16
   ORIGIN 72 40 272
   ROTATED 0
 }
 
-layer {
+layer
+{
   IMAGE "overviews/dod_solitude.bmp"
   HEIGHT 721.00
 }
-

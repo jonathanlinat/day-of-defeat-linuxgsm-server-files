@@ -1,12 +1,10 @@
-dod_saints by Arjan "IR" Bak, (arjanb@nuclear-dawn.net)
-dod_saints_b6 by DoD 1.3 Community (https://discord.gg/dodcommunity)
+Arjan "IR" Bak, (arjanb@nuclear-dawn.net)
+DoD 1.3 Community (https://discord.gg/dodcommunity)
 
 ---
 
 1943, Sicily
 
-The Allies retreated from a key village, setting the stage for a calculated comeback.
-This strategic withdrawal led to the initiation of Operation: Saints, a counteroffensive
-aimed at recapturing the lost territory. Named to embody the resilience and resolve of
-the Allied forces, Operation: Saints represented a pivotal moment in their Sicilian
-campaign, marking a determined effort to regain control and momentum.
+The Allies retreated from a key village, setting the stage for a calculated comeback. This strategic withdrawal led to the initiation of Operation: Saints, a counteroffensive aimed at recapturing the lost territory.
+
+Named to embody the resilience and resolve of the Allied forces, Operation: Saints represented a pivotal moment in their Siciliancampaign, marking a determined effort to regain control and momentum.
