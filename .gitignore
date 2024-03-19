@@ -87,8 +87,6 @@
 !/serverfiles/dod/maps/dod_saints_b6.txt
 !/serverfiles/dod/maps/dod_solitude.bsp
 !/serverfiles/dod/maps/dod_solitude.txt
-!/serverfiles/dod/maps/para_munition_b2.bsp
-!/serverfiles/dod/maps/para_munition_b2.txt
 
 # Server Files > Day of Defeat > Models
 
@@ -107,22 +105,6 @@
 
 !/serverfiles/dod/models/mapmodels/ae_pole.mdl
 !/serverfiles/dod/models/mapmodels/arc_xer_tree2_scaled.mdl
-!/serverfiles/dod/models/mapmodels/hk_sherman_e_tr.mdl
-!/serverfiles/dod/models/mapmodels/kingtiger.mdl
-
-# Server Files > Day of Defeat > Models > paramunition
-
-!/serverfiles/dod/models/paramunition
-/serverfiles/dod/models/paramunition/*
-
-!/serverfiles/dod/models/paramunition/baum.mdl
-!/serverfiles/dod/models/paramunition/ben.mdl
-!/serverfiles/dod/models/paramunition/eimer.mdl
-!/serverfiles/dod/models/paramunition/flames.spr
-!/serverfiles/dod/models/paramunition/hangingpara.mdl
-!/serverfiles/dod/models/paramunition/kerze.mdl
-!/serverfiles/dod/models/paramunition/light.mdl
-!/serverfiles/dod/models/paramunition/opel.mdl
 
 # Server Files > Day of Defeat > Overviews
 
@@ -133,27 +115,3 @@
 !/serverfiles/dod/overviews/dod_saints_b6.txt
 !/serverfiles/dod/overviews/dod_solitude.bmp
 !/serverfiles/dod/overviews/dod_solitude.txt
-!/serverfiles/dod/overviews/para_munition_b2.bmp
-!/serverfiles/dod/overviews/para_munition_b2.txt
-
-# Server Files > Day of Defeat > Sound
-
-!/serverfiles/dod/sound
-/serverfiles/dod/sound/*
-
-# Server Files > Day of Defeat > Sounds > Map Sounds
-
-!/serverfiles/dod/sound/mapsounds
-/serverfiles/dod/sound/mapsounds/*
-
-!/serverfiles/dod/sound/mapsounds/alliesscore_short.wav
-!/serverfiles/dod/sound/mapsounds/axisscoreshort.wav
-!/serverfiles/dod/sound/mapsounds/bben1.wav
-!/serverfiles/dod/sound/mapsounds/birds9.wav
-!/serverfiles/dod/sound/mapsounds/burning1.wav
-!/serverfiles/dod/sound/mapsounds/dim_reaper_tankhit.wav
-!/serverfiles/dod/sound/mapsounds/dodambience2.wav
-!/serverfiles/dod/sound/mapsounds/erriewind.wav
-!/serverfiles/dod/sound/mapsounds/kami-bird1a.wav
-!/serverfiles/dod/sound/mapsounds/panzerlied.wav
-!/serverfiles/dod/sound/mapsounds/tree1.wav
