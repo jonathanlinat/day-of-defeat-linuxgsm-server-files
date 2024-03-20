@@ -9,14 +9,13 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Setup SSH
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.OPENSSH_PRIVATE_KEY }}" > ~/.ssh/${{ secrets.VPS_USERNAME }}
-          chmod 600 ~/.ssh/${{ secrets.VPS_USERNAME }}
-          ssh-keyscan ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
-        shell: bash
-      - name: Synchronize (push) the files
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.OPENSSH_PRIVATE_KEY }}
+          name: ${{ secrets.VPS_USERNAME }}
+          known_hosts: ${{ secrets.OPENSSH_KNOWN_HOSTS }}
+      - name: Synchronize the files
         run: rsync -avvzP --delete ${{ secrets.RSYNC_SOURCE_PATH }} ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_HOST }}:${{ secrets.RSYNC_DEST_PATH }}
         shell: bash
       - name: Restart the gaming server
