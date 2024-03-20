@@ -4,6 +4,7 @@ on:
     branches: [main]
 jobs:
   deploy:
+    name: Deploy the files
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -11,12 +12,12 @@ jobs:
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.LOCAL_OPENSSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/github-action
+          chmod 400 ~/.ssh/github-action
+          echo -e "Host ${{ secrets.VPS_HOST }}\n\tUser ${{ secrets.VPS_USERNAME }}\n\tHostname ${{ secrets.VPS_HOST }}\n\tIdentityFile ~/.ssh/github-action\n\tStrictHostKeyChecking No" >> ~/.ssh/config
         shell: bash
-      - name: rsync the files
-        run: rsync -avvzP --delete ${{ secrets.RSYNC_SOURCE_PATH }} ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_HOST }}:${{ secrets.RSYNC_DEST_PATH }}
+      - name: Synchronize (push) the files
+        run: rsync -avvzP --delete -e ssh  ${{ secrets.RSYNC_SOURCE_PATH }} ${{ secrets.VPS_HOST }}:${{ secrets.RSYNC_DEST_PATH }}
         shell: bash
         env:
           RSYNC_RSH: ssh
