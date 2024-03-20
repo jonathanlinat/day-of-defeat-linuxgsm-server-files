@@ -12,9 +12,9 @@ jobs:
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.LOCAL_OPENSSH_PRIVATE_KEY }}" > ~/.ssh/github-action
+          echo "${{ secrets.OPENSSH_PRIVATE_KEY }}" > ~/.ssh/github-action
           chmod 400 ~/.ssh/github-action
-          echo -e "Host ${{ secrets.VPS_HOST }}\n\tUser ${{ secrets.VPS_USERNAME }}\n\tHostname ${{ secrets.VPS_HOST }}\n\tIdentityFile ~/.ssh/github-action\n\tStrictHostKeyChecking No" >> ~/.ssh/config
+          echo -e "Host github-action\n\tUser ${{ secrets.VPS_USERNAME }}\n\tHostname ${{ secrets.VPS_HOST }}\n\tIdentityFile ~/.ssh/github-action\n\tStrictHostKeyChecking No" >> ~/.ssh/config
         shell: bash
       - name: Synchronize (push) the files
         run: rsync -avvzP --delete -e ssh  ${{ secrets.RSYNC_SOURCE_PATH }} ${{ secrets.VPS_HOST }}:${{ secrets.RSYNC_DEST_PATH }}
