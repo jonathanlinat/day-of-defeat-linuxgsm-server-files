@@ -14,7 +14,7 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.OPENSSH_PRIVATE_KEY }}" > ~/.ssh/github-action
           chmod 600 ~/.ssh/github-action
-          echo "${{ secrets.OPENSSH_KNOWN_HOSTS }}" >> ~/.ssh/known_hosts
+          ssh-keyscan ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
         shell: bash
       - name: Synchronize (push) the files
         run: rsync -avvzP --delete ${{ secrets.RSYNC_SOURCE_PATH }} ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_HOST }}:${{ secrets.RSYNC_DEST_PATH }}
