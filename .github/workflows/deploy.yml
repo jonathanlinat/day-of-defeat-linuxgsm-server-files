@@ -13,14 +13,14 @@ jobs:
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.OPENSSH_PRIVATE_KEY }}" > ~/.ssh/github-action
-          chmod 400 ~/.ssh/github-action
-          echo -e "Host github-action\n\tUser ${{ secrets.VPS_USERNAME }}\n\tHostname ${{ secrets.VPS_HOST }}\n\tIdentityFile ~/.ssh/github-action\n\tStrictHostKeyChecking No" >> ~/.ssh/config
+          chmod 600 ~/.ssh/github-action
+          echo "${{ secrets.OPENSSH_KNOWN_HOSTS }}" >> ~/.ssh/known_hosts
         shell: bash
       - name: Synchronize (push) the files
-        run: rsync -avvzP --delete -e ssh  ${{ secrets.RSYNC_SOURCE_PATH }} ${{ secrets.VPS_HOST }}:${{ secrets.RSYNC_DEST_PATH }}
+        run: rsync -avvzP --delete ${{ secrets.RSYNC_SOURCE_PATH }} ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_HOST }}:${{ secrets.RSYNC_DEST_PATH }}
         shell: bash
         env:
           RSYNC_RSH: ssh
       - name: Restart the gaming server
-        run: ssh ${{ secrets.VPS_USERNAME }} "${{ secrets.REMOTE_SERVER_BINARY }} restart"
+        run: ssh ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_HOST }} -p22 "${{ secrets.REMOTE_SERVER_BINARY }} restart"
         shell: bash
