@@ -12,9 +12,12 @@ jobs:
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.OPENSSH_PRIVATE_KEY }}" > ~/.ssh/github-action
-          chmod 600 ~/.ssh/github-action
+          echo "${{ secrets.OPENSSH_PRIVATE_KEY }}" > ~/.ssh/${{ secrets.VPS_USERNAME }}
+          chmod 600 ~/.ssh/${{ secrets.VPS_USERNAME }}
           ssh-keyscan ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
+        shell: bash
+      - name: Synchronize (push) the files
+        run: rsync -avvzP --delete ${{ secrets.RSYNC_SOURCE_PATH }} ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_HOST }}:${{ secrets.RSYNC_DEST_PATH }}
         shell: bash
       - name: Restart the gaming server
         run: ssh ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_HOST }} -p22 "${{ secrets.REMOTE_SERVER_BINARY }} restart"
