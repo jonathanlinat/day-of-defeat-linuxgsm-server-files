@@ -16,11 +16,6 @@ jobs:
           chmod 600 ~/.ssh/github-action
           ssh-keyscan ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
         shell: bash
-      - name: Synchronize (push) the files
-        run: rsync -avvzP --delete ${{ secrets.RSYNC_SOURCE_PATH }} ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_HOST }}:${{ secrets.RSYNC_DEST_PATH }}
-        shell: bash
-        env:
-          RSYNC_RSH: ssh
       - name: Restart the gaming server
         run: ssh ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_HOST }} -p22 "${{ secrets.REMOTE_SERVER_BINARY }} restart"
         shell: bash
