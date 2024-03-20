@@ -15,8 +15,8 @@ public plugin_init() {
     register_cvar(PLUGIN, VERSION, FCVAR_SERVER | FCVAR_SPONLY);
     register_statsfwd(XMF_DEATH);
     
-    pKillinfo = register_cvar("h4c2r1ds_killinfo", "1");
-    pUnits = register_cvar("h4c2r1ds_killinfo_units", "1");
+    pKillinfo = register_cvar("amx_killinfo", "1");
+    pUnits = register_cvar("amx_killinfo_units", "1");
 }
 
 public client_death(killer, victim, wpnindex, hitplace, TK) {

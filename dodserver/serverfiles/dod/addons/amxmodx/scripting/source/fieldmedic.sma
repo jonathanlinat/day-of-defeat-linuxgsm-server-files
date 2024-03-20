@@ -43,20 +43,20 @@ public plugin_precache() {
 }
 
 public plugin_init() {
-    g_medic_ctrl = register_cvar("h4c2r1ds_fieldmedic_ctrl", "3");
-    g_auto_time = register_cvar("h4c2r1ds_fieldmedic_autotime", "1.0");
-    g_auto_step = register_cvar("h4c2r1ds_fieldmedic_autostep", "1");
-    g_auto_maxhp = register_cvar("h4c2r1ds_fieldmedic_automaxhp", "80");
-    g_medic_time = register_cvar("h4c2r1ds_fieldmedic_time", "0.1");
-    g_medic_step = register_cvar("h4c2r1ds_fieldmedic_step", "1");
-    g_medic_maxhp = register_cvar("h4c2r1ds_fieldmedic_maxhp", "100");
-    g_medic_maxspeed = register_cvar("h4c2r1ds_fieldmedic_maxspeed", "30");
-    g_maxspeed_enable = register_cvar("h4c2r1ds_fieldmedic_maxspeed_enable", "0");
-    g_medic_sound = register_cvar("h4c2r1ds_fieldmedic_sound", "1");
-    g_medic_maxcalls = register_cvar("h4c2r1ds_fieldmedic_calls", "2");
+    g_medic_ctrl = register_cvar("amx_fieldmedic_ctrl", "3");
+    g_auto_time = register_cvar("amx_fieldmedic_autotime", "1.0");
+    g_auto_step = register_cvar("amx_fieldmedic_autostep", "1");
+    g_auto_maxhp = register_cvar("amx_fieldmedic_automaxhp", "80");
+    g_medic_time = register_cvar("amx_fieldmedic_time", "0.1");
+    g_medic_step = register_cvar("amx_fieldmedic_step", "1");
+    g_medic_maxhp = register_cvar("amx_fieldmedic_maxhp", "100");
+    g_medic_maxspeed = register_cvar("amx_fieldmedic_maxspeed", "30");
+    g_maxspeed_enable = register_cvar("amx_fieldmedic_maxspeed_enable", "0");
+    g_medic_sound = register_cvar("amx_fieldmedic_sound", "1");
+    g_medic_maxcalls = register_cvar("amx_fieldmedic_calls", "2");
 
     register_plugin(PLUGIN, VERSION, AUTHOR);
-    register_concmd("h4c2r1ds_fieldmedic", "control_medic", ADMIN_CFG, "<#|?>");
+    register_concmd("amx_fieldmedic", "control_medic", ADMIN_CFG, "<#|?>");
     register_clcmd("say_team /medic", "cmd_medic", 0, "Call for a Medic");
     register_forward(FM_SetClientMaxspeed, "fwd_maxspeed");
 
@@ -182,12 +182,12 @@ public control_medic(id, lvl, cid) {
     trim(tmpstr);
 
     if (equal(tmpstr, "?")) {
-        console_print(id, "^nField Medic Control: h4c2r1ds_fieldmedic #");
-        console_print(id, "  0 - Disables h4c2r1ds_fieldmedic plugin");
+        console_print(id, "^nField Medic Control: amx_fieldmedic #");
+        console_print(id, "  0 - Disables amx_fieldmedic plugin");
         console_print(id, "  1 - Play must 'say /medic' to heal - fast");
         console_print(id, "  2 - Player automatically heals - slow");
         console_print(id, "  3 - Enables Mode 1 and Mode 2 simultaneously");
-        console_print(id, "h4c2r1ds_fieldmedic is currently set to: %d^n", get_pcvar_num(g_medic_ctrl));
+        console_print(id, "amx_fieldmedic is currently set to: %d^n", get_pcvar_num(g_medic_ctrl));
 
         return PLUGIN_HANDLED;
     }
@@ -195,14 +195,14 @@ public control_medic(id, lvl, cid) {
     new tmpctrl = str_to_num(tmpstr);
 
     if (tmpctrl < 0 || tmpctrl > 3) {
-        console_print(id, "h4c2r1ds_fieldmedic parameter out of range (0 - 3)");
+        console_print(id, "amx_fieldmedic parameter out of range (0 - 3)");
 
         return PLUGIN_HANDLED;
     }
 
     set_pcvar_num(g_medic_ctrl, tmpctrl);
     get_user_name(id, tmpstr, 31);
-    console_print(id, "h4c2r1ds_fieldmedic control changed to %d", tmpctrl);
+    console_print(id, "amx_fieldmedic control changed to %d", tmpctrl);
 
     return PLUGIN_HANDLED;
 }

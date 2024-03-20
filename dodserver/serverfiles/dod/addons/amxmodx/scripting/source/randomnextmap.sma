@@ -1,6 +1,6 @@
 #include <amxmodx>
 
-#define PLUGIN "Random Map Cycle"
+#define PLUGIN "Random Next Map"
 #define VERSION "1.0.0"
 #define AUTHOR "Jonathan Linat"
 
@@ -12,8 +12,8 @@ new g_Cvar_ExcludeMaps;
 public plugin_init() {
     register_plugin(PLUGIN, VERSION, AUTHOR);
     
-    g_Cvar_ExcludeMaps = register_cvar("h4c2r1ds_randommapcycle_exclude", "5");
-    g_Cvar_MapCycleFile = register_cvar("h4c2r1ds_randommapcycle_file", "mapcycle.txt");
+    g_Cvar_ExcludeMaps = register_cvar("amx_randomnextmap_exclude", "5");
+    g_Cvar_MapCycleFile = register_cvar("amx_randomnextmap_file", "mapcycle.txt");
     
     set_task(1.0, "randomize_nextmap");
 }
