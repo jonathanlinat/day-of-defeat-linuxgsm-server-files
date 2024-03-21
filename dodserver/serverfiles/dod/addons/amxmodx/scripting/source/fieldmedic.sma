@@ -24,19 +24,6 @@ new g_medic_sound;
 new g_sounds[3][] = {
     "player/britmedic.wav", "player/usmedic.wav", "player/germedic.wav"
 };
-new g_positive_response[32][] = {
-    "Heading to your position!", "Hold tight, I'm coming!", "Hang in there, help is on the way!",
-    "Assistance incoming!", "Stay strong, I'm en route!", "I've got you, don't move!",
-    "Healing is inbound!", "Keep your head down, I'm on my way!", "Relief is just moments away!",
-    "Approaching your location!", "You're my next stop!", "Just a moment, I'll be there soon!",
-    "Stay put, I'm heading to you!", "Your medic is on the move!", "Brace yourself, healing en route!",
-    "Don't worry, I'm closing in!", "Your call has been heard, I'm on my way!", "Be there in a jiffy!",
-    "You won't be alone for long!", "Support is on its way!", "I'm sprinting to you now!",
-    "Hold on, relief is coming!", "I'm just around the corner!", "Healing support incoming!",
-    "Rushing to your aid!", "You called, I'm answering!", "Making my way to you now!",
-    "Assistance is moments away!", "You're my priority, on my way!", "I'm your lifeline, coming through!",
-    "No soldier left behind, I'm coming!", "Ready for a patch-up, heading over!"
-}
 new g_negative_response[32][] = {
     "You're at full strength, soldier!", "You don't need me, you're topped off!",
     "All healthy here, move along!", "Your vitals are perfect, no need for me.",
@@ -103,13 +90,7 @@ public plugin_init() {
 
 public cmd_medic(id) {
     if (get_pcvar_num(g_medic_ctrl) == 1 || get_pcvar_num(g_medic_ctrl) == 3) {
-        if (!is_user_alive(id)) {
-            return PLUGIN_CONTINUE;
-        }
-
-        if (!g_medic_calls[id]) {
-            client_print(id, print_chat, "Medic: %s", g_healing_response[random(32)]);
-
+        if (!is_user_alive(id) || !g_medic_calls[id]) {
             return PLUGIN_CONTINUE;
         }
 
@@ -130,7 +111,7 @@ public cmd_medic(id) {
         }
 
         clear_task(id);
-        client_print(id, print_chat, "Medic: %s", g_positive_response[random(32)]);
+        client_print(id, print_chat, "Medic: %s", g_healing_response[random(32)]);
         set_task(get_pcvar_float(g_medic_time), "heal_player", id, "", 0, "b");
         g_task_set[id] = 2;
 
