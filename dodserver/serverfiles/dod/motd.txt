@@ -14,16 +14,10 @@
         color: #fff;
       }
 
-      a {
+      .highlighted {
         padding: 4px 6px;
-        text-decoration: underline;
         background-color: #fb0;
         color: #000;
-      }
-
-      a:hover {
-        text-decoration: none;
-        background-color: #983;
       }
 
       h1 {
@@ -46,15 +40,9 @@
     </style>
   </head>
   <body>
-    <h1>DoD 1.3 Community <span class="normalized"><a href="https://www.discord.gg/dodcommunity">https://discord.gg/dodcommunity</a></span></h1>
+    <h1>DoD 1.3 Community <span class="normalized"><span class="highlighted">https://discord.gg/dodcommunity</span></span></h1>
     <p>Welcome to this <i>Day of Defeat 1.3</i> public gaming server, powered by cutting-edge server technologies for optimal performance.</p>
     <h2>Server Characteristics</h2>
-    <p>This server:</p>
-    <ul>
-      <li>runs on <a href="https://www.linuxgsm.com">LinuxGSM</a> for management</li>
-      <li>utilizes <a href="https://www.github.com/dreamstalker/rehlds">ReHLDS</a> for security and stability</li>
-      <li>features <a href="https://www.github.com/theAsmodai/metamod-r">Metamod-r</a> for functionality</li>
-      <li>is equipped with <a href="https://www.amxmodx.org">AMX Mod X</a> for gameplay experience and administrative capabilities</li>
-    </ul>
+    <p>This public gaming server is based on <span class="highlighted">LinuxGSM</span> for management, utilizes <span class="highlighted">ReHLDS</span> for security and stability, features <span class="highlighted">Metamod-r</span> for functionality, and is equipped with <span class="highlighted">AMX Mod X</span> for gameplay experience and administrative capabilities.</p>
   </body>
 </html>
