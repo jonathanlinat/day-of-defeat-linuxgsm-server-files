@@ -22,15 +22,49 @@ new g_maxspeed_enable;
 new g_medic_maxcalls;
 new g_medic_sound;
 new g_sounds[3][] = {
-    "player/britmedic.wav",
-    "player/usmedic.wav",
-    "player/germedic.wav"
+    "player/britmedic.wav", "player/usmedic.wav", "player/germedic.wav"
 };
-new g_response[16][] = {
+new g_positive_response[32][] = {
+    "Heading to your position!", "Hold tight, I'm coming!", "Hang in there, help is on the way!",
+    "Assistance incoming!", "Stay strong, I'm en route!", "I've got you, don't move!",
+    "Healing is inbound!", "Keep your head down, I'm on my way!", "Relief is just moments away!",
+    "Approaching your location!", "You're my next stop!", "Just a moment, I'll be there soon!",
+    "Stay put, I'm heading to you!", "Your medic is on the move!", "Brace yourself, healing en route!",
+    "Don't worry, I'm closing in!", "Your call has been heard, I'm on my way!", "Be there in a jiffy!",
+    "You won't be alone for long!", "Support is on its way!", "I'm sprinting to you now!",
+    "Hold on, relief is coming!", "I'm just around the corner!", "Healing support incoming!",
+    "Rushing to your aid!", "You called, I'm answering!", "Making my way to you now!",
+    "Assistance is moments away!", "You're my priority, on my way!", "I'm your lifeline, coming through!",
+    "No soldier left behind, I'm coming!", "Ready for a patch-up, heading over!"
+}
+new g_negative_response[32][] = {
+    "You're at full strength, soldier!", "You don't need me, you're topped off!",
+    "All healthy here, move along!", "Your vitals are perfect, no need for me.",
+    "You're in peak condition already!", "Save the call for when you're hurt.",
+    "You're as fit as a fiddle!", "You must mistake me for someone else; you're full on health!",
+    "No scratches on you, warrior!", "Why call? You're in perfect shape!",
+    "You seem more than capable as is.", "Not a scratch on you, no medic needed.",
+    "I see no wounds to tend here.", "You're already battle-ready!",
+    "Looks like you've been avoiding trouble!", "No ailments detected, you're clear.",
+    "You're fighting fit, save the medkits for later.",
+    "You're wasting my time, you're already healed!", "Full health, go back to the fight!",
+    "Your health bar disagrees with your call.", "I'm not needed here, you're at full capacity.",
+    "Looking strong and healthy, soldier!", "No attention needed here, you're at 100%.",
+    "I don't fix what isn't broken.", "Try not to get hit next time, just for practice.",
+    "You're just showing off your health now.", "Looks like you're in better shape than me!",
+    "You're all set, back to your post.", "Full health? Someone's been careful!",
+    "I can't make you any healthier than this!", "You're in top-notch condition, keep it that way.",
+    "Perfect health! Keep it up, soldier!"
+}
+new g_healing_response[32][] = {
     "Shake It Off", "Apply Some Ice", "Just A Scratch", "Time For A Break",
     "Breathe Deeply", "Count To Ten", "Chin Up, Buttercup", "Laugh It Off",
     "On Your Feet, Soldier", "Magic Potion Time", "Summon The Healing Fairy", "Channel Your Inner Phoenix",
-    "Embrace The Pain", "Call For Backup", "Ready For Round Two?", "Patch It Up, Move On"
+    "Embrace The Pain", "Call For Backup", "Ready For Round Two?", "Patch It Up, Move On",
+    "Dust Yourself Off", "It's Only A Flesh Wound", "Back In The Fight", "Nothing A Little Rest Won't Fix",
+    "Stand Tall, Warrior", "Harness Your Strength", "A Minor Setback", "Victory Awaits",
+    "Keep Your Spirits High", "Fight Through The Pain", "A Swift Recovery", "The Battle's Not Over",
+    "Show Them Your Courage", "Rally The Troops", "Eyes On The Prize", "Never Back Down"
 };
 new g_medic_calls[33];
 new g_task_set[33] = {0, ...};
@@ -81,13 +115,13 @@ public cmd_medic(id) {
             }
 
             if (pev(id, pev_health) >= get_pcvar_num(g_medic_maxhp)) {
-                client_print(id, print_chat, "Medic: Quit Wasting My Time!");
+                client_print(id, print_chat, "Medic: %s", g_negative_response[random(32)]);
 
                 return PLUGIN_CONTINUE;
             }
 
             clear_task(id);
-            client_print(id, print_chat, "Medic: On my way!");
+            client_print(id, print_chat, "Medic: %s", g_positive_response[random(32)]);
             set_task(get_pcvar_float(g_medic_time), "heal_player", id, "", 0, "b");
             g_task_set[id] = 2;
 
@@ -95,8 +129,15 @@ public cmd_medic(id) {
                 set_pev(id, pev_maxspeed, get_pcvar_float(g_medic_maxspeed));
             }
         } else {
-            client_print(id, print_chat, pev(id, pev_health) >= get_pcvar_num(g_medic_maxhp) ?
-                "Medic: Leave Me Alone!" : "Medic: %s!", g_response[random(16)]);
+            new g_response[128];
+
+            if (pev(id, pev_health) >= get_pcvar_num(g_medic_maxhp)) {
+                format(g_response, sizeof(g_response), "Medic: %s", g_negative_response[random(32)]);
+            } else {
+                format(g_response, sizeof(g_response), "Medic: %s", g_healing_response[random(32)]);
+            }
+
+            client_print(id, print_chat, g_response);
         }   
     }
 
@@ -181,28 +222,14 @@ public control_medic(id, lvl, cid) {
     read_argv(1, tmpstr, 31);
     trim(tmpstr);
 
-    if (equal(tmpstr, "?")) {
-        console_print(id, "^nField Medic Control: amx_fieldmedic #");
-        console_print(id, "  0 - Disables amx_fieldmedic plugin");
-        console_print(id, "  1 - Play must 'say /medic' to heal - fast");
-        console_print(id, "  2 - Player automatically heals - slow");
-        console_print(id, "  3 - Enables Mode 1 and Mode 2 simultaneously");
-        console_print(id, "amx_fieldmedic is currently set to: %d^n", get_pcvar_num(g_medic_ctrl));
-
-        return PLUGIN_HANDLED;
-    }
-
     new tmpctrl = str_to_num(tmpstr);
 
     if (tmpctrl < 0 || tmpctrl > 3) {
-        console_print(id, "amx_fieldmedic parameter out of range (0 - 3)");
-
         return PLUGIN_HANDLED;
     }
 
     set_pcvar_num(g_medic_ctrl, tmpctrl);
     get_user_name(id, tmpstr, 31);
-    console_print(id, "amx_fieldmedic control changed to %d", tmpctrl);
 
     return PLUGIN_HANDLED;
 }
