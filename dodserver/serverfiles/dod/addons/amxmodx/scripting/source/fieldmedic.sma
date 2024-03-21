@@ -103,6 +103,10 @@ public plugin_init() {
 
 public cmd_medic(id) {
     if (get_pcvar_num(g_medic_ctrl) == 1 || get_pcvar_num(g_medic_ctrl) == 3) {
+        if (!is_user_alive(id)) {
+            return PLUGIN_CONTINUE;
+        }
+
         if (!g_medic_calls[id]) {
             client_print(id, print_chat, "Medic: %s", g_healing_response[random(32)]);
 
