@@ -57,14 +57,16 @@ new g_negative_response[32][] = {
     "Perfect health! Keep it up, soldier!"
 }
 new g_healing_response[32][] = {
-    "Shake It Off", "Apply Some Ice", "Just A Scratch", "Time For A Break",
-    "Breathe Deeply", "Count To Ten", "Chin Up, Buttercup", "Laugh It Off",
-    "On Your Feet, Soldier", "Magic Potion Time", "Summon The Healing Fairy", "Channel Your Inner Phoenix",
-    "Embrace The Pain", "Call For Backup", "Ready For Round Two?", "Patch It Up, Move On",
-    "Dust Yourself Off", "It's Only A Flesh Wound", "Back In The Fight", "Nothing A Little Rest Won't Fix",
-    "Stand Tall, Warrior", "Harness Your Strength", "A Minor Setback", "Victory Awaits",
-    "Keep Your Spirits High", "Fight Through The Pain", "A Swift Recovery", "The Battle's Not Over",
-    "Show Them Your Courage", "Rally The Troops", "Eyes On The Prize", "Never Back Down"
+    "Heading to your position!", "Hold tight, I'm coming!", "Hang in there, help is on the way!",
+    "Assistance incoming!", "Stay strong, I'm en route!", "I've got you, don't move!", "Healing is inbound!",
+    "Keep your head down, I'm on my way!", "Relief is just moments away!", "Approaching your location!",
+    "You're my next stop!", "Just a moment, I'll be there soon!", "Stay put, I'm heading to you!",
+    "Your medic is on the move!", "Brace yourself, healing en route!", "Don't worry, I'm closing in!",
+    "Your call has been heard, I'm on my way!", "Be there in a jiffy!", "You won't be alone for long!",
+    "Support is on its way!", "I'm sprinting to you now!", "Hold on, relief is coming!",
+    "I'm just around the corner!", "Healing support incoming!", "Rushing to your aid!", "You called, I'm answering!",
+    "Making my way to you now!", "Assistance is moments away!", "You're my priority, on my way!",
+    "I'm your lifeline, coming through!", "No soldier left behind, I'm coming!", "Ready for a patch-up, heading over!"
 };
 new g_medic_calls[33];
 new g_task_set[33] = {0, ...};
@@ -101,44 +103,36 @@ public plugin_init() {
 
 public cmd_medic(id) {
     if (get_pcvar_num(g_medic_ctrl) == 1 || get_pcvar_num(g_medic_ctrl) == 3) {
-        if (g_medic_calls[id]) {
-            --g_medic_calls[id];
+        if (!g_medic_calls[id]) {
+            client_print(id, print_chat, "Medic: %s", g_healing_response[random(32)]);
 
-            if (get_pcvar_num(g_medic_sound)) {
-                new myteam = get_user_team(id);
+            return PLUGIN_CONTINUE;
+        }
 
-                if (myteam != AXIS) {
-                    myteam = dod_get_map_info(MI_ALLIES_TEAM) ? BRITISH : ALLIES;
-                }
+        if (pev(id, pev_health) >= get_pcvar_num(g_medic_maxhp)) {
+            client_print(id, print_chat, "Medic: %s", g_negative_response[random(32)]);
 
-                emit_sound(id, CHAN_VOICE, g_sounds[myteam], VOL_NORM, ATTN_NORM, 0, PITCH_NORM);
-            }
+            return PLUGIN_CONTINUE;
+        }
 
-            if (pev(id, pev_health) >= get_pcvar_num(g_medic_maxhp)) {
-                client_print(id, print_chat, "Medic: %s", g_negative_response[random(32)]);
+        --g_medic_calls[id];
 
-                return PLUGIN_CONTINUE;
-            }
+        if (get_pcvar_num(g_medic_sound)) {
+            new myteam = get_user_team(id);
 
-            clear_task(id);
-            client_print(id, print_chat, "Medic: %s", g_positive_response[random(32)]);
-            set_task(get_pcvar_float(g_medic_time), "heal_player", id, "", 0, "b");
-            g_task_set[id] = 2;
+            myteam = (myteam == AXIS) ? AXIS : (dod_get_map_info(MI_ALLIES_TEAM) ? BRITISH : ALLIES);
 
-            if (get_pcvar_num(g_maxspeed_enable)) {
-                set_pev(id, pev_maxspeed, get_pcvar_float(g_medic_maxspeed));
-            }
-        } else {
-            new g_response[128];
+            emit_sound(id, CHAN_VOICE, g_sounds[myteam], VOL_NORM, ATTN_NORM, 0, PITCH_NORM);
+        }
 
-            if (pev(id, pev_health) >= get_pcvar_num(g_medic_maxhp)) {
-                format(g_response, sizeof(g_response), "Medic: %s", g_negative_response[random(32)]);
-            } else {
-                format(g_response, sizeof(g_response), "Medic: %s", g_healing_response[random(32)]);
-            }
+        clear_task(id);
+        client_print(id, print_chat, "Medic: %s", g_positive_response[random(32)]);
+        set_task(get_pcvar_float(g_medic_time), "heal_player", id, "", 0, "b");
+        g_task_set[id] = 2;
 
-            client_print(id, print_chat, g_response);
-        }   
+        if (get_pcvar_num(g_maxspeed_enable)) {
+            set_pev(id, pev_maxspeed, get_pcvar_float(g_medic_maxspeed));
+        }
     }
 
     return PLUGIN_CONTINUE;
