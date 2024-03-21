@@ -1,8 +1,17 @@
-#include <amxmodx>
-
-#define PLUGIN "Random Next Map"
+#define PLUGIN "Next Map Selection Randomizer"
 #define VERSION "1.0.0"
 #define AUTHOR "Jonathan Linat"
+
+/*
+ * This plugin aims to randomize the next map selection to enhance variety and player
+ * engagement by choosing from a specified map cycle list. Configurable options allow server
+ * administrators to exclude recently played maps and customize the map cycle file, ensuring
+ * players experience * a wide range of environments without repetition.
+ *
+ * It has been successfully tested with AMX Mod X v1.10+.
+ */
+
+#include <amxmodx>
 
 #define LOCAL_INFO "lastmaps"
 
@@ -12,8 +21,8 @@ new g_Cvar_ExcludeMaps;
 public plugin_init() {
     register_plugin(PLUGIN, VERSION, AUTHOR);
     
-    g_Cvar_ExcludeMaps = register_cvar("amx_randomnextmap_exclude", "5");
-    g_Cvar_MapCycleFile = register_cvar("amx_randomnextmap_file", "mapcycle.txt");
+    g_Cvar_ExcludeMaps = register_cvar("amx_nextmapselectionrandomizer_exclude", "5");
+    g_Cvar_MapCycleFile = register_cvar("amx_nextmapselectionrandomizer_file", "mapcycle.txt");
     
     set_task(1.0, "randomize_nextmap");
 }

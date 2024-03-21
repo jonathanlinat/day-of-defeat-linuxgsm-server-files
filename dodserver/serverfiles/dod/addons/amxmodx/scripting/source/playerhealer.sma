@@ -1,12 +1,25 @@
+#define PLUGIN "Player Healer"
+#define VERSION "1.0.0"
+#define AUTHOR "Jonathan Linat"
+
+/*
+ * This plugin enables automatic healing for players in-game, allowing server
+ * administrators to configure healing parameters * such as maximum health points
+ * for auto-healing, medic call limits, and healing sounds. The plugin supports
+ * both manual * medic calls by players and automatic healing when certain conditions
+ * are met. It enhances gameplay by providing players * with timely health recovery,
+ * ensuring a dynamic and sustained action. The healing responses and conditions can be 
+ * customized through server cvars, making it adaptable to different game types and
+ * server settings.
+ *
+ * It has been successfully tested with AMX Mod X v1.10+.
+ */
+
 #include <amxmisc>
 #include <amxmodx>
 #include <dodx>
 #include <fakemeta>
 #include <hamsandwich>
-
-#define PLUGIN "Field Medic"
-#define VERSION "1.0.0"
-#define AUTHOR "Jonathan Linat"
 
 #define BRITISH 0
 
@@ -66,20 +79,20 @@ public plugin_precache() {
 }
 
 public plugin_init() {
-    g_medic_ctrl = register_cvar("amx_fieldmedic_ctrl", "3");
-    g_auto_time = register_cvar("amx_fieldmedic_autotime", "1.0");
-    g_auto_step = register_cvar("amx_fieldmedic_autostep", "1");
-    g_auto_maxhp = register_cvar("amx_fieldmedic_automaxhp", "80");
-    g_medic_time = register_cvar("amx_fieldmedic_time", "0.1");
-    g_medic_step = register_cvar("amx_fieldmedic_step", "1");
-    g_medic_maxhp = register_cvar("amx_fieldmedic_maxhp", "100");
-    g_medic_maxspeed = register_cvar("amx_fieldmedic_maxspeed", "30");
-    g_maxspeed_enable = register_cvar("amx_fieldmedic_maxspeed_enable", "0");
-    g_medic_sound = register_cvar("amx_fieldmedic_sound", "1");
-    g_medic_maxcalls = register_cvar("amx_fieldmedic_calls", "2");
+    g_medic_ctrl = register_cvar("amx_playerhealer_ctrl", "3");
+    g_auto_time = register_cvar("amx_playerhealer_autotime", "1.0");
+    g_auto_step = register_cvar("amx_playerhealer_autostep", "1");
+    g_auto_maxhp = register_cvar("amx_playerhealer_automaxhp", "80");
+    g_medic_time = register_cvar("amx_playerhealer_time", "0.1");
+    g_medic_step = register_cvar("amx_playerhealer_step", "1");
+    g_medic_maxhp = register_cvar("amx_playerhealer_maxhp", "100");
+    g_medic_maxspeed = register_cvar("amx_playerhealer_maxspeed", "30");
+    g_maxspeed_enable = register_cvar("amx_playerhealer_maxspeed_enable", "0");
+    g_medic_sound = register_cvar("amx_playerhealer_sound", "1");
+    g_medic_maxcalls = register_cvar("amx_playerhealer_calls", "2");
 
     register_plugin(PLUGIN, VERSION, AUTHOR);
-    register_concmd("amx_fieldmedic", "control_medic", ADMIN_CFG, "<#|?>");
+    register_concmd("amx_playerhealer", "control_medic", ADMIN_CFG, "<#|?>");
     register_clcmd("say_team /medic", "cmd_medic", 0, "Call for a Medic");
     register_forward(FM_SetClientMaxspeed, "fwd_maxspeed");
 
