@@ -1,0 +1,67 @@
+"Action Manifest"
+{	
+	"version"		"3"
+	"revision"		"1"
+	"major_revision"		"1"
+	"major_revision_affects_mousekb" "1"
+	"major_revision_affects_xinput" "1"
+
+	"configurations"
+	{
+		"controller_neptune"
+		{
+			"0"
+			{
+				"path" "deck_controller_config_standard.vdf"
+			}
+			"1"
+			{
+				"path" "deck_controller_config_gyro.vdf"
+			}
+		}
+	
+		"controller_ps4"
+		{
+			"0"
+			{
+				"path" "ps4_controller_config_standard.vdf"
+			}
+			"1"
+			{
+				"path" "ps4_controller_config_gyro.vdf"
+			}
+		}
+
+		"controller_xboxone"
+		{
+			"0"
+			{
+				"path" "xbox_controller_config_standard.vdf"
+			}
+		}
+
+		"controller_switch_pro"
+		{
+			"0"
+			{
+				"path" "switch_controller_config_standard.vdf"
+			}
+			"1"
+			{
+				"path" "switch_controller_config_gyro.vdf"
+			}
+		}
+
+		"controller_steamcontroller_gordon"
+		{
+			"0"
+			{
+				"path" "sc_controller_config_standard.vdf"
+			}
+			"1"
+			{
+				"path" "sc_controller_config_gyro.vdf"
+			}
+		}
+	}
+}
