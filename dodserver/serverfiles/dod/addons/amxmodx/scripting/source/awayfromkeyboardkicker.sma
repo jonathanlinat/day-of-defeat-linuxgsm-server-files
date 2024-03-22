@@ -63,14 +63,14 @@ public check_afktime(id) {
 
     if (maxafktime - WARNING_TIME <= g_afktime[id] && g_afktime[id] < maxafktime) {
         new timeleft = maxafktime - g_afktime[id];
-        client_print(id, print_chat, "You have %i seconds to move or you will be kicked for being AFK", timeleft);
+        client_print(id, print_chat, "You have %i seconds to move or you will be kicked for being AFK.", timeleft);
     } else if (g_afktime[id] >= maxafktime) {
         new name[32];
         get_user_name(id, name, 31);
 
-        client_print(0, print_chat, "%s was kicked for being AFK longer than %i seconds", name, maxafktime);
-        log_amx("%s was kicked for being AFK longer than %i seconds", name, maxafktime);
-        server_cmd("kick #%d ^"You were kicked for being AFK longer than %i seconds^"", get_user_userid(id), maxafktime);
+        client_print(0, print_chat, "%s was kicked for being AFK longer than %i seconds.", name, maxafktime);
+        log_amx("%s was kicked for being AFK longer than %i seconds.", name, maxafktime);
+        server_cmd("kick #%d ^"You were kicked for being AFK longer than %i seconds.^"", get_user_userid(id), maxafktime);
     }
 }
 
