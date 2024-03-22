@@ -1,0 +1,12 @@
+global 
+{
+	ZOOM		1.00
+	ORIGIN	-101.47	137.91	-77.50
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/dod_northbound.bmp"
+	HEIGHT	538.00
+}

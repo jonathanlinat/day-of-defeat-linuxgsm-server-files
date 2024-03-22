@@ -1,0 +1,14 @@
+// overview description file for dod_flash
+
+global 
+{
+	ZOOM		1.19
+	ORIGIN		-295.99		-514.16		208.00
+	ROTATED		1
+}
+
+layer 
+{
+	IMAGE	"overviews/dod_flash.bmp"
+	HEIGHT	-191.00
+}

@@ -1,0 +1,14 @@
+// overview description file for mymap.bsp
+
+global 
+{
+	ZOOM		0.86
+	ORIGIN		-468	438	2
+	ROTATED		0
+}
+
+layer 
+{
+	IMAGE	"overviews/dod_forest.bmp"
+	HEIGHT	-882.00
+}

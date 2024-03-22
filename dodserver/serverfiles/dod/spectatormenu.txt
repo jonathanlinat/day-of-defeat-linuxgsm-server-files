@@ -1,0 +1,46 @@
+// Command Menu definition
+// 
+// Basic Format:
+//		"<Bound Key>" "<Button Text>" "<Command sent to server>"
+//
+// 
+//
+//
+// Buttons can also open up submenus, as follows:
+// {
+// 	"Some More Options",
+//	{
+//		...
+//	}
+// }
+//
+//
+// Buttons preceded with "CUSTOM" are handled in special ways. They can only be moved
+// around or deleted.
+//
+//
+// Limitations:
+//		Maximum of 50 menus.
+//		Maximum of 100 buttons per menu.
+
+//--------------------------------------------------------
+// Everything below here is editable
+
+"6" "#DoD_Close" "spec_menu 0"
+
+"5" "#DoD_ChooseTeam" "changeteam"
+
+"4" "#DoD_Help"	"spec_help"
+
+TOGGLE 	"true" "3" "#DoD_ChatMessages"		"hud_saytext"
+
+TOGGLE	"true" "2" "#DoD_AutoDirector"		"spec_autodirector"
+
+TOGGLE	"false" "1" "#DoD_ShowScores"		"togglescores"
+
+
+
+
+
+
+

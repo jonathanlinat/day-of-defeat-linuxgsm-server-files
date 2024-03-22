@@ -1,0 +1,13 @@
+// overview description file for dod_sturm
+global 
+{
+	ZOOM		1.06
+	ORIGIN		-227.97		555.77		1658.00
+	ROTATED		0
+}
+
+layer 
+{
+	IMAGE	"overviews/dod_sturm.bmp"
+	HEIGHT	-3365.00
+}

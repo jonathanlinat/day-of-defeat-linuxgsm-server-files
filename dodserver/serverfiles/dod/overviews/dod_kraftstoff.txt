@@ -1,0 +1,14 @@
+// overview description file for dod_kraftstoff.bsp
+
+global 
+{
+	ZOOM	1.05
+	ORIGIN	686.94 		-311.44		196.00
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/dod_kraftstoff.bmp"
+	HEIGHT	-167.00
+}

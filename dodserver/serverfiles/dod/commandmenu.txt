@@ -1,0 +1,119 @@
+// Command Menu definition
+// 
+// Basic Format:
+//		"<Bound Key>" "<Button Text>" "<Command sent to server>"
+//
+// Or you can check for a specific class:
+//		<Class> "<BoundKey>" "<Button Text>" "<Command sent to server>"
+// Where <Class> is one of: SCOUT, SNIPER, SOLDIER, DEMOMAN, MEDIC, HWGUY, PYRO, SPY, ENGINEER
+// 
+// Or you can check for a specific map:
+//		MAP <MapName> "<BoundKey>" "<Button Text>" "<Command sent to server>"
+// Where <MapName> is the name of the map, without the ".bsp".
+//
+// Or you can check for a specific team:
+//		TEAM1 "<BoundKey>" "<Button Text>" "<Command sent to server>"
+//		TEAM2 "<BoundKey>" "<Button Text>" "<Command sent to server>"
+// TEAM3, TEAM4 work as well
+//
+// Buttons can also open up submenus, as follows:
+// {
+// 	"Some More Options",
+//	{
+//		...
+//	}
+// }
+//
+// Class can be any of the following:
+//		SCOUT, SNIPER, SOLDER, DEMOMAN, MEDIC, HWGUY, PYRO, SPY, ENGINEER
+//	Buttons prepended with a class name will only be seen if the player
+//	is that class. 
+//
+// Buttons preceded with "CUSTOM" are handled in special ways. They can only be moved
+// around or deleted.
+//
+//
+// Limitations:
+//		Maximum of 40 menus.
+//		Maximum of 100 buttons per menu.
+
+//--------------------------------------------------------
+// Everything below here is editable
+
+"1" "HELP"
+{
+	CUSTOM		"1" "SERVER INFO"		"!SERVERINFO"
+	CUSTOM		"2" "MAP DESCRIPTION"		"!MAPBRIEFING"
+}
+
+"2" "CHANGE CLASS"	"changeclass"
+"3" "CHANGE TEAM"	"changeteam"
+
+// Custom maps section
+
+	MAP dod_caen "4" "MAP DOD_CAEN"
+	{
+		"1" "'Capture those flags'"		"say_team Capture those flags"
+		"2" "'Bomb their tanks'"		"say_team Bomb their tanks"
+		"3" "'I'm going to capture..."
+		{
+			"1" "the Allies Spawn'"			"say_team I'm going to capture the Allies Spawn!"
+			"2" "the Allies Plaza'"			"say_team I'm going to capture the Allies Plaza!"
+			"3" "the Allies Courtyard'"		"say_team I'm going to capture the Allies Courtyard!"
+			"4" "the Axis Courtyard'"		"say_team I'm going to capture the Axis Courtyard!"
+			"5" "the Axis Plaza'"			"say_team I'm going to capture the Axis Plaza!"	
+			"5" "the Axis Spawn'"			"say_team I'm going to capture the Axis Spawn!"	
+		}
+		"4" "'Need defense at..."
+		{
+			"1" "the Allies Spawn'"			"say_team We need defense at the Allies Spawn!"
+			"2" "the Allies Plaza'"			"say_team We need defense at the Allies Plaza!"
+			"3" "the Allies Courtyard'"		"say_team We need defense at the Allies Courtyard!"
+			"4" "the Axis Courtyard'"		"say_team We need defense at the Axis Courtyard!"
+			"5" "the Axis Plaza'"			"say_team We need defense at the Axis Plaza!"	
+			"5" "the Axis Spawn'"			"say_team We need defense at the Axis Spawn!"	
+		}
+	}
+
+"5" "VOICE MESSAGES 1"
+{
+	"1" 	"'Move out'"		"voice_attack"
+	"2"	"'Fall Back'"		"voice_fallback"
+	"3"	"'Covering Fire'"	"voice_cover"
+	"4" 	"'I need backup'"	"voice_backup"
+	"5" 	"'Hold this position'"	"voice_hold"
+}
+
+"6" "VOICE MESSAGES 2"
+{
+	"1" "'Yes Sir!'"		"voice_yessir"
+	"2" "'Left!'"			"voice_left"
+	"3" "'Right!'"			"voice_right"
+	"4" "'I need ammo'"		"voice_needammo"
+	"5" "'Sniper!'"			"voice_sniper"
+	"6" "'Grenade!'"		"voice_grenade"
+}
+
+"7" "HAND SIGNALS 1"
+{
+	"1" "'Stick Together'"		"signal_sticktogether"
+	"2" "'Fall Back'"		"signal_fallback"
+	"3" "'No Sir'"			"signal_no"
+	"4" "'Yes Sir'"			"signal_yes"
+	"5" "'Sniper!'"			"signal_sniper"
+	"6" "'Need Backup'"		"signal_backup"
+	"7" "'Right'"			"signal_enemyright"
+	"8" "'Left'"			"signal_enemyleft"
+}
+
+"8" "HAND SIGNALS 2"
+{
+	"1" "'Flank Left'"		"signal_flankleft"
+	"2" "'Flank Right'"		"signal_flankright"
+	"3" "'Move Out'"		"signal_moveout"
+	"4" "'Area Clear'"		"signal_areaclear"
+	"5" "'Covering Fire'"		"signal_coveringfire"
+	"6" "'Hold Position'"		"signal_holdposition"
+	"7" "'Enemy Ahead'"		"signal_enemyspotted"
+	"8" "'Grenade!'"		"signal_grenade"
+}

@@ -1,0 +1,14 @@
+// overview description file for dod_avalanche
+
+global 
+{
+	ZOOM		1.61
+	ORIGIN		424.00		160.00		112.00
+	ROTATED		0
+}
+
+layer 
+{
+	IMAGE	"overviews/dod_avalanche.bmp"
+	HEIGHT	-631.00
+}

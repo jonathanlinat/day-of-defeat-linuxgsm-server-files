@@ -1,0 +1,14 @@
+// overview description file for dod_donner.bsp
+
+global 
+{
+	ZOOM		1.11
+	ORIGIN		-150.75	-1021.05	-576.00
+	ROTATED		1
+}
+
+layer 
+{
+	IMAGE	"overviews/dod_donner.bmp"
+	HEIGHT	-2305.00
+}

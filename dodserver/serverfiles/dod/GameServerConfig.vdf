@@ -1,0 +1,44 @@
+// DOD DEDICATED SERVER CONFIGURATION SPECIFICATION FOR GUI
+"GameServerConfig"
+{
+	"mp_timelimit"
+	{
+		"name" "Time limit"
+		"type" "string"
+	}
+	"mp_footsteps"
+	{
+		"name" "Footsteps"
+		"type" "enumeration"
+		"list"
+		{
+			"0" "Disabled"
+			"1" "Enabled"
+		}
+	}
+	"mp_friendlyfire"
+	{
+		"name" "Friendly fire"
+		"type" "enumeration"
+		"list"
+		{
+			"0" "Disabled"
+			"1" "Enabled"
+		}
+	}
+	"mp_tkpenalty"
+	{
+		"name" "Consecutive Teamkills Limit"
+		"type" "string"
+	}
+	"mp_flashlight"
+	{
+		"name" "Flashlight"
+		"type" "enumeration"
+		"list"
+		{
+			"0" "Disabled"
+			"1" "Enabled"
+		}
+	}
+}

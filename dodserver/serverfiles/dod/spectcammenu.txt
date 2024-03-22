@@ -1,0 +1,36 @@
+// Command Menu definition
+// 
+// Basic Format:
+//		"<Bound Key>" "<Button Text>" "<Command sent to server>"
+//
+// 
+//
+//
+// Buttons can also open up submenus, as follows:
+// {
+// 	"Some More Options",
+//	{
+//		...
+//	}
+// }
+//
+//
+// Buttons preceded with "CUSTOM" are handled in special ways. They can only be moved
+// around or deleted.
+//
+//
+// Limitations:
+//		Maximum of 50 menus.
+//		Maximum of 100 buttons per menu.
+
+//--------------------------------------------------------
+// Everything below here is editable
+
+"4" "#OBS_IN_EYE"		"spec_mode 4"
+"3" "#OBS_ROAMING"		"spec_mode 3"
+"2" "#OBS_CHASE_FREE"	"spec_mode 2"
+"1" "#OBS_CHASE_LOCKED"	"spec_mode 1"
+
+
+
+

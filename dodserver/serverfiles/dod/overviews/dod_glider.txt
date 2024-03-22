@@ -1,0 +1,14 @@
+// overview description file for dod_glider.bsp
+
+global 
+{
+	ZOOM	1.14
+	ORIGIN	426 	308	1553
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/dod_glider.bmp"
+	HEIGHT	-503
+}

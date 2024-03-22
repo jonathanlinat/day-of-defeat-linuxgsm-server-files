@@ -1,96 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>DoD 1.3 Community MOTD</title>
-        <style>
-            body {
-                margin: 8px;
-                font-family: Verdana, Tahoma, sans-serif;
-                font-size: 10pt;
-                font-weight: 400;
-                line-height: 200%;
-                background: #000;
-                color: #fff;
-            }
-            .highlighted {
-                padding: 4px 6px;
-                background-color: #fb0;
-                color: #000;
-            }
-            h1 {
-                font-size: 18pt;
-            }
-            h2 {
-                margin-top: 32px;
-                padding-top: 32px;
-                border-top: 1px solid #555;
-                font-size: 14pt;
-            }
-            h3 {
-                margin-top: 24px;
-                font-size: 12pt;
-            }
-            li,
-            p {
-                font-weight: 700;
-            }
-            p {
-                color: #fb0;
-            }
-            li {
-                color: #fff;
-            }
-            .normalized {
-                font-size: 10pt;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>DoD 1.3 Community <span class="highlighted normalized">https://discord.gg/dodcommunity</span></h1>
-        <p>Welcome to this <span class="highlighted">Day of Defeat</span> public gaming server, powered by cutting-edge server technologies for optimal performance.</p>
-        <h2>Some Common Rules</h2>
-        <p>We strive to create a welcoming and respectful gaming environment. To ensure everyone has a positive experience, we adhere to some basic rules of conduct:</p>
-        <ul>
-            <li>No violence or promotion of violence.</li>
-            <li>No racism, discrimination, or hate speech of any kind.</li>
-            <li>Respect all players and admins - personal attacks or harassment will not be tolerated.</li>
-            <li>Keep language and behavior appropriate for a diverse community.</li>
-            <li>Follow all game-specific rules as outlined by server admins or in server documentation.</li>
-        </ul>
-        <p>Violations of these rules may result in a warning, temporary ban, or permanent ban, depending on the severity of the offense. Let's work together to keep our server a fun and safe place for everyone.</p>
-        <h2>Seeking Assistance?</h2>
-        <p>If you encounter any issues or have questions about the server, our active and friendly Discord community is here to help. Connect with us on Discord to get in touch with an admin, moderator, or fellow players for support, tips, or just to chat about the game.</p>
-        <p>Don't hesitate to join, whether you need help troubleshooting, are looking for teammates, or want to share your experiences:</p>
-        <h2>Server Characteristics</h2>
-        <p>This public gaming server is based on <span class="highlighted">LinuxGSM</span> for management, utilizes <span class="highlighted">ReHLDS</span> for security and stability, features <span class="highlighted">Metamod-r</span> for functionality, and is equipped with <span class="highlighted">AMX Mod X</span> for an enhanced gameplay experience and administrative capabilities.</p>
-        <h2>Our Map Collection</h2>
-        <p>Delve into a variety of battlefields, each offering unique strategic challenges and environments!</p>
-        <h3>The Official Maps</h3>
-        <ul>
-            <li>dod_anzio</li>
-            <li>dod_avalanche</li>
-            <li>dod_caen</li>
-            <li>dod_charlie</li>
-            <li>dod_chemille</li>
-            <li>dod_donner</li>
-            <li>dod_escape</li>
-            <li>dod_falaise</li>
-            <li>dod_flash</li>
-            <li>dod_flugplatz</li>
-            <li>dod_forest</li>
-            <li>dod_glider</li>
-            <li>dod_jagd</li>
-            <li>dod_kalt</li>
-            <li>dod_kraftstoff</li>
-            <li>dod_lesmont</li>
-            <li>dod_merderet</li>
-            <li>dod_northbound</li>
-            <li>dod_saints</li>
-            <li>dod_sturm</li>
-            <li>dod_switch</li>
-            <li>dod_vicenza</li>
-            <li>dod_zalec</li>
-        </ul>
-    </body>
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Day of Defeat MOTD</title>
+<style>
+    body{
+        background: #000;
+        margin: 8px;
+        color:#FFB000;
+        font: normal 10pt Verdana, Tahoma, sans-serif;
+    }
+ 
+    a {
+        color: #655521;
+        text-decoration: underline;
+    }
+ 
+    a:hover {
+        color: #655521;
+        text-decoration: none;
+    }
+ 
+    h3 {
+        margin:0;
+        font-size: 16pt;
+    }
+ 
+    body p {
+        line-height: 1.2;
+        font-weight:700;
+    }
+ 
+    .white {color:#fff}
+</style>
+</head>
+<body>
+<h3 class="white">Day of Defeat</h3>
+<p>Welcome to <i>Day of Defeat</i>.
+<i>Day of Defeat</i> is a World War II multiplayer game driven by the Half-life
+engine. DoD attempts to recreate WWII battles in both fictional and
+non-fictional environments - the game puts you in the shoes (rather, combat
+boots!) of a British, American or German soldier circa 1944, Western Europe.</p>
+<p class="white">You can visit DoD at: <a href="http://www.dayofdefeat.net/">http://www.dayofdefeat.net/</a></p>
+</body>
 </html>

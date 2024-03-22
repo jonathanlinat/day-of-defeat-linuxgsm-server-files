@@ -1,0 +1,14 @@
+// overview description file for dod_switch.bsp
+
+global 
+{
+	ZOOM	1.16
+	ORIGIN	1146.00	582.50	-432.00
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/dod_switch.bmp"
+	HEIGHT	-1120.00
+}

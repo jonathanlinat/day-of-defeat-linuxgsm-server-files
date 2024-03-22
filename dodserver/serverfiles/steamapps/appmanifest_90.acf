@@ -1,0 +1,53 @@
+"AppState"
+{
+	"appid"		"90"
+	"Universe"		"1"
+	"name"		"Half-Life Dedicated Server"
+	"StateFlags"		"4"
+	"installdir"		"Half-Life"
+	"LastUpdated"		"1711116643"
+	"LastPlayed"		"0"
+	"SizeOnDisk"		"99518386"
+	"StagingSize"		"0"
+	"buildid"		"5433925"
+	"LastOwner"		"76561199197204697"
+	"UpdateResult"		"0"
+	"BytesToDownload"		"661250784"
+	"BytesDownloaded"		"661250784"
+	"BytesToStage"		"1228657887"
+	"BytesStaged"		"1228657887"
+	"TargetBuildID"		"5433925"
+	"AutoUpdateBehavior"		"0"
+	"AllowOtherDownloadsWhileRunning"		"0"
+	"ScheduledAutoUpdate"		"0"
+	"InstalledDepots"
+	{
+		"4"
+		{
+			"manifest"		"8690279432129063737"
+			"size"		"25737094"
+		}
+		"1006"
+		{
+			"manifest"		"4884950798805348056"
+			"size"		"73781292"
+		}
+	}
+	"SharedDepots"
+	{
+		"1"		"70"
+		"11"		"10"
+		"71"		"70"
+		"31"		"30"
+	}
+	"UserConfig"
+	{
+		"mod"		"dod"
+		"BetaKey"		"steam_legacy"
+	}
+	"MountedConfig"
+	{
+		"mod"		"dod"
+		"BetaKey"		"steam_legacy"
+	}
+}

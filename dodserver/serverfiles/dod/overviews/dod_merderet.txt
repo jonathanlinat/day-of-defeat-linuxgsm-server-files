@@ -1,0 +1,14 @@
+// overview description file for dod_merderet.bsp
+
+global 
+{
+	ZOOM	1.07
+	ORIGIN	-168.59	428.59	-1677.50
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/dod_merderet.bmp"
+	HEIGHT	-3412.00
+}

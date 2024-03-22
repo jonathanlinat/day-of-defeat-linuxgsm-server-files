@@ -1,0 +1,61 @@
+
+Console initialized.
+Using breakpad crash handler
+Setting breakpad minidump AppID = 30
+Forcing breakpad minidump interfaces to load
+tid(423002) burning pthread_key_t == 0 so we never use it
+Looking up breakpad interfaces from steamclient
+Calling BreakpadMiniDumpSystemInit
+Protocol version 48
+Exe version 1.1.2.6/Stdio (dod)
+Exe build: 15:18:27 Mar 18 2024 (3628)
+STEAM Auth Server
+Server IP address 0.0.0.0:27015
+   
+   Metamod-r version 1.3.0.149 Copyright (c) 2016-2018 ReHLDS Team (rebuild of original Metamod by Will Day and Jussi Kivilinna)
+   Metamod-r comes with ABSOLUTELY NO WARRANTY; for details type `meta gpl'.
+   This is free software, and you are welcome to redistribute it
+   under certain conditions; type `meta gpl' for details.
+   
+Metamod-r v1.3.0.149, API (5:13)
+Metamod-r build: 18:21:15 Jan 15 2024
+Metamod-r from: https://github.com/theAsmodai/metamod-r/commit/603a257
+
+   AMX Mod X version 1.10.0.5467 Copyright (c) 2004-2015 AMX Mod X Development Team 
+   AMX Mod X comes with ABSOLUTELY NO WARRANTY; for details type `amxx gpl'.
+   This is free software and you are welcome to redistribute it under 
+   certain conditions; type 'amxx gpl' for details.
+  
+L 03/22/2024 - 10:15:23: -------- Mapchange to dod_Anzio --------
+L 03/22/2024 - 10:15:23: [DODX] Could not load stats file: dod/addons/amxmodx/data/dodstats.dat
+[AMXX] Loaded 1 admin from file
+[S_API FAIL] SteamAPI_Init() failed; SteamAPI_IsSteamRunning() failed.
+CAppInfoCacheReadFromDiskThread took 7 milliseconds to initialize
+dlmopen steamservice.so failed: steamservice.so: cannot open shared object file: No such file or directory
+Looking up breakpad interfaces from steamclient
+Calling BreakpadMiniDumpSystemInit
+
+Executing AMX Mod X Configuration File 
+Scrolling message displaying frequency: 10:00 minutes
+Server logging data to file logs/L0322000.log
+L 03/22/2024 - 10:15:23: Log file started (file "logs/L0322000.log") (game "dod") (version "48/1.1.2.6/Stdio/3628")
+L 03/22/2024 - 10:15:23: Server cvar "sv_aim" = "0"
+L 03/22/2024 - 10:15:23: Server cvar "pausable" = "0"
+L 03/22/2024 - 10:15:23: Server cvar "sv_maxspeed" = "320"
+L 03/22/2024 - 10:15:23: Server cvar "mp_timelimit" = "20"
+couldn't exec listip.cfg
+couldn't exec banned.cfg
+Connection to Steam servers successful.
+   VAC secure mode is activated.
+quit
+L 03/22/2024 - 10:15:33: [META] ini: Begin re-reading plugins list: /home/dodserver/serverfiles/dod/addons/metamod/plugins.ini
+L 03/22/2024 - 10:15:33: [META] ini: Read plugin config for: AMX Mod X
+L 03/22/2024 - 10:15:33: [META] ini: Finished reading plugins list: /home/dodserver/serverfiles/dod/addons/metamod/plugins.ini; Found 1 plugins
+L 03/22/2024 - 10:15:33: [META] dll: Updating plugins...
+L 03/22/2024 - 10:15:33: [META] dll: Finished updating 2 plugins; kept 1, loaded 0, unloaded 0, reloaded 0, delayed 0
+L 03/22/2024 - 10:15:33: [META] dll: Rebuilding callbacks...
+L 03/22/2024 - 10:15:33: [META] dll: Callbacks rebuilded.
+L 03/22/2024 - 10:15:33: Server shutdown
+L 03/22/2024 - 10:15:33: Log file closed
+L 03/22/2024 - 10:15:33: Server shutdown
+Fri 22 Mar 2024 10:15:33 AM EDT: Server restart in 10 seconds

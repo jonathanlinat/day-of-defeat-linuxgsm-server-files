@@ -1,19 +1,24 @@
 #!/bin/bash
-# AMX Mod X Compilation Script
-# Compiles .sma files from the source directory to the plugins directory
 
-SOURCE_DIR="./source"
-PLUGINS_DIR="./../plugins"
+# AMX Mod X
+#
+# by the AMX Mod X Development Team
+#  originally developed by OLO
+#
+# This file is part of AMX Mod X.
 
-if [ ! -d "$PLUGINS_DIR" ]; then
-  mkdir -p "$PLUGINS_DIR"
-fi
+# new code contributed by \malex\
 
-rm -f "$PLUGINS_DIR"/*
+test -e compiled || mkdir compiled
+rm -f temp.txt
 
-for sourcefile in $SOURCE_DIR/*.sma; do
-  filename=$(basename "$sourcefile")
-  amxxfile="${filename%.sma}.amxx"
-  echo -n "Compiling $filename ..."
-  ./amxxpc "$sourcefile" -o"$PLUGINS_DIR/$amxxfile"
+for sourcefile in *.sma
+do
+        amxxfile="`echo $sourcefile | sed -e 's/\.sma$/.amxx/'`"
+        echo -n "Compiling $sourcefile ..."
+        ./amxxpc $sourcefile -ocompiled/$amxxfile >> temp.txt
+        echo "done"
 done
+
+less temp.txt
+rm temp.txt
