@@ -93,7 +93,7 @@ public plugin_init() {
 
     register_plugin(PLUGIN, VERSION, AUTHOR);
     register_concmd("amx_playerhealer", "control_medic", ADMIN_CFG, "<#|?>");
-    register_clcmd("say_team /medic", "cmd_medic", 0, "Call for a Medic");
+    register_clcmd("say_team /medic", "cmd_medic", 0, "- call for a medic");
     register_forward(FM_SetClientMaxspeed, "fwd_maxspeed");
 
     RegisterHam(Ham_Spawn, "player", "ham_player_spawn", 1);
