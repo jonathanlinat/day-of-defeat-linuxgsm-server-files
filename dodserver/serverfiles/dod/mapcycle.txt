@@ -10,6 +10,7 @@ dod_glider
 dod_stuka
 dod_jagd
 dod_charlie
+dod_heutau
 dod_chemille
 dod_kalt
 dod_bastogne
