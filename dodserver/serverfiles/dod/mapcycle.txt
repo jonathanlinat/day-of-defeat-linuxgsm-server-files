@@ -22,6 +22,7 @@ dod_switch
 dod_diversion
 dod_vicenza
 dod_flash
+dod_eden
 dod_kraftstoff
 dod_hobofire
 dod_flugplatz
