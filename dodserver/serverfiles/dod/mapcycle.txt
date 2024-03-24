@@ -20,4 +20,5 @@ dod_diversion
 dod_vicenza
 dod_flash
 dod_kraftstoff
+dod_hobofire
 dod_flugplatz
