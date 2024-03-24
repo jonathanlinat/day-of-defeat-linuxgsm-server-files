@@ -10,6 +10,7 @@ dod_harrington
 dod_glider
 dod_stuka
 dod_jagd
+dod_aleutian
 dod_charlie
 dod_heutau
 dod_chemille
