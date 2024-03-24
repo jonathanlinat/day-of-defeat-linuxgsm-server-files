@@ -1,0 +1,30 @@
+Map Name: DoD_Railroad
+Version : Final              
+Author  : Instacrome
+Contact : instacrome@hotmail.com    
+Website : Infocore.org
+
+-----------------------
+
+Textures: Kamikazi! and Mikezilla
+
+*Objectives:
+
+*ALLIES:
+ Take control of the village and the railroad going
+ through it. Doing this will secure supplies for
+ the front lines.
+
+*AXIS:
+ Keep the Allies from taking control of the village
+ so that the Allies won't be able to use
+ the railroad in upcoming campaigns.
+
+-----------------------
+
+Thanks to :
+
+Kamikazi and Mikezilla for the textures
+Swordzkof for the feedback
+
+
