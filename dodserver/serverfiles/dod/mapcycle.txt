@@ -6,6 +6,7 @@ dod_caen
 dod_railroad
 dod_anzio
 dod_forest
+dod_harrington
 dod_glider
 dod_stuka
 dod_jagd
@@ -24,3 +25,4 @@ dod_flash
 dod_kraftstoff
 dod_hobofire
 dod_flugplatz
+dod_armory

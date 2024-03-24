@@ -1,0 +1,12 @@
+global 
+{
+	ZOOM	1.47
+	ORIGIN	1.09 -675.50 -40.00
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/dod_harrington.bmp"
+	HEIGHT	-369
+}
