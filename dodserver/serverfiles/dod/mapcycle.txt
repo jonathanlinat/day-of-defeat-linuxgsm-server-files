@@ -7,6 +7,7 @@ dod_railroad
 dod_anzio
 dod_forest
 dod_glider
+dod_stuka
 dod_jagd
 dod_charlie
 dod_chemille
