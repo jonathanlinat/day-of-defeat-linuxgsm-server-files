@@ -1,0 +1,65 @@
+DOD_HILL_CLASSIC
+By N C |7
+
+
+Based on DOD_HILL
+By Helvan
+
+
+
+OBJECTIVES
+
+
+-ALLIES
+
+Your objective is to take control of the hill being defended by the axis
+The hill can be captured by taking control of all 4 capture areas (Bunker1,
+Bunker2, Bunker3 and The Hill)
+
+
+-AXIS
+
+You will have 10 minutes to defend the hill from the allied assault
+
+
+
+NOTES:
+
+
+All doors can be opened/closed by pressing the USE key
+
+-ALLIES
+
+There are 2 walls that you can blow to open alternate access points to the
+hill (satchel charges can be found in your spawn)
+
+Using the bazooka (found in your spawn area) you can blow bridge as well as the main wall at
+The end of the bridge to gain another access point to the axis' main stronghold
+
+
+Your team will receive 1 point every time all 4 capture areas are taken
+And each player will receive 1 point for every area that they capture
+
+Each capture area will take 5 seconds to capture The Hill will take 2 people to capture
+
+
+-AXIS
+
+
+There are 3 mortars that can be used within the main axis stronghold and 1 near
+The main path leading to the stronghold
+
+Every time you successfully defend the hill your team will receive 1 point
+
+
+CREDITS
+
+Dod_Hill by Helvan
+
+All textures, models, sounds, sprites and ideas are property of their authors
+
+===========================================
+Map Packaged For DoD 1.0 By Houston DoD
+
+http://www.houstondod.com
+
