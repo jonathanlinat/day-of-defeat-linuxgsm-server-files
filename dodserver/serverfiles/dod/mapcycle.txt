@@ -10,6 +10,7 @@ dod_jagd
 dod_charlie
 dod_chemille
 dod_kalt
+dod_bastogne
 dod_avalanche
 dod_zalec
 dod_advance
