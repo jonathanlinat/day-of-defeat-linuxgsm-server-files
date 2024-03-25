@@ -1,4 +1,4 @@
-// overview description file for dod_armory
+// overview description file for dod_armory_b6
 // overview by nein_
 // map by toxinator
 
