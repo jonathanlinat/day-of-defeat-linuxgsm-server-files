@@ -1,0 +1,14 @@
+// overview made by acetamino for dod_solitude_b2.bsp
+
+global
+{
+	ZOOM		1.16
+	ORIGIN	72.00	40.00	272.00
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/dod_solitude_b2.bmp"
+	HEIGHT	721.00
+}

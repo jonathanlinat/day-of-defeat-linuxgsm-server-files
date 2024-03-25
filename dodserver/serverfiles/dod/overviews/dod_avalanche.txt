@@ -1,4 +1,4 @@
-// overview description file for dod_avalanche
+// overview description file for dod_avalanche.bsp
 
 global 
 {

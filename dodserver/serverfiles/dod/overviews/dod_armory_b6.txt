@@ -1,6 +1,4 @@
-// overview description file for dod_armory_b6
-// overview by nein_
-// map by toxinator
+// overview description file for dod_armory_b6.bsp
 
 global 
 {
@@ -11,6 +9,6 @@ global
 
 layer 
 {
-	IMAGE	"overviews/dod_armory.bmp"
+	IMAGE	"overviews/dod_armory_b6.bmp"
 	HEIGHT	-897.00
 }

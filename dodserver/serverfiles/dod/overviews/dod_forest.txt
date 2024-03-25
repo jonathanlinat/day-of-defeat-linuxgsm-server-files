@@ -1,4 +1,4 @@
-// overview description file for mymap.bsp
+// overview description file for dod_forest.bsp
 
 global 
 {

@@ -1,0 +1,68 @@
+// v2
+// #virtualvengeance
+//
+//___________________________________________________________
+//
+// Detail texture map file for dod_harrington - by steve hisey and sean "cypher" kalas
+//
+//
+//[*TEXTURE]	[*TGA]		     [*hscale][*vscale]
+//
+!kamiwat		detail/rocky		3.0 	3.0	
+{cugzbob 		detail/1		3.0	3.0
+{kl_billgates1e		detail/dt_metal1 	1.0	1.0
+{kl_littal-iveh		detail/dt_grass1	3.0	3.0
+{kl_windowud1		detail/dt_grass1	10.0	10.0
+{mz_treegrate		detail/yeahh		6.0	6.0
+{pk_dodforest02		detail/yeahh		6.0	6.0
+cxbrickfarchi_3		detail/stone2   	10.0	10.0 // archways
+cxbrickftrim_3		detail/penis		10.0	10.0 // lower part of archways
+cxbrickfwdwb_2		detail/penis		10.0	10.0 // upper part of archways
+IR_drunkwall1		detail/dt_stone1	10.0	10.0 // building above shop by axis spawn
+IR_Nbrick1		detail/dt_brick   	10.0	10.0
+IR_Ntut2		detail/dt_stone2	20.0	20.0 // light tan squares top stairs
+kl_boulangerie1		detail/dt_stone1	10.0	10.0 // shop by axis spawn
+kl_brick_ahh1		detail/dt_brick		10.0	6.0  // main bricking
+kl_coolrock3		detail/merd_rubble	5.0	5.0  // large rock walls
+kl_demobd3		detail/dt_stone1	10.0	10.0 // building at long w/ opening
+kl_demogr5		detail/merd_rubble	10.0	10.0 // large dark brown bricking
+kl_door			detail/dt_wood		10.0	10.0 // doors
+kl_einluka4		detail/dt_ssteel1	10.0	10.0 // white wall at long
+kl_einluka5		detail/dt_ssteel1	10.0	10.0 // white wall at long
+kl_fedex1		detail/dt_wood1 	5.0	5.0  // mini boxes
+kl_fuxmuds3		detail/dt_grass1	10.0	10.0 // blah grass
+kl_grass2_3		detail/dt_grass1	10.0	10.0 // blah grass		
+kl_leetcobble		detail/dt_stone3	5.0	5.0  // main flooring
+kl_mmmpie1		detail/dt_ground2   	8.0	8.0  // main curbing
+kl_mocarpet1		detail/dt_carpet1 	10.0	10.0 // don't care
+kl_noowp3		detail/dt_fabric2 	10.0	10.0 // inside of hallways
+kl_rewf2		detail/merd_rubble	10.0	10.0 // brick roofing?
+kl_roofside		detail/dt_metal1 	2.0	2.0  // roofing
+kl_secrubble1		detail/rockout		4.0	4.0  // rubble pile at long
+kl_shitwall1c		detail/merd_rubble	10.0	10.0 // brick wall w/ shitty stucko
+kl_sumdoor1		detail/dt_wood1		10.0	10.0 // tiny random brown doors
+kl_tudor3		detail/penis		1.0	1.0  // light wall w/ redish wood by axis 
+kl_wood43		detail/dt_wood1		10.0	10.0 // top of wood parts (ie bridge)
+kl_wud3			detail/dt_wood1		10.0	10.0 // bridge wood
+kl_wutgaet		detail/dt_wood		10.0	10.0 // mid doors
+m_zplanks2		detail/dt_wood2		10.0	10.0 // green wood planks
+pk_dodroof02b		detail/magic		1.0	1.0  // random roofing
+pk_dodroof03a		detail/magic		1.0	1.0  // random roofing
+pk_dodshop01a		detail/dt_stone1	10.0	10.0 // shop by middle planter
+pk_dodshop01c		detail/dt_stone1	10.0	10.0 // shop by middle planter
+pk_dodshop01d		detail/dt_stone1	10.0	10.0 // shop by middle planter
+pk_dodstrshp01		detail/dt_stone1 	10.0	10.0 // shop by middle planter
+pk_dodtudor01a2		detail/dt_stone2	20.0	20.0 // light tan squares
+pk_dodtudor01d		detail/dt_stone2	20.0	20.0 // light tan squares
+pk_dodwall02b		detail/dt_ground2   	10.0	10.0
+pk_dodwall02c		detail/dt_ground2   	10.0	10.0
+pk_dodwall03c		detail/dt_ground2   	10.0	10.0
+pk_dodwall03k		detail/dt_ground2   	10.0	10.0
+pk_dodwall06_2d		detail/dt_ground2 	10.0	10.0 // allied mid shop
+pk_dodwall07a		detail/dt_ground2 	10.0	10.0 // allied mid shop
+pk_dodwall07b		detail/dt_ground2 	10.0	10.0 // ~
+pk_dodwall07e		detail/dt_ground2 	10.0	10.0
+pk_dodwall07f		detail/dt_ground2 	10.0	10.0
+pk_dodwin01a		detail/merd_rubble	10.0	10.0
+
+

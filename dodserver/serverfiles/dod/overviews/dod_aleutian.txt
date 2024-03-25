@@ -1,5 +1,4 @@
-// overview description file for dod_aleutian
-// overview by slaughter
+// overview description file for dod_aleutian.bsp
 
 global 
 {

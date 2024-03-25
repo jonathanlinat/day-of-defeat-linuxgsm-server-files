@@ -1,4 +1,5 @@
-// overview description file for dod_saints
+// overview description file for dod_saints.bsp
+
 global 
 {
 	ZOOM		1.25

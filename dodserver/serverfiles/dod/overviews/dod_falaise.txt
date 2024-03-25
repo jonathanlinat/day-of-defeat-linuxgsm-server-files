@@ -1,4 +1,5 @@
-// overview description file for dod_falaise
+// overview description file for dod_falaise.bsp
+
 global 
 {
 	ZOOM		0.82

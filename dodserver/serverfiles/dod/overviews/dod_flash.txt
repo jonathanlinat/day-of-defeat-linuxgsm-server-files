@@ -1,4 +1,4 @@
-// overview description file for dod_flash
+// overview description file for dod_flash.bsp
 
 global 
 {
