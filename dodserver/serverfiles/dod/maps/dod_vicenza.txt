@@ -15,5 +15,4 @@ Axis Objectives
    - Destroy the two Allied vehicles with Panzerschrecks or Satchels.
    - Prevent the Allies from destroying the Axis vehicles.
 
-Note:
-Use satchel charges to destroy obstacles.
+Note: Use satchel charges to destroy obstacles.

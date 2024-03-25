@@ -1,4 +1,4 @@
-DOD_CAEN by Tim "Waldo" Holt, (timh@valvesoftware.com)
+DOD_CAEN by Tim "Waldo" Holt (timh@valvesoftware.com)
 
 July, 1944, France
 

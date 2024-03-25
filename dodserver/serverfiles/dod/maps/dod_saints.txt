@@ -1,5 +1,4 @@
-DOD_SAINTS by Arjan "IR" Bak
-(arjanb@nuclear-dawn.net)
+DOD_SAINTS by Arjan "IR" Bak (arjanb@nuclear-dawn.net)
 
 1943, Sicily
 
@@ -15,6 +14,3 @@ Axis Objectives:
    
 Textures: Philip "Blazeeer" Klevestav , Daniel "kleinluka" Luka,and Arjan "IR" Bak  
 Base layout design: Jean-Edouard "kominAaa" Fages
-
-
-
