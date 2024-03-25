@@ -1,7 +1,13 @@
-dod_aleutian by larry "slaughter" walper (lwalper@hotmail.com)
+DOD_ALEUTIAN by larry "slaughter" walper, (lwalper@hotmail.com)
 
-In some random place in Europe, the Allied troops are bored and feel trying to kill the Germans who have control of a magical city. The Germans have placed various flags around the map as a symbol of their control but when the Allied jeeps rolled in the flags turned white and the Germans realized they would have to physically run over them again to control them. The Allies could care less about flags, but will need their help to defeat the Mighty Germans in Hitlerville...
-
+In some random place in Europe, the Allied troops are bored and
+feel trying to kill the Germans who have control of a magical city.
+The Germans have placed various flags around the map as a symbol
+of their control but when the Allied jeeps rolled in the flags
+turned white and the Germans realized they would have to
+physically run over them again to control them. The Allies could
+care less about flags, but will need their help to defeat the
+Mighty Germans in Hitlerville...
 
 Thanks to: 
 

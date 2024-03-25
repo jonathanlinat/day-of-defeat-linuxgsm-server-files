@@ -1,12 +1,11 @@
-DoD_Heutau by Florian(floMatic)Plischkowsky 
-original map by: Michael(sector-effector)Goemmel
+DOD_HEUTAU by Florian "floMatic" Plischkowsky & Michael "sector-effector" Goemmel
 
 As the Invasion neared its end, 
 there was only one barrier left to prevent 
 the Allied Forces from entering 
 the southern regions of the Reich: 
 the Chiemgau Region with the key city Heutau, 
-the Wehrmacht´s last real stronghold.
+the Wehrmachtï¿½s last real stronghold.
 
 Thanks to:
 Most thx to Bleibringer ,Sector-Effector , 

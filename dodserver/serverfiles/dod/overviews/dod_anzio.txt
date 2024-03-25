@@ -3,8 +3,6 @@
 global 
 {
 	ZOOM	1.11
-//	ORIGIN	338 	-286	-358
-//	ORIGIN	338 	-286	0
 	ORIGIN 	307.06	372.72	-334.00
 	ROTATED	0
 }

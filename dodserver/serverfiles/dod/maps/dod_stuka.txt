@@ -1,4 +1,5 @@
-by 3D_Mike and mawibse
+DOD_STUKA by 3D_Mike & mawibse
+
 www.3D-Mike.com    www.mawibse.leveldesign.nu
 Recomended minimum number of players are 8
 Flags move slightly from round to round.
@@ -17,5 +18,4 @@ the German air force couldn't use one of their most dreaded machines of
 war on the soon to arrive British Tanks and infantry.
 
 What dreaded machine of war?   
-The Junker Ju87,
-or as it is more commonly called; Stuka.
+The Junker Ju87, or as it is more commonly called; Stuka.

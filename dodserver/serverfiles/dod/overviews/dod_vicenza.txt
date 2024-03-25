@@ -1,4 +1,4 @@
-// overview description file for dod_vicenza
+// overview description file for dod_vicenza.bsp
 
 global 
 {

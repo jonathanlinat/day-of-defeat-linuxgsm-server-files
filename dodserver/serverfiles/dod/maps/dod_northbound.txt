@@ -1,4 +1,4 @@
-DOD_NORTHBOUND by Arttu "skdr" Maki (http://skdr.dayofdefeat.fi)
+DOD_NORTHBOUND by Arttu "skdr" Maki, (http://skdr.dayofdefeat.fi)
 
 January 20, 1945, Northern Front
 
@@ -16,4 +16,3 @@ Axis Objectives:
 
 Textures: Daniel "Kleinluka" Luka
 Models: Valve
-	

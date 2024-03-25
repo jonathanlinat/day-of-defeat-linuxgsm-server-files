@@ -1,4 +1,4 @@
-DOD_ESCAPE by Arjan "IR" Bak (arjanb@invasionworks.com)
+DOD_ESCAPE by Arjan "IR" Bak, (arjanb@invasionworks.com)
 
 Holland, 1944
 
@@ -17,10 +17,3 @@ Axis Objective:
 
 Textures: Arjan "IR" Bak, Scott "Kamikazi!" Jordan,
 Daniel "kleinluka" Luka & Martijn "wizzard" Bak
-
-
-
-
-
-
-

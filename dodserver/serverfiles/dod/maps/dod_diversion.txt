@@ -1,5 +1,4 @@
-dod_diversion
-by Darkwing
+DOD_DIVERSION by Darkwing
 
 Operation Diversion: The Battle for Burha
 

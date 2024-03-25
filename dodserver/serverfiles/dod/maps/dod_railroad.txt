@@ -1,8 +1,4 @@
-Map Name: DoD_Railroad
-Version : Final              
-Author  : Instacrome
-Contact : instacrome@hotmail.com    
-Website : Infocore.org
+DOD_RAILROAD by Instacrome, (instacrome@hotmail.com)
 
 -----------------------
 
@@ -26,5 +22,3 @@ Thanks to :
 
 Kamikazi and Mikezilla for the textures
 Swordzkof for the feedback
-
-

@@ -1,5 +1,4 @@
-DOD_ADVANCE by Magnar "insta" Jenssen 
-(magnar.jenssen@gmail.com)
+DOD_ADVANCE by Magnar "insta" Jenssen, (magnar.jenssen@gmail.com)
 
 Northern France, Near Belgium, Summer 1944
 
@@ -17,4 +16,3 @@ Axis Objectives:
 
 Textures: Valve
 Models: Valve
-	
