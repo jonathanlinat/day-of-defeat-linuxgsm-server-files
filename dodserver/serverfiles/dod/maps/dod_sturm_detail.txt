@@ -1,3 +1,0 @@
-kl_rubble	detail/sturm_dirt	8.0	8.0
-kl_demogr3c2	detail/sturm_rubble	6.0	6.0
-kl_demogr3c3	detail/sturm_rubble	6.0	6.0
