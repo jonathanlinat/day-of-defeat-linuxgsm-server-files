@@ -11,6 +11,5 @@ Allied Objectives:
 Axis Objectives:
    - Capture the 4 flag points
 
-
 Textures: Arjan "IR" Bak, Chad "Masako" Barnsdale,
 Scott "Kamikazi!" Jordan
