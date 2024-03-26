@@ -2,13 +2,13 @@
 
 global 
 {
-	ZOOM	0.85
-	ORIGIN	180.88	33.13	28.00
-	ROTATED	0
+ 	ZOOM 0.85
+ 	ORIGIN 180.88 33.13 28.00
+ 	ROTATED 0
 }
 
 layer 
 {
-	IMAGE	"overviews/dod_jagd.bmp"
-	HEIGHT	-713.00
+ 	IMAGE "overviews/dod_jagd.bmp"
+ 	HEIGHT -713.00
 }

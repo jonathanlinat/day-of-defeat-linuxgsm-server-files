@@ -2,13 +2,13 @@
 
 global 
 {
-	ZOOM		0.82
-	ORIGIN		36.5		227		-97.00
-	ROTATED		1
+ 	ZOOM 0.82
+ 	ORIGIN 36.5 227 -97.00
+ 	ROTATED 1
 }
 
 layer 
 {
-	IMAGE	"overviews/dod_falaise.bmp"
-	HEIGHT	-97.00
+ 	IMAGE "overviews/dod_falaise.bmp"
+ 	HEIGHT -97.00
 }

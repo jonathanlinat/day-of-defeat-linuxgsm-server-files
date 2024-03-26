@@ -2,14 +2,13 @@
 
 global
 {
-	ZOOM 1.27
-	ORIGIN -64.00 -352.00 184.00
-	ROTATED 0
+ 	ZOOM 1.27
+ 	ORIGIN -64.00 -352.00 184.00
+ 	ROTATED 0
 }
 
 layer
 {
-	IMAGE "overviews/dod_bastogne.bmp"
-	HEIGHT -209.00
+ 	IMAGE "overviews/dod_bastogne.bmp"
+ 	HEIGHT -209.00
 }
-

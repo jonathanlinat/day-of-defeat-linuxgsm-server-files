@@ -2,13 +2,13 @@
 
 global 
 {
-	ZOOM	1.14
-	ORIGIN	426 	308	1553
-	ROTATED	0
+ 	ZOOM 1.14
+ 	ORIGIN 426 308 1553
+ 	ROTATED 0
 }
 
 layer 
 {
-	IMAGE	"overviews/dod_glider.bmp"
-	HEIGHT	-503
+ 	IMAGE "overviews/dod_glider.bmp"
+ 	HEIGHT -503
 }

@@ -2,13 +2,13 @@
 
 global 
 {
-	ZOOM		1.26
-	ORIGIN	-57.78	405.31	64.00
-	ROTATED	0
+ 	ZOOM 1.26
+ 	ORIGIN -57.78 405.31 64.00
+ 	ROTATED 0
 }
 
 layer 
 {
-	IMAGE	"overviews/dod_escape.bmp"
-	HEIGHT	-273.00
+ 	IMAGE "overviews/dod_escape.bmp"
+ 	HEIGHT -273.00
 }

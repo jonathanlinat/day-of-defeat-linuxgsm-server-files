@@ -2,13 +2,13 @@
 
 global 
 {
-	ZOOM	0.74
-	ORIGIN	-32	0	44	
-	ROTATED	0
+ 	ZOOM 0.74
+ 	ORIGIN -32 0 44 
+ 	ROTATED 0
 }
 
 layer 
 {
-	IMAGE	"overviews/dod_charlie.bmp"
-	HEIGHT	0
+ 	IMAGE "overviews/dod_charlie.bmp"
+ 	HEIGHT 0
 }

@@ -2,13 +2,13 @@
 
 global 
 {
-	ZOOM	1.11
-	ORIGIN 	307.06	372.72	-334.00
-	ROTATED	0
+ 	ZOOM 1.11
+ 	ORIGIN 307.06 372.72 -334.00
+ 	ROTATED 0
 }
 
 layer 
 {
-	IMAGE	"overviews/dod_anzio.bmp"
-	HEIGHT	25
+ 	IMAGE "overviews/dod_anzio.bmp"
+ 	HEIGHT 25
 }

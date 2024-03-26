@@ -2,13 +2,13 @@
 
 global 
 {
-	ZOOM		1.30
-	ORIGIN	128.91	-791.03	128.00
-	ROTATED	0
+ 	ZOOM 1.30
+ 	ORIGIN 128.91 -791.03 128.00
+ 	ROTATED 0
 }
 
 layer 
 {
-	IMAGE	"overviews/dod_kalt.bmp"
-	HEIGHT	-273.00
+ 	IMAGE "overviews/dod_kalt.bmp"
+ 	HEIGHT -273.00
 }
