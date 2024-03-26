@@ -22,6 +22,7 @@ dod_avalanche
 dod_diversion
 dod_merderet
 dod_escape
+dod_thunder2_b2
 dod_switch
 dod_vicenza
 dod_caen
