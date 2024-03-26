@@ -1,0 +1,14 @@
+// overview description file for dod_eden.bsp
+
+global 
+{
+	ZOOM		1.03
+	ORIGIN		960.00		944.00		288.00
+	ROTATED		1
+}
+
+layer 
+{
+	IMAGE	"overviews/dod_eden.bmp"
+	HEIGHT	-1633.00
+}

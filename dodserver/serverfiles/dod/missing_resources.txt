@@ -1,0 +1,5 @@
+dod_eden
+  3-50471-trees.wad
+  petergrave.wad
+  t8dm5.wad
+  texpack9.wad
