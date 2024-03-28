@@ -12,6 +12,7 @@ dod_anzio
 dod_kalt
 dod_railroad
 dod_jagd
+dod_cherbourg
 dod_falaise
 dod_donner
 a3

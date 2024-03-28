@@ -3,3 +3,16 @@ dod_eden
   petergrave.wad
   t8dm5.wad
   texpack9.wad
+
+dod_cherbourg
+  arc_forest.wad
+  arc_snow.wad
+  dod_frontlines.wad
+  hisupermega.wad
+  int_snowpak2.wad
+  lazy.wad
+  max.wad
+  mz_defeated.wad
+  ortona.wad
+  stal.wad
+  warpig.wad
