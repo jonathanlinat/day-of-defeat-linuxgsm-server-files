@@ -2,6 +2,7 @@ dod_charlie
 dod_flash
 dod_saints
 dod_chemille
+dod_arch
 dod_glider
 dod_sturm
 dod_eden
