@@ -3,22 +3,34 @@ on:
   push:
     branches: [main]
 jobs:
-  deploy:
-    name: Deploy the files
+  sync-gaming-server-files:
+    name: Deploy the gaming server files
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Setup SSH
+      - name: Setup OpenSSH
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.OPENSSH_PRIVATE_KEY }}" > ~/.ssh/${{ secrets.OPENSSH_ID }}
-          chmod 600 ~/.ssh/${{ secrets.OPENSSH_ID }}
+          echo "${{ secrets.VPS_GAMESERVER_OPENSSH_PRIVATE_KEY }}" > ~/.ssh/${{ secrets.VPS_GAMESERVER_OPENSSH_ID }}
+          chmod 600 ~/.ssh/${{ secrets.VPS_GAMESERVER_OPENSSH_ID }}
           ssh-keyscan ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
         shell: bash
-      - name: Synchronize the files
-        run: rsync -e "ssh -i ~/.ssh/${{ secrets.OPENSSH_ID }}" -avvzP --delete --exclude='.*' ${{ secrets.RSYNC_SOURCE_PATH }} ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_HOST }}:${{ secrets.RSYNC_DEST_PATH }}
+      - name: Synchronize the gaming server files
+        run: rsync -e "ssh -i ~/.ssh/${{ secrets.VPS_GAMESERVER_OPENSSH_ID }}" -avvzP --delete --exclude='.*' ${{ secrets.VPS_GAMESERVER_RSYNC_SOURCE_PATH }} ${{ secrets.VPS_GAMESERVER_USERNAME }}@${{ secrets.VPS_HOST }}:${{ secrets.VPS_GAMESERVER_RSYNC_DEST_PATH }}
+        shell: bash
+  restart-gaming-server:
+    name: Restart the gamning server
+    runs-on: ubuntu-latest
+    needs: [sync-gaming-server-files]
+    steps:
+      - name: Setup OpenSSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.VPS_GAMESERVER_OPENSSH_PRIVATE_KEY }}" > ~/.ssh/${{ secrets.VPS_GAMESERVER_OPENSSH_ID }}
+          chmod 600 ~/.ssh/${{ secrets.VPS_GAMESERVER_OPENSSH_ID }}
+          ssh-keyscan ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
         shell: bash
       - name: Restart the gaming server
-        run: ssh -i ~/.ssh/${{ secrets.OPENSSH_ID }} ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_HOST }} -p 22 "${{ secrets.REMOTE_SERVER_BINARY }} restart"
+        run: ssh -i ~/.ssh/${{ secrets.VPS_GAMESERVER_OPENSSH_ID }} ${{ secrets.VPS_GAMESERVER_USERNAME }}@${{ secrets.VPS_HOST }} -p 22 "${{ secrets.VPS_GAMESERVER_BINARY }} restart"
         shell: bash
