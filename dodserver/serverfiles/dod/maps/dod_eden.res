@@ -4,7 +4,7 @@
 // For more info go to http://resgen.hltools.com
 
 // .res entries (38):
-//3-50471-trees.wad
+3-50471-trees.wad
 coldice.wad
 cs_bdog.wad
 cs_cbble.wad
@@ -26,7 +26,7 @@ op4ctf.wad
 opfor.wad
 overviews/dod_eden.bmp
 overviews/dod_eden.txt
-//petergrave.wad
+petergrave.wad
 pine.wad
 rewolf.wad
 sound/ambience/cricket.wav
@@ -37,8 +37,8 @@ sound/ambience/wren1.wav
 sound/debris/beamstart7.wav
 sprites/glow02.spr
 sprites/xflare1.spr
-//t8dm5.wad
-//texpack9.wad
+t8dm5.wad
+texpack9.wad
 tfc.wad
 tfc2.wad
 xeno.wad
