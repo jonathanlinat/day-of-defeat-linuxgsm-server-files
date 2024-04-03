@@ -1,0 +1,14 @@
+// overview description file for dod_a32_b1.bsp
+
+global
+{
+	ZOOM 1.73
+	ORIGIN 0 0 -65
+	ROTATED 1
+}
+
+layer
+{
+	IMAGE "overviews/dod_a32_b1.bmp"
+	HEIGHT -65
+}

@@ -2,8 +2,8 @@
 
 global
 {
-	ZOOM  0.78
-	ORIGIN 39.50  76.5 -1610
+	ZOOM 0.78
+	ORIGIN 39.50 76.5 -1610
 	ROTATED 1
 }
 
