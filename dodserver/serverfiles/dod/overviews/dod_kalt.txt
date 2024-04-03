@@ -1,13 +1,13 @@
 // overview description file for dod_kalt.bsp
 
-global 
+global
 {
  	ZOOM 1.30
  	ORIGIN 128.91 -791.03 128.00
  	ROTATED 0
 }
 
-layer 
+layer
 {
  	IMAGE "overviews/dod_kalt.bmp"
  	HEIGHT -273.00

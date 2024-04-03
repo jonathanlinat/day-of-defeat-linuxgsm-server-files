@@ -1,13 +1,13 @@
 // overview description file for dod_saints.bsp
 
-global 
+global
 {
  	ZOOM 1.25
  	ORIGIN -704.00 196.00 -96.00
  	ROTATED 1
 }
 
-layer 
+layer
 {
  	IMAGE "overviews/dod_saints.bmp"
  	HEIGHT -609.00

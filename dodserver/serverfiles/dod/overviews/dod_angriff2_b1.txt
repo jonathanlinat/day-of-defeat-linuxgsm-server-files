@@ -1,13 +1,13 @@
 // overview description file for dod_angriff2_b1.bsp
 
-global 
+global
 {
 	ZOOM  1.84
 	ORIGIN -835 -352 -65
 	ROTATED 0
 }
 
-layer 
+layer
 {
 	IMAGE "overviews/dod_angriff2_b1.bmp"
 	HEIGHT -65

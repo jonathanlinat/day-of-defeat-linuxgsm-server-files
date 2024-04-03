@@ -1,13 +1,13 @@
 // overview description file for dod_aleutian.bsp
 
-global 
+global
 {
  	ZOOM 1.33
  	ORIGIN 738.00  24.00 -64.00
  	ROTATED 0
 }
 
-layer 
+layer
 {
  	IMAGE "overviews/dod_aleutian.bmp"
  	HEIGHT -417.00

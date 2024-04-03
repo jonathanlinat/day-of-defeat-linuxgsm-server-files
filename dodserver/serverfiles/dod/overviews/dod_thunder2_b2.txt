@@ -1,13 +1,13 @@
 // overview description file for dod_thunder2_b2.bsp
 
-global 
+global
 {
  	ZOOM 1.15
  	ORIGIN -96.00 143.98 -177
  	ROTATED 0
 }
 
-layer 
+layer
 {
  	IMAGE "overviews/dod_thunder2_b2.bmp"
  	HEIGHT -177

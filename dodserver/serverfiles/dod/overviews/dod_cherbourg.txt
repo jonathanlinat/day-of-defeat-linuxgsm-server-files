@@ -1,13 +1,13 @@
 // overview description file for dod_cherbourg.bsp
 
-global 
+global
 {
 	ZOOM  0.78
 	ORIGIN 39.50  76.5 -1610
 	ROTATED 1
 }
 
-layer 
+layer
 {
 	IMAGE "overviews/dod_cherbourg.bmp"
 	HEIGHT -1000

@@ -1,13 +1,13 @@
 // overview description file for dod_forest.bsp
 
-global 
+global
 {
  	ZOOM 0.86
  	ORIGIN -468 438 2
  	ROTATED 0
 }
 
-layer 
+layer
 {
  	IMAGE "overviews/dod_forest.bmp"
  	HEIGHT -882.00

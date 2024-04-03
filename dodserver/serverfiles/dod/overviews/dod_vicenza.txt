@@ -1,13 +1,13 @@
 // overview description file for dod_vicenza.bsp
 
-global 
+global
 {
  	ZOOM 1.03
  	ORIGIN -6.75 252.78 -32.00
  	ROTATED 1
 }
 
-layer 
+layer
 {
  	IMAGE "overviews/dod_vicenza.bmp"
  	HEIGHT -305.00

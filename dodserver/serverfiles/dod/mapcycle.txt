@@ -30,6 +30,7 @@ dod_falaise
 dod_avalanche
 dod_flash
 dod_forest
+dod_snowcity2_b1
 dod_merderet
 dod_cherbourg
 dod_bastogne

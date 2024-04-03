@@ -1,13 +1,13 @@
 // overview description file for dod_zalec.bsp
 
-global 
+global
 {
  	ZOOM 0.74
  	ORIGIN 134.66 34.50 144.00
  	ROTATED 0
 }
 
-layer 
+layer
 {
  	IMAGE "overviews/dod_zalec.bmp"
  	HEIGHT -641.00

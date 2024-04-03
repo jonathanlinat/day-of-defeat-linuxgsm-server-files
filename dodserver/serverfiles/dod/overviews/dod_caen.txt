@@ -1,13 +1,13 @@
 // overview description file for dod_caen.bsp
 
-global 
+global
 {
  	ZOOM 0.85
  	ORIGIN 584.00 260.00 120.008
  	ROTATED 0
 }
 
-layer 
+layer
 {
  	IMAGE "overviews/dod_caen.bmp"
  	HEIGHT -257

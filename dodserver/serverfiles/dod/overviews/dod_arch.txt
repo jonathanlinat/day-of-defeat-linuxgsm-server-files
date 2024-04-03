@@ -1,13 +1,13 @@
 // overview description file for dod_arch.bsp
 
-global 
+global
 {
 	ZOOM 1.16
 	ORIGIN 1146.00 582.50 -432.00
 	ROTATED 0
 }
 
-layer 
+layer
 {
 	IMAGE "overviews/dod_arch.bmp"
 	HEIGHT -1120.00

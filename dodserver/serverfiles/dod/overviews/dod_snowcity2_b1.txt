@@ -1,0 +1,14 @@
+// overview description file for dod_snowcity2_b1.bsp
+
+global
+{
+	ZOOM 1.32
+	ORIGIN 894.28 -238.72 -129
+	ROTATED 0
+}
+
+layer
+{
+	IMAGE "overviews/dod_snowcity2_b1.bmp"
+	HEIGHT -129
+}

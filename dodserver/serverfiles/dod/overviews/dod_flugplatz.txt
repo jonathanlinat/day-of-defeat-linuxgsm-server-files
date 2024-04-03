@@ -1,13 +1,13 @@
 // overview description file for dod_flugplatz.bsp
 
-global 
+global
 {
  	ZOOM .85
  	ORIGIN 199.50 -33.00 -559.00
  	ROTATED 0
 }
 
-layer 
+layer
 {
  	IMAGE "overviews/dod_flugplatz.bmp"
  	HEIGHT -559.00
