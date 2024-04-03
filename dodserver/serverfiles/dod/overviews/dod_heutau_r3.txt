@@ -1,0 +1,14 @@
+// overview description file for dod_heutau_r3.bsp
+
+global
+{
+	ZOOM 0.85
+	ORIGIN 48 0 -529
+	ROTATED 0
+}
+
+layer
+{
+	IMAGE "overviews/dod_heutau_r3.bmp"
+	HEIGHT -529
+}
