@@ -16,3 +16,6 @@ dod_cherbourg
   ortona.wad
   stal.wad
   warpig.wad
+
+dod_gunst2_b1
+  tempdecal.wad

@@ -1,0 +1,14 @@
+// overview description file for dod_gunst2_b1.bsp
+
+global 
+{
+	ZOOM 2.85
+	ORIGIN 0 128 -193
+	ROTATED 1
+}
+
+layer 
+{
+	IMAGE "overviews/dod_gunst2_b1.bmp"
+	HEIGHT -193
+}
