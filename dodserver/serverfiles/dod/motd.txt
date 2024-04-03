@@ -1,12 +1,14 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Day of Defeat MOTD</title>
+        <style>
+            html, body { height: 100%; margin: 0; }
+            iframe { width: 100%; height: 100%; border: none; }
+        </style>
     </head>
     <body>
-        <frameset cols="*">
-            <frame src="http://108.61.151.70/fastdl/motd.html" name="frame_main" frameborder="0">
-        </frameset>
+        <iframe src="http://108.61.151.70/fastdl/motd.html" name="frame_main"></iframe>
     </body>
 </html>
