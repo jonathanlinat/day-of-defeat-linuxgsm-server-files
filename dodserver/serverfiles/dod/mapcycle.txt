@@ -25,6 +25,7 @@ dod_saints
 dod_vicenza
 dod_charlie
 dod_sturm
+dod_angriff2_b1
 dod_falaise
 dod_avalanche
 dod_flash
