@@ -1,0 +1,14 @@
+// overview description file for dod_sulz.bsp
+
+global
+{
+	ZOOM 1.26
+	ORIGIN 384.00 -224.00 -449.00
+	ROTATED 0
+}
+
+layer
+{
+	IMAGE "overviews/dod_sulz.bmp"
+	HEIGHT -449.00
+}
