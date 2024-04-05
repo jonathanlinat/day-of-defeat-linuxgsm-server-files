@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>DoD 1.3 Community MOTD</title>
+        <title>DoD 1.3 Community MOTD (https://discord.gg/dodcommunity)</title>
         <style>
             html,
             body {
