@@ -15,6 +15,7 @@ dod_railroad2_b2
 dod_glider
 dod_aleutian
 dod_donner
+dod_dani_b3
 dod_chemille
 dod_brucke_b1
 dod_railroad
