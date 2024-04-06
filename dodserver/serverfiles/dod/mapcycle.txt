@@ -25,7 +25,7 @@ dod_zalec
 dod_flugplatz
 dod_saints
 dod_vicenza
-dod_sherman3_b1
+dod_tiger2_r2
 dod_charlie
 dod_sturm
 dod_angriff2_b1
