@@ -21,6 +21,6 @@
         </style>
     </head>
     <body>
-        <iframe src="http://108.61.151.70/fastdl/motd.html" name="frame_main"></iframe>
+        <iframe src="http://108.61.151.70/motd.html" name="frame_main"></iframe>
     </body>
 </html>
