@@ -1,0 +1,14 @@
+// overview description file for dod_tensions2_b2.bsp
+
+global
+{
+  ZOOM 2.67
+  ORIGIN -128.00 1184.00 -16.00
+  ROTATED	1
+}
+
+layer
+{
+  IMAGE	"overviews/dod_tensions2_b2.bmp"
+  HEIGHT -321.00
+}
