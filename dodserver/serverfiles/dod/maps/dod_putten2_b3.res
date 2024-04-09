@@ -1,9 +1,9 @@
-// \dod_snowcity2_b1.res - created with RESGen v2.0.2.
+// \dod_putten2_b3.res - created with RESGen v2.0.2.
 // RESGen is made by Jeroen "ShadowLord" Bogers,
 // with serveral improvements and additions by Zero3Cool.
 // For more info go to http://resgen.hltools.com
 
-// .res entries (59):
+// .res entries (67):
 decals.wad
 dod_anzio.wad
 dod_avalanche.wad
@@ -28,37 +28,45 @@ dod_sturm.wad
 dod_vicenza.wad
 dod_zalec.wad
 gfx.wad
-gfx/env/killertomatobk.tga
-gfx/env/killertomatodn.tga
-gfx/env/killertomatoft.tga
-gfx/env/killertomatolf.tga
-gfx/env/killertomatort.tga
-gfx/env/killertomatoup.tga
+gfx/env/jagdbk.tga
+gfx/env/jagddn.tga
+gfx/env/jagdft.tga
+gfx/env/jagdlf.tga
+gfx/env/jagdrt.tga
+gfx/env/jagdup.tga
 hlbasics.wad
 martee.wad
+models/mapmodels/arc_fern.mdl
+models/mapmodels/arc_flower.mdl
+models/mapmodels/arc_xer_tree1.mdl
 models/mapmodels/barbed_wire.mdl
-models/mapmodels/bell.mdl
-models/mapmodels/bulb.mdl
-models/mapmodels/by_statue_snow.mdl
-models/mapmodels/charlie_plans.mdl
-models/mapmodels/furniture.mdl
-models/mapmodels/jed_kubelwagen_camo.mdl
-models/mapmodels/jeep.mdl
+models/mapmodels/by_canopy.mdl
+models/mapmodels/by_rubble_set.mdl
+models/mapmodels/desk_office-mahg.mdl
+models/mapmodels/dinner_table2.mdl
+models/mapmodels/dod_jagd_car.mdl
+models/mapmodels/flo_grass.mdl
+models/mapmodels/flo_grass2.mdl
+models/mapmodels/lamp.mdl
 models/mapmodels/sandbags.mdl
+models/mapmodels/sherman.mdl
 models/mapmodels/street_lamp1.mdl
-models/mapmodels/zalec_2bulb1wire.mdl
-models/mapmodels/zalec_tree1.mdl
+models/mapmodels/tiger.mdl
+models/mapmodels/zalec_1bulb2wire.mdl
 models/w_aflag.mdl
 models/w_gflag.mdl
 models/w_wflag.mdl
-overviews/dod_snowcity2_b1.bmp
-overviews/dod_snowcity2_b1.txt
-sound/ambience/dodambience5.wav
+overviews/dod_putten2_b3.bmp
+overviews/dod_putten2_b3.txt
+sound/ambience/birds_outside1.wav
+sound/ambience/burning1.wav
+sound/ambience/dodambience1.wav
 sound/ambience/germanwin.wav
 sound/ambience/gerpointcaptured.wav
 sound/ambience/truck-1ka.wav
 sound/ambience/uspointcaptured.wav
 sound/ambience/uswin.wav
-sprites/glow01.spr
+sound/ambience/waterrun.wav
+sprites/flames.spr
 sprites/mapsprites/caparea.spr
 sprites/obj_tnt.spr

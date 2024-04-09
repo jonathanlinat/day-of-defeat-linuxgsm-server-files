@@ -61,4 +61,3 @@ sound/ambience/uspointcaptured.wav
 sound/ambience/uswin.wav
 sprites/flames.spr
 sprites/glow01.spr
-tempdecal.wad

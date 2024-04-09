@@ -3,6 +3,7 @@ dod_cherbourg
 dod_jagd
 dod_angriff2_b1
 dod_kraftstoff
+dod_putten2_b3
 dod_flash
 dod_avalanche
 dod_bastogne
