@@ -1,0 +1,14 @@
+// overview description file for dod_adrenalin4.bsp
+
+global
+{
+	ZOOM 1.47
+	ORIGIN 240 224 -1735
+	ROTATED 1
+}
+
+layer
+{
+	IMAGE "overviews/dod_adrenalin4.bmp"
+	HEIGHT -1735
+}

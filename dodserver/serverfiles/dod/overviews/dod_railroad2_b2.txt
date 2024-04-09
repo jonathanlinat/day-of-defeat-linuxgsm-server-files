@@ -4,11 +4,11 @@ global
 {
 	ZOOM 1.32
 	ORIGIN 1624.00 796.00 -64.00
-	ROTATED	0
+	ROTATED 0
 }
 
 layer
 {
-	IMAGE	"overviews/dod_railroad2_b2.bmp"
+	IMAGE "overviews/dod_railroad2_b2.bmp"
 	HEIGHT -497.00
 }
