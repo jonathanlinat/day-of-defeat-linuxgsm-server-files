@@ -3,7 +3,7 @@
 // with serveral improvements and additions by Zero3Cool.
 // For more info go to http://resgen.hltools.com
 
-// .res entries (40):
+// .res entries (42):
 arc_forest.wad
 arc_snow.wad
 dod_frontlines.wad
@@ -25,6 +25,8 @@ models/w_gflag.mdl
 models/w_wflag.mdl
 mz_defeated.wad
 ortona.wad
+overviews/dod_cherbourg.bmp
+overviews/dod_cherbourg.txt
 revenant.wad
 sd.wad
 smoe_cm2.wad

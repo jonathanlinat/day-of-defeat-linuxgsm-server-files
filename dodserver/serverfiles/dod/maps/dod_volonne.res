@@ -30,7 +30,7 @@ models/mapmodels/pine_tree.mdl
 models/mapmodels/sandbags.mdl
 models/mapmodels/street_lamp1.mdl
 models/mapmodels/wood_barrel1.mdl
-models/tnt.mdl
+models/Tnt.mdl
 models/w_aflag.mdl
 models/w_gflag.mdl
 models/w_wflag.mdl
