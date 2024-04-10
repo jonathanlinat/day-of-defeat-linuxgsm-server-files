@@ -2,13 +2,13 @@
 
 global
 {
-	ZOOM 1.47
-	ORIGIN 240 224 -1735
+	ZOOM 1.50
+	ORIGIN 240 224 -1009
 	ROTATED 1
 }
 
 layer
 {
 	IMAGE "overviews/dod_adrenalin4.bmp"
-	HEIGHT -1735
+	HEIGHT -1009
 }

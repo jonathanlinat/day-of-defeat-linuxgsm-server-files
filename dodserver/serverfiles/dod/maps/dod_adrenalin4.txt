@@ -1,5 +1,4 @@
-dod_adrenalin4
-by Darkwing
+DOD_ADRENALIN4 by Darkwing
 
 September 1944
 The prequel to earlier Adrenalin versions.
