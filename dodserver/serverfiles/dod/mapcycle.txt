@@ -39,7 +39,6 @@ dod_railroad
 dod_forest
 dod_diversion
 dod_vicenza
-dod_sherman3_b1
 dod_flugplatz
 dod_merderet
 dod_brucke_b1
