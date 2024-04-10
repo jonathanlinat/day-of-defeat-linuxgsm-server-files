@@ -1,0 +1,14 @@
+// overview description file for dod_volonne.bsp
+
+global
+{
+	ZOOM 1.02
+	ORIGIN 227.55 -64 -408
+	ROTATED 0
+}
+
+layer
+{
+	IMAGE "overviews/dod_volonne.bmp"
+	HEIGHT -1008
+}
