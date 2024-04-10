@@ -1,14 +1,1 @@
 DOD_SULZ by Christian "DaKurt" (cszb@cszb.net)
-
-January, 1944, Germany
-
-A small ville at the german-french frontier. The Allies are going 
-to push the Axis back and capture the city of Sulz.
-Due to the snow they are involved in hard fights against the axis 
-troups.
-
-Allied Objectives: 
-   - Capture the 5 flag points
-
-Axis Objectives:
-   - Capture the 5 flag points

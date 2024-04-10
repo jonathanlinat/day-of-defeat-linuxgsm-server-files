@@ -1,18 +1,1 @@
 DOD_ADVANCE by Magnar "insta" Jenssen (magnar.jenssen@gmail.com)
-
-Northern France, Near Belgium, Summer 1944
-
-After D-Day the massed Allied armies moved inland through the 
-Cotentin peninsula. Axis forces fought a spirited delaying
-action and managed to blunt the Allied advance for several
-months. In small towns the fighting was brutal house-to-house
-combat. This is one of those towns...
-
-Allied Objectives:
-   - Capture all 6 points
-
-Axis Objectives:
-   - Capture all 6 points
-
-Textures: Valve
-Models: Valve
