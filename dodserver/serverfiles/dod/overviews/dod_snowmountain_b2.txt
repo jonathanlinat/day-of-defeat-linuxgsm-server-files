@@ -1,0 +1,14 @@
+// overview description file for dod_snowmountain_b2.bsp
+
+global
+{
+	ZOOM 1.26
+	ORIGIN 32 224 -705
+	ROTATED 0
+}
+
+layer
+{
+	IMAGE "overviews/dod_snowmountain_b2.bmp"
+	HEIGHT -705
+}

@@ -34,6 +34,7 @@ dod_thunder2_b5a
 dod_eden
 dod_tiger2_r2
 dod_sulz
+dod_snowmountain_b2
 dod_glider
 dod_snowcity2_b1
 dod_railroad
