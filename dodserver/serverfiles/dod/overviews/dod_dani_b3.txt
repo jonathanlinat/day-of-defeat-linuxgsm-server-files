@@ -2,13 +2,13 @@
 
 global
 {
-  ZOOM 1.69
-  ORIGIN 36.00 -5.83 248.00 
-  ROTATED 1 
+	ZOOM 1.69
+	ORIGIN 36.00 -5.83 248.00 
+	ROTATED 1 
 }
 
 layer
 {
-  IMAGE "overviews/dod_dani_b3.bmp" 
-  HEIGHT 593
+	IMAGE "overviews/dod_dani_b3.bmp" 
+	HEIGHT 593
 }

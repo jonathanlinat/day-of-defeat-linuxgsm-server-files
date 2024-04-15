@@ -1,0 +1,14 @@
+// overview description file for dod_sidestreets_b1.bsp
+
+global
+{
+	ZOOM 0.99
+	ORIGIN 174 -128 -481
+	ROTATED 0
+}
+
+layer
+{
+	IMAGE "overviews/dod_sidestreets_b1.bmp"
+	HEIGHT -481
+}

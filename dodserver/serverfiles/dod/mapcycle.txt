@@ -11,6 +11,7 @@ dod_tensions2_b2
 dod_avalanche
 dod_bastogne
 dod_anzio
+dod_sidestreets_b1
 dod_zalec
 dod_saints_b7
 dod_escape

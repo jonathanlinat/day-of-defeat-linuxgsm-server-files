@@ -12,4 +12,3 @@ layer
  	IMAGE "overviews/dod_advance.bmp"
  	HEIGHT 1009.00
 }
-
