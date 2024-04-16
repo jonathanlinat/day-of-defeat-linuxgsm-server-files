@@ -1,0 +1,14 @@
+// overview description file for dod_liberte_b2.bsp
+
+global
+{
+  ZOOM 1.17
+  ORIGIN 0.42 31.92 74.00
+  ROTATED 1
+}
+
+layer
+{
+  IMAGE "overviews/dod_liberte_b2.bmp"
+  HEIGHT -621.00
+}
