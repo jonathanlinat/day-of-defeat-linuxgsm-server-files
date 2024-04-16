@@ -1,0 +1,14 @@
+// overview description file for dod_vonbrewski_b1.bsp
+
+global
+{
+	ZOOM 1.51
+	ORIGIN 368 704 -65
+	ROTATED 0
+}
+
+layer
+{
+	IMAGE "overviews/dod_vonbrewski_b1.bmp"
+	HEIGHT -65
+}
