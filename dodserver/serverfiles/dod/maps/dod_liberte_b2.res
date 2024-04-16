@@ -65,12 +65,12 @@ models/mapmodels/sign_shop.mdl
 models/mapmodels/tol_carwreck1.mdl
 models/mapmodels/truck.mdl
 models/TACT2021/88flakup.mdl
-models/TACT2021/ae_smallbush.mdl
-models/TACT2021/bulb.mdl
-models/TACT2021/flo_chairnew.mdl
+models/tact2021/ae_smallbush.mdl
+models/tact2021/bulb.mdl
+models/tact2021/flo_chairnew.mdl
 models/TACT2021/flo_sandbag1337.mdl
-models/TACT2021/lamp.mdl
-models/TACT2021/pooptub.mdl
+models/tact2021/lamp.mdl
+models/tact2021/pooptub.mdl
 models/TACT2021/repunzbottles.mdl
 models/TACT2021/tactrub.mdl
 models/TACT2021/trash1.mdl

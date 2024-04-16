@@ -52,4 +52,3 @@ sound/ambience/uswin.wav
 sound/ambience/windy.wav
 sound/debris/bustconcrete2.wav
 sprites/mapsprites/caparea.spr
-tempdecal.wad
