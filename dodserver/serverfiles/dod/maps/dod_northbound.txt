@@ -1,1 +1,1 @@
-DOD_NORTHBOUND by Arttu "skdr" Maki (http://skdr.dayofdefeat.fi)
+DOD_NORTHBOUND, an official map by Arttu "skdr" Maki (http://skdr.dayofdefeat.fi)

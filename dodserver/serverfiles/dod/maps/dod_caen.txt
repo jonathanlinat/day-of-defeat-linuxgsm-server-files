@@ -1,1 +1,1 @@
-DOD_CAEN by Tim "Waldo" Holt (timh@valvesoftware.com)
+DOD_CAEN, an official map by Tim "Waldo" Holt (timh@valvesoftware.com)
