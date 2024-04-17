@@ -41,7 +41,7 @@ jobs:
           envsubst '$VPS_GAMESERVER_CONFIG_AMX_ADMINS' < dodserver/serverfiles/dod/addons/amxmodx/configs/users.ini.template > dodserver/serverfiles/dod/addons/amxmodx/configs/users.ini
           rm -f dodserver/serverfiles/dod/addons/amxmodx/configs/users.ini.template
         shell: bash
-      - name: Set execute permissions for all files
+      - name: Set execute permissions for the gaming server files
         run: find dodserver/serverfiles/dod -type f -exec chmod 755 {} \;
         shell: bash
       - name: Synchronize the gaming server files
