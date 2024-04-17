@@ -14,10 +14,27 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.VPS_GAMESERVER_OPENSSH_PRIVATE_KEY }}" > ~/.ssh/${{ secrets.VPS_GAMESERVER_OPENSSH_ID }}
           chmod 600 ~/.ssh/${{ secrets.VPS_GAMESERVER_OPENSSH_ID }}
-          ssh-keyscan ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
+          ssh-keyscan ${{ secrets.VPS_HOSTNAME }} >> ~/.ssh/known_hosts
+        shell: bash
+      - name: Generate the 'mapcycle.txt' file
+        run: ls dodserver/serverfiles/dod/maps/*.bsp | awk -F'/' '{ print $(NF) }' | sed 's/\.bsp$//' | shuf > dodserver/serverfiles/dod/mapcycle.txt
+        shell: bash
+      - name: Configure default map and max players for LinuxGSM
+        run: |
+          DEFAULT_MAP=$(shuf -n 1 dodserver/serverfiles/dod/mapcycle.txt)
+          export VPS_GAMESERVER_CONFIG_DEFAULT_MAP="$DEFAULT_MAP"
+          export VPS_GAMESERVER_CONFIG_MAX_PLAYERS="${{ secrets.VPS_GAMESERVER_CONFIG_MAX_PLAYERS }}"
+          envsubst < dodserver/lgsm/config-lgsm/dodserver/dodserver.cfg.template > dodserver/lgsm/config-lgsm/dodserver/dodserver.cfg
+        shell: bash
+      - name: Set hostname, RCON password, and download URL for the gaming server
+        run: |
+          export VPS_GAMESERVER_CONFIG_HOSTNAME="${{ secrets.VPS_GAMESERVER_CONFIG_HOSTNAME }}"
+          export VPS_GAMESERVER_CONFIG_RCON_PASSWORD="${{ secrets.VPS_GAMESERVER_CONFIG_RCON_PASSWORD }}"
+          export VPS_GAMESERVER_CONFIG_DOWNLOAD_URL="${{ secrets.VPS_GAMESERVER_CONFIG_DOWNLOAD_URL }}"
+          envsubst < dodserver/serverfiles/dod/dodserver.cfg.template > dodserver/serverfiles/dod/dodserver.cfg
         shell: bash
       - name: Synchronize the gaming server files
-        run: rsync -e "ssh -i ~/.ssh/${{ secrets.VPS_GAMESERVER_OPENSSH_ID }}" -avvzP --delete --exclude='.*' ${{ secrets.VPS_GAMESERVER_RSYNC_SOURCE_PATH }} ${{ secrets.VPS_GAMESERVER_USERNAME }}@${{ secrets.VPS_HOST }}:${{ secrets.VPS_GAMESERVER_RSYNC_DEST_PATH }}
+        run: rsync -e "ssh -i ~/.ssh/${{ secrets.VPS_GAMESERVER_OPENSSH_ID }}" -avvzP --delete --exclude='.*' ${{ secrets.VPS_GAMESERVER_RSYNC_SOURCE_PATH }} ${{ secrets.VPS_GAMESERVER_USERNAME }}@${{ secrets.VPS_HOSTNAME }}:${{ secrets.VPS_GAMESERVER_RSYNC_DEST_PATH }}
         shell: bash
   restart-gaming-server:
     name: Restart the gaming server
@@ -29,8 +46,8 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.VPS_GAMESERVER_OPENSSH_PRIVATE_KEY }}" > ~/.ssh/${{ secrets.VPS_GAMESERVER_OPENSSH_ID }}
           chmod 600 ~/.ssh/${{ secrets.VPS_GAMESERVER_OPENSSH_ID }}
-          ssh-keyscan ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
+          ssh-keyscan ${{ secrets.VPS_HOSTNAME }} >> ~/.ssh/known_hosts
         shell: bash
       - name: Execute the restart command through OpenSSH
-        run: ssh -i ~/.ssh/${{ secrets.VPS_GAMESERVER_OPENSSH_ID }} ${{ secrets.VPS_GAMESERVER_USERNAME }}@${{ secrets.VPS_HOST }} -p 22 "${{ secrets.VPS_GAMESERVER_BINARY }} restart"
+        run: ssh -i ~/.ssh/${{ secrets.VPS_GAMESERVER_OPENSSH_ID }} ${{ secrets.VPS_GAMESERVER_USERNAME }}@${{ secrets.VPS_HOSTNAME }} -p 22 "${{ secrets.VPS_GAMESERVER_BINARY }} restart"
         shell: bash

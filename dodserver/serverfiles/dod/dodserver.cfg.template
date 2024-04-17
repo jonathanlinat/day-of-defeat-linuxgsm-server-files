@@ -1,6 +1,6 @@
-hostname "[DoD 1.3 Community] US (https://discord.gg/dodcommunity)"
-
-rcon_password "adminCjiBf_4M"
+hostname $VPS_GAMESERVER_CONFIG_HOSTNAME
+rcon_password $VPS_GAMESERVER_CONFIG_RCON_PASSWORD
+sv_downloadurl $VPS_GAMESERVER_CONFIG_DOWNLOAD_URL
 
 decalfrequency 30
 
@@ -38,7 +38,6 @@ sv_bounce 1
 sv_cheats 0
 sv_clienttrace 3.5
 sv_clipmode 0
-sv_downloadurl "http://108.61.151.70/"
 sv_friction 4
 sv_gravity 800
 sv_maxrate 100000
