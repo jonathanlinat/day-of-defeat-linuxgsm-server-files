@@ -53,7 +53,8 @@ sv_stopspeed 100
 sv_timeout 45
 sv_unlag 1
 sv_voicecodec "voice_speex"
-sv_voicequality 2
+sv_voiceenable 1
+sv_voicequality 5
 sv_wateraccelerate 10
 sv_waterfriction 1
 sys_ticrate 1000
