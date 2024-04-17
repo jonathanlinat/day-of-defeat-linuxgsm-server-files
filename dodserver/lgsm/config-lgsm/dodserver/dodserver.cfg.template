@@ -12,8 +12,8 @@
 ip="0.0.0.0"
 port="27015"
 clientport="27005"
-defaultmap=$VPS_GAMESERVER_CONFIG_DEFAULT_MAP
-maxplayers=$VPS_GAMESERVER_CONFIG_MAX_PLAYERS
+defaultmap="$VPS_GAMESERVER_CONFIG_DEFAULT_MAP"
+maxplayers="$VPS_GAMESERVER_CONFIG_MAX_PLAYERS"
 pingboost="3"
 zone="4096"
 

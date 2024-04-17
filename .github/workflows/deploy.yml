@@ -24,7 +24,7 @@ jobs:
           DEFAULT_MAP=$(shuf -n 1 dodserver/serverfiles/dod/mapcycle.txt)
           export VPS_GAMESERVER_CONFIG_DEFAULT_MAP="$DEFAULT_MAP"
           export VPS_GAMESERVER_CONFIG_MAX_PLAYERS="${{ secrets.VPS_GAMESERVER_CONFIG_MAX_PLAYERS }}"
-          envsubst < dodserver/lgsm/config-lgsm/dodserver/dodserver.cfg.template > dodserver/lgsm/config-lgsm/dodserver/dodserver.cfg
+          envsubst '$VPS_GAMESERVER_CONFIG_DEFAULT_MAP,$VPS_GAMESERVER_CONFIG_MAX_PLAYERS' < dodserver/lgsm/config-lgsm/dodserver/dodserver.cfg.template > dodserver/lgsm/config-lgsm/dodserver/dodserver.cfg
           rm -f dodserver/lgsm/config-lgsm/dodserver/dodserver.cfg.template
         shell: bash
       - name: Set hostname, RCON password, and download URL for the gaming server
@@ -32,8 +32,11 @@ jobs:
           export VPS_GAMESERVER_CONFIG_HOSTNAME="${{ secrets.VPS_GAMESERVER_CONFIG_HOSTNAME }}"
           export VPS_GAMESERVER_CONFIG_RCON_PASSWORD="${{ secrets.VPS_GAMESERVER_CONFIG_RCON_PASSWORD }}"
           export VPS_GAMESERVER_CONFIG_DOWNLOAD_URL="${{ secrets.VPS_GAMESERVER_CONFIG_DOWNLOAD_URL }}"
-          envsubst < dodserver/serverfiles/dod/dodserver.cfg.template > dodserver/serverfiles/dod/dodserver.cfg
+          envsubst '$VPS_GAMESERVER_CONFIG_HOSTNAME,$VPS_GAMESERVER_CONFIG_RCON_PASSWORD,$VPS_GAMESERVER_CONFIG_DOWNLOAD_URL' < dodserver/serverfiles/dod/dodserver.cfg.template > dodserver/serverfiles/dod/dodserver.cfg
           rm -f dodserver/serverfiles/dod/dodserver.cfg.template
+        shell: bash
+      - name: Set execute permissions for all files
+        run: find dodserver/serverfiles/dod -type f -exec chmod 755 {} \;
         shell: bash
       - name: Synchronize the gaming server files
         run: rsync -e "ssh -i ~/.ssh/${{ secrets.VPS_GAMESERVER_OPENSSH_ID }}" -avvzP --delete --exclude='.*' ${{ secrets.VPS_GAMESERVER_RSYNC_SOURCE_PATH }} ${{ secrets.VPS_GAMESERVER_USERNAME }}@${{ secrets.VPS_HOSTNAME }}:${{ secrets.VPS_GAMESERVER_RSYNC_DEST_PATH }}
