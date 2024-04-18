@@ -1,0 +1,61 @@
+// \dod_veghel_b3.res - created with RESGen v2.0.2.
+// RESGen is made by Jeroen "ShadowLord" Bogers,
+// with serveral improvements and additions by Zero3Cool.
+// For more info go to http://resgen.hltools.com
+
+// .res entries (55):
+gfx/env/jagdbk.tga
+gfx/env/jagddn.tga
+gfx/env/jagdft.tga
+gfx/env/jagdlf.tga
+gfx/env/jagdrt.tga
+gfx/env/jagdup.tga
+models/dod_veghel/ae_medbush.mdl
+models/dod_veghel/ae_smallbush.mdl
+models/dod_veghel/arc_xer_tree2_scaled.mdl
+models/dod_veghel/f_fass.mdl
+models/dod_veghel/f_feasser.mdl
+models/dod_veghel/stuka_streetlight.mdl
+models/mapmodels/arc_fern.mdl
+models/mapmodels/arc_flower.mdl
+models/mapmodels/arc_xer_tree1.mdl
+models/mapmodels/arc_xer_tree2.mdl
+models/mapmodels/barbed_wire.mdl
+models/mapmodels/bed_empty-wood.mdl
+models/mapmodels/bord.mdl
+models/mapmodels/cow.mdl
+models/mapmodels/flo_bed.mdl
+models/mapmodels/flo_light.mdl
+models/mapmodels/fueltruck.mdl
+models/mapmodels/hay.mdl
+models/mapmodels/hono.mdl
+models/mapmodels/horse_statue.mdl
+models/mapmodels/jeep.mdl
+models/mapmodels/kingtiger.mdl
+models/mapmodels/lamp.mdl
+models/mapmodels/mawibse_lamp_01.mdl
+models/mapmodels/repunzel_bott.mdl
+models/mapmodels/sandbags.mdl
+models/mapmodels/sherman.mdl
+models/mapmodels/wood_barrel1.mdl
+models/mapmodels/zalec_1bulb2wire.mdl
+models/mapmodels/zalec_2bulb2wire.mdl
+models/null.mdl
+models/w_aflag.mdl
+models/w_gflag.mdl
+models/w_wflag.mdl
+overviews/dod_veghel_b3.bmp
+overviews/dod_veghel_b3.txt
+sound/ambience/dodambience3.wav
+sound/ambience/drips.wav
+sound/ambience/germanwin.wav
+sound/ambience/gerpointcaptured.wav
+sound/ambience/truck-1ka.wav
+sound/ambience/uspointcaptured.wav
+sound/ambience/uswin.wav
+sound/mapsounds/gerpointcaptured.wav
+sound/mapsounds/uspointcaptured.wav
+sprites/glow01.spr
+sprites/glow04.spr
+sprites/mapsprites/caparea.spr
+sprites/obj_tnt.spr

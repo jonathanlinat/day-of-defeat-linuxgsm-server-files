@@ -1,0 +1,14 @@
+// overview description file for dod_veghel_b3.bsp
+
+global
+{
+	ZOOM 1.13
+	ORIGIN 0.00 -288.0 0.00
+	ROTATED 0
+}
+
+layer
+{
+	IMAGE "overviews/dod_veghel_b3.bmp"
+	HEIGHT -545.00
+}
