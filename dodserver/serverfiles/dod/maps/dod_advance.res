@@ -45,4 +45,10 @@ sound/ambience/usareasecure.wav
 sound/ambience/uswin.wav
 sprites/glow01.spr
 sprites/mapsprites/caparea.spr
+sprites/obj_icons/dod_advance/icon_obj_custom1_allies.spr
+sprites/obj_icons/dod_advance/icon_obj_custom1_axis.spr
+sprites/obj_icons/dod_advance/icon_obj_custom1_neutral.spr
+sprites/obj_icons/dod_advance/icon_obj_custom2_allies.spr
+sprites/obj_icons/dod_advance/icon_obj_custom2_axis.spr
+sprites/obj_icons/dod_advance/icon_obj_custom2_neutral.spr
 sprites/obj_tnt.spr
