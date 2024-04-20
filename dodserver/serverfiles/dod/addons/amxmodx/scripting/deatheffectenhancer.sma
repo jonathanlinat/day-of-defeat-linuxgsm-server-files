@@ -1,4 +1,4 @@
-#define PLUGIN "Death Effect"
+#define PLUGIN "Death Effect Enhancer"
 #define VERSION "1.0"
 #define AUTHOR "Jonathan Linat"
 
@@ -22,15 +22,15 @@
 new Float:g_DeadBody[33][3];
 new g_DeathSpriteID;
 
+public plugin_precache() {
+    g_DeathSpriteID = precache_model("sprites/effects/death_god.spr");
+}
+
 public plugin_init() {
     register_plugin(PLUGIN, VERSION, AUTHOR);
     register_think(EFFECT_CLASSNAME, "effectThink");
 
     RegisterHam(Ham_Killed, "player", "playerKilledPost", 1);
-}
-
-public plugin_precache() {
-    g_DeathSpriteID = precache_model("sprites/effects/death_god.spr");
 }
 
 public playerKilledPost(victim, attacker) {

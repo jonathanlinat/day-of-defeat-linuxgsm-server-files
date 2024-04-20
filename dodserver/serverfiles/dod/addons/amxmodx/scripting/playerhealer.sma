@@ -4,13 +4,8 @@
 
 /*
  * This plugin enables automatic healing for players in-game, allowing server
- * administrators to configure healing parameters * such as maximum health points
- * for auto-healing, medic call limits, and healing sounds. The plugin supports
- * both manual * medic calls by players and automatic healing when certain conditions
- * are met. It enhances gameplay by providing players * with timely health recovery,
- * ensuring a dynamic and sustained action. The healing responses and conditions can be 
- * customized through server cvars, making it adaptable to different game types and
- * server settings.
+ * administrators to configure healing parameters such as maximum health points
+ * for auto-healing, medic call limits, and healing sounds.
  *
  * It has been successfully tested with AMX Mod X v1.10+.
  */
@@ -92,7 +87,6 @@ public plugin_init() {
     g_medic_maxcalls = register_cvar("amx_playerhealer_calls", "2");
 
     register_plugin(PLUGIN, VERSION, AUTHOR);
-    register_concmd("amx_playerhealer", "control_medic", ADMIN_CFG, "<#|?>");
     register_clcmd("say_team /medic", "cmd_medic", 0, "- call for a medic");
     register_forward(FM_SetClientMaxspeed, "fwd_maxspeed");
 
@@ -156,6 +150,7 @@ public heal_player(id) {
         case 1: {
             if (p_health >= get_pcvar_num(g_auto_maxhp)) {
                 clear_task(id);
+
                 return;
             }
 
@@ -164,6 +159,7 @@ public heal_player(id) {
         case 2: {
             if (p_health >= get_pcvar_num(g_medic_maxhp)) {
                 clear_task(id);
+
                 return;
             }
 
@@ -203,25 +199,4 @@ public clear_task(id) {
     remove_task(id);
     g_task_set[id] = 0;
     set_pev(id, pev_maxspeed, g_p_speed[id]);
-}
-
-public control_medic(id, lvl, cid) {
-    if (!cmd_access(id, lvl, cid, 2)) {
-        return PLUGIN_HANDLED;
-    }
-    
-    new tmpstr[32];
-    read_argv(1, tmpstr, 31);
-    trim(tmpstr);
-
-    new tmpctrl = str_to_num(tmpstr);
-
-    if (tmpctrl < 0 || tmpctrl > 3) {
-        return PLUGIN_HANDLED;
-    }
-
-    set_pcvar_num(g_medic_ctrl, tmpctrl);
-    get_user_name(id, tmpstr, 31);
-
-    return PLUGIN_HANDLED;
 }

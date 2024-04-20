@@ -1,4 +1,4 @@
-#define PLUGIN "Parachute"
+#define PLUGIN "Parachute Provider"
 #define VERSION "1.0.0"
 #define AUTHOR "Jonathan Linat"
 
@@ -15,14 +15,11 @@
 #include <fakemeta>
 #include <fun>
 
-#define MAX_AUTHID_LENGTH 64
-#define MAX_IP_LENGTH 16
-
-new const Float:DEFAULT_GRAVITY = 1.0;
-new const Float:PARACHUTE_GRAVITY = 0.1;
+#define DEFAULT_GRAVITY 1.0
+#define PARACHUTE_GRAVITY 0.1
+#define FALL_SPEED -50.0
 
 new g_model;
-new g_cvarFallSpeed;
 
 public plugin_precache() {
     g_model = precache_model("models/parachute.mdl");
@@ -30,8 +27,6 @@ public plugin_precache() {
 
 public plugin_init() {
     register_plugin(PLUGIN, VERSION, AUTHOR);
-
-    g_cvarFallSpeed = register_cvar("amx_parachute_fallspeed", "50.0");
 }
 
 public client_PreThink(id) {
@@ -39,13 +34,13 @@ public client_PreThink(id) {
         return PLUGIN_CONTINUE;
     }
 
-    new Float:fallspeed = -get_pcvar_float(g_cvarFallSpeed);
     new button = get_user_button(id), oldbutton = get_user_oldbutton(id), flags = get_entity_flags(id);
 
     if (flags & FL_ONGROUND) {
         if (get_user_gravity(id) != DEFAULT_GRAVITY) {
             set_user_gravity(id, DEFAULT_GRAVITY);
         }
+
         return PLUGIN_CONTINUE;
     }
 
@@ -54,7 +49,7 @@ public client_PreThink(id) {
 
     if ((button & IN_USE)) {
         set_user_gravity(id, PARACHUTE_GRAVITY);
-        velocity[2] = (velocity[2] > fallspeed) ? fallspeed : velocity[2];
+        velocity[2] = (velocity[2] > FALL_SPEED) ? FALL_SPEED : velocity[2];
 
         entity_set_vector(id, EV_VEC_velocity, velocity);
         create_parachute_effect(id);
@@ -66,11 +61,11 @@ public client_PreThink(id) {
 }
 
 public create_parachute_effect(id) {
-    message_begin(MSG_PVS, SVC_TEMPENTITY, { 0, 0, 0 }, 0);
+    message_begin(MSG_PVS, SVC_TEMPENTITY, {0, 0, 0}, 0);
     write_byte(TE_PLAYERATTACHMENT);
     write_byte(id);
-    write_coord(-MAX_AUTHID_LENGTH);
+    write_coord(-64);
     write_short(g_model);
-    write_short(MAX_IP_LENGTH);
+    write_short(16);
     message_end();
 }
