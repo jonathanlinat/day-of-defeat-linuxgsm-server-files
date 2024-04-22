@@ -15,6 +15,9 @@ test -e compiled || mkdir compiled
 # Clear any previous compilation logs
 rm -f temp.txt
 
+# Create compilation directory
+mkdir -p compiled/
+
 for sourcefile in *.sma
 do
   # Construct the .amxx filename from the .sma filename
@@ -40,3 +43,6 @@ less temp.txt
 
 # Remove the temporary file after use
 rm temp.txt
+
+# Clear any previous compilation files
+rm -rf compiled/

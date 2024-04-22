@@ -11,61 +11,91 @@
  */
 
 #include <amxmodx>
+#include <amxmisc>
 #include <engine>
-#include <fakemeta>
-#include <fun>
 
-#define DEFAULT_GRAVITY 1.0
-#define PARACHUTE_GRAVITY 0.1
-#define FALL_SPEED -50.0
-
+new para_ent[33];
 new g_model;
 
-public plugin_precache() {
-    g_model = precache_model("models/parachute.mdl");
+public plugin_init() {
+	register_plugin(PLUGIN, VERSION, AUTHOR);
+
+	register_event("ResetHUD", "event_resethud", "be");
 }
 
-public plugin_init() {
-    register_plugin(PLUGIN, VERSION, AUTHOR);
+public plugin_precache() {
+	g_model = precache_model("models/parachute.mdl");
+}
+
+public client_connect(id) {
+	if (para_ent[id] > 0) {
+		remove_entity(para_ent[id]);
+	}
+
+	para_ent[id] = 0;
+}
+
+public event_resethud(id) {
+	if (para_ent[id] > 0) {
+		remove_entity(para_ent[id]);
+	}
+
+	para_ent[id] = 0;
 }
 
 public client_PreThink(id) {
-    if (!is_user_connected(id) || !is_user_alive(id)) {
-        return PLUGIN_CONTINUE;
-    }
+	if (!is_user_alive(id)) {
+		return PLUGIN_CONTINUE;
+	}
 
-    new button = get_user_button(id), oldbutton = get_user_oldbutton(id), flags = get_entity_flags(id);
+	if (get_user_button(id) & IN_USE) {
+		if (!(get_entity_flags(id) & FL_ONGROUND)) {
+			new Float:velocity[3];
+			entity_get_vector(id, EV_VEC_velocity, velocity);
 
-    if (flags & FL_ONGROUND) {
-        if (get_user_gravity(id) != DEFAULT_GRAVITY) {
-            set_user_gravity(id, DEFAULT_GRAVITY);
-        }
+			if (velocity[2] < 0) {
+				if (para_ent[id] == 0) {
+					para_ent[id] = create_entity("info_target");
 
-        return PLUGIN_CONTINUE;
-    }
+					if (para_ent[id] > 0) {
+						entity_set_model(para_ent[id], g_model);
+						entity_set_int(para_ent[id], EV_INT_movetype, MOVETYPE_FOLLOW);
+						entity_set_edict(para_ent[id], EV_ENT_aiment, id);
+					}
+				}
 
-    new Float:velocity[3];
-    entity_get_vector(id, EV_VEC_velocity, velocity);
+				if (para_ent[id] > 0) {
+					velocity[2] = (velocity[2] + 40.0 < -100) ? velocity[2] + 40.0 : -100.0;
+					entity_set_vector(id, EV_VEC_velocity, velocity);
 
-    if ((button & IN_USE)) {
-        set_user_gravity(id, PARACHUTE_GRAVITY);
-        velocity[2] = (velocity[2] > FALL_SPEED) ? FALL_SPEED : velocity[2];
+					if (entity_get_float(para_ent[id], EV_FL_frame) < 0.0 || entity_get_float(para_ent[id], EV_FL_frame) > 254.0) {
+						if (entity_get_int(para_ent[id], EV_INT_sequence) != 1) {
+							entity_set_int(para_ent[id], EV_INT_sequence, 1);
+						}
 
-        entity_set_vector(id, EV_VEC_velocity, velocity);
-        create_parachute_effect(id);
-    } else if (oldbutton & IN_USE && get_user_gravity(id) != DEFAULT_GRAVITY) {
-        set_user_gravity(id, DEFAULT_GRAVITY);
-    }
-    
-    return PLUGIN_CONTINUE;
-}
+						entity_set_float(para_ent[id], EV_FL_frame, 0.0);
+					} else {
+						entity_set_float(para_ent[id], EV_FL_frame, entity_get_float(para_ent[id], EV_FL_frame) + 1.0);
+					}
+				}
+			} else {
+				if (para_ent[id] > 0) {
+					remove_entity(para_ent[id]);
+					para_ent[id] = 0;
+				}
+			}
+		} else {
+			if (para_ent[id] > 0) {
+				remove_entity(para_ent[id]);
+				para_ent[id] = 0;
+			}
+		}
+	} else if (get_user_oldbutton(id) & IN_USE) {
+		if (para_ent[id] > 0) {
+			remove_entity(para_ent[id]);
+			para_ent[id] = 0;
+		}
+	}
 
-public create_parachute_effect(id) {
-    message_begin(MSG_PVS, SVC_TEMPENTITY, {0, 0, 0}, 0);
-    write_byte(TE_PLAYERATTACHMENT);
-    write_byte(id);
-    write_coord(-64);
-    write_short(g_model);
-    write_short(16);
-    message_end();
+	return PLUGIN_CONTINUE;
 }
