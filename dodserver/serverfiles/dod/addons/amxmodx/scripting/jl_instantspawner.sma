@@ -33,8 +33,8 @@ public func_prethink(id) {
     if (hud_sent[id] && round_start && spawn_switch[id] == 0 && pev(id, pev_health) <= 0 && get_pdata_int(id, 366) != -1 && pev(id, pev_team) != 3) {
         spawn_switch[id] = 1;
 
-        set_task(2.0, "func_spawn", 2200+id);
-        set_task(2.0, "func_reset", 2201+id);
+        set_task(2.0, "func_spawn", 2200 + id);
+        set_task(2.0, "func_reset", 2201 + id);
     }
 }
 
