@@ -1,4 +1,4 @@
-#define PLUGIN "Advanced Machine Gun Deployer"
+#define PLUGIN "Machine Gun Deployment Enhancer"
 #define VERSION "1.0.0"
 #define AUTHOR "Jonathan Linat"
 #define URL "https://github.com/jonathanlinat"

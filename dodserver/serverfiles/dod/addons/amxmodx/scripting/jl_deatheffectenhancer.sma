@@ -35,4 +35,18 @@ public client_death(killer, victim, wpnindex, hitplace, TK) {
     if (!is_user_bot(victim)) {
         timeDied[victim] = get_gametime() + 1.0;
     }
+
+    set_task(0.01, "fade_to_red", victim);
+}
+
+public fade_to_red(victim) {
+    message_begin(MSG_ONE, get_user_msgid("ScreenFade"), { 0, 0, 0 }, victim);
+    write_short(1500);
+    write_short(1000);
+    write_short(0x000F);
+    write_byte(255);
+    write_byte(0);
+    write_byte(0);
+    write_byte(192)
+    message_end();
 }
