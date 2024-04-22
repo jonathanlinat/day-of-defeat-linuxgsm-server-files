@@ -36,13 +36,13 @@ public client_death(killer, victim, wpnindex, hitplace, TK) {
         timeDied[victim] = get_gametime() + 1.0;
     }
 
-    set_task(0.1, "fade_to_black", victim);
+    set_task(0.25, "fade_to_black", victim);
 }
 
 public fade_to_black(victim) {
     message_begin(MSG_ONE, get_user_msgid("ScreenFade"), { 0, 0, 0 }, victim);
-    write_short(12000);
-    write_short(9000);
+    write_short(1500);
+    write_short(1000);
     write_short(0x0008);
     write_byte(0);
     write_byte(0);
