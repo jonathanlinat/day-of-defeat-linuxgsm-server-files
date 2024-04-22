@@ -15,7 +15,6 @@
 #include <engine>
 
 new para_ent[33];
-new g_model;
 
 public plugin_init() {
 	register_plugin(PLUGIN, VERSION, AUTHOR);
@@ -24,7 +23,7 @@ public plugin_init() {
 }
 
 public plugin_precache() {
-	g_model = precache_model("models/parachute.mdl");
+	precache_model("models/parachute.mdl");
 }
 
 public client_connect(id) {
@@ -58,7 +57,7 @@ public client_PreThink(id) {
 					para_ent[id] = create_entity("info_target");
 
 					if (para_ent[id] > 0) {
-						entity_set_model(para_ent[id], g_model);
+						entity_set_model(para_ent[id], "models/parachute.mdl");
 						entity_set_int(para_ent[id], EV_INT_movetype, MOVETYPE_FOLLOW);
 						entity_set_edict(para_ent[id], EV_ENT_aiment, id);
 					}
