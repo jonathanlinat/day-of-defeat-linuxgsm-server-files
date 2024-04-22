@@ -20,7 +20,7 @@ new g_oldangles[33][3];
 new g_afktime[33];
 new g_maxafktime;
 new g_minplayers;
-new bool:g_spawned[33] = {true, ...};
+new bool:g_spawned[33] = { true, ... };
 
 public plugin_init() {
     register_plugin(PLUGIN, VERSION, AUTHOR, URL);
@@ -28,11 +28,11 @@ public plugin_init() {
     g_maxafktime = register_cvar("amx_awayfromkeyboardkicker_maxtime", "90");
     g_minplayers = register_cvar("amx_awayfromkeyboardkicker_minplayers", "16");
 
-    set_task(float(CHECK_FREQ), "checkPlayers", _, _, _, "b");
-    register_event("ResetHUD", "playerSpawned", "be");
+    set_task(float(CHECK_FREQ), "check_players", _, _, _, "b");
+    register_event("ResetHUD", "player_spawned", "be");
 }
 
-public checkPlayers() {
+public check_players() {
     for (new i = 1; i <= get_maxplayers(); i++) {
         if (is_user_alive(i) && is_user_connected(i) && !is_user_bot(i) && !is_user_hltv(i) && g_spawned[i]) {
             new newangle[3];
@@ -92,16 +92,16 @@ public client_putinserver(id) {
     return PLUGIN_HANDLED;
 }
 
-public playerSpawned(id) {
+public player_spawned(id) {
     g_spawned[id] = false;
     new sid[1];
     sid[0] = id;
-    set_task(0.75, "delayedSpawn", _, sid, 1);
+    set_task(0.75, "delayed_spawn", _, sid, 1);
 
     return PLUGIN_HANDLED;
 }
 
-public delayedSpawn(sid[]) {
+public delayed_spawn(sid[]) {
     get_user_origin(sid[0], g_oldangles[sid[0]]);
     g_spawned[sid[0]] = true;
 
