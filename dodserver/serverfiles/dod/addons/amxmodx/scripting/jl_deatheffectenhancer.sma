@@ -47,6 +47,6 @@ public fade_to_red(victim) {
     write_byte(255);
     write_byte(0);
     write_byte(0);
-    write_byte(192)
+    write_byte(64)
     message_end();
 }
