@@ -1,6 +1,7 @@
 #define PLUGIN "SVC Bad Preventer"
 #define VERSION "1.0.0"
 #define AUTHOR "Jonathan Linat"
+#define URL "https://github.com/jonathanlinat"
 
 #include <amxmodx>
 
@@ -12,7 +13,7 @@
  */
 
 public plugin_init() {
-    register_plugin(PLUGIN, VERSION, AUTHOR);
+    register_plugin(PLUGIN, VERSION, AUTHOR, URL);
 
     set_msg_block(49, BLOCK_SET);
 }

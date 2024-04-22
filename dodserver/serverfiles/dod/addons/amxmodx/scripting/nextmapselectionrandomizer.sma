@@ -1,6 +1,7 @@
 #define PLUGIN "Next Map Selection Randomizer"
 #define VERSION "1.0.0"
 #define AUTHOR "Jonathan Linat"
+#define URL "https://github.com/jonathanlinat"
 
 /*
  * This plugin aims to randomize the next map selection to enhance variety and player
@@ -18,7 +19,8 @@
 #define MAP_CYCLE_FILE "mapcycle.txt"
 
 public plugin_init() {
-    register_plugin(PLUGIN, VERSION, AUTHOR);
+    register_plugin(PLUGIN, VERSION, AUTHOR, URL);
+
     set_task(1.0, "randomize_nextmap");
 }
 

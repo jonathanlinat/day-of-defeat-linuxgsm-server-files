@@ -1,6 +1,7 @@
 #define PLUGIN "Away From Keyboard Kicker"
 #define VERSION "1.0.0"
 #define AUTHOR "Jonathan Linat"
+#define URL "https://github.com/jonathanlinat"
 
 /*
  * This plugin automatically identifies and kicks players who are away from their keyboard (AFK) 
@@ -22,7 +23,7 @@ new g_afktime[33];
 new bool:g_spawned[33] = { true, ... };
 
 public plugin_init() {
-    register_plugin(PLUGIN, VERSION, AUTHOR);
+    register_plugin(PLUGIN, VERSION, AUTHOR, URL);
 
     set_task(float(CHECK_FREQ), "checkPlayers", _, _, _, "b");
     register_event("ResetHUD", "playerSpawned", "be");

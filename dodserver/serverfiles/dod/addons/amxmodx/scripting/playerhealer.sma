@@ -1,6 +1,7 @@
 #define PLUGIN "Player Healer"
 #define VERSION "1.0.0"
 #define AUTHOR "Jonathan Linat"
+#define URL "https://github.com/jonathanlinat"
 
 /*
  * This plugin enables automatic healing for players in-game, allowing server
@@ -67,13 +68,9 @@ new g_medic_calls[33];
 new g_task_set[33] = {0, ...};
 new Float:g_p_speed[33];
 
-public plugin_precache() {
-    precache_sound("player/britmedic.wav");
-    precache_sound("player/usmedic.wav");
-    precache_sound("player/germedic.wav");
-}
-
 public plugin_init() {
+    register_plugin(PLUGIN, VERSION, AUTHOR, URL);
+
     g_medic_ctrl = register_cvar("amx_playerhealer_ctrl", "3");
     g_auto_time = register_cvar("amx_playerhealer_autotime", "1.0");
     g_auto_step = register_cvar("amx_playerhealer_autostep", "1");
@@ -85,14 +82,18 @@ public plugin_init() {
     g_maxspeed_enable = register_cvar("amx_playerhealer_maxspeed_enable", "0");
     g_medic_sound = register_cvar("amx_playerhealer_sound", "1");
     g_medic_maxcalls = register_cvar("amx_playerhealer_calls", "2");
-
-    register_plugin(PLUGIN, VERSION, AUTHOR);
     register_clcmd("say_team /medic", "cmd_medic", 0, "- call for a medic");
     register_forward(FM_SetClientMaxspeed, "fwd_maxspeed");
 
     RegisterHam(Ham_Spawn, "player", "ham_player_spawn", 1);
     RegisterHam(Ham_Killed, "player", "ham_player_death", 1);
     RegisterHam(Ham_TakeDamage, "player", "ham_player_damage", 1);
+}
+
+public plugin_precache() {
+    precache_sound("player/britmedic.wav");
+    precache_sound("player/usmedic.wav");
+    precache_sound("player/germedic.wav");
 }
 
 public cmd_medic(id) {
