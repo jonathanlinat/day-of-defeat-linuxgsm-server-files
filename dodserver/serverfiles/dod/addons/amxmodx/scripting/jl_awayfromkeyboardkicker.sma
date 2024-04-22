@@ -67,6 +67,7 @@ public check_afktime(id) {
 
         if (maxafktime - WARNING_TIME <= g_afktime[id] && g_afktime[id] < maxafktime) {
             new timeleft = maxafktime - g_afktime[id];
+
             client_print(id, print_chat, "You have %i seconds to move or you will be kicked for being AFK.", timeleft);
         } else if (g_afktime[id] >= maxafktime) {
             new name[32];

@@ -6,8 +6,7 @@
 #include <amxmodx>
 
 /*
- * This plugin aims to prevent the following error:
- * "Error: server failed to transmit file 'AY&SYea'"
+ * This plugin aims to prevent the following error: "Error: server failed to transmit file 'AY&SYea'"
  *
  * It has been successfully tested with AMX Mod X v1.10+.
  */
