@@ -30,7 +30,7 @@ overviews/dod_diversion.bmp
 overviews/dod_diversion.txt
 sound/ambience/adrenaxis.wav
 sound/ambience/adrenbrit.wav
-sound/ambience/darkwing duck.wav
+sound/ambience/darkwing_duck.wav
 sound/ambience/dodambience1.wav
 sound/ambience/gerpointcaptured.wav
 sound/ambience/stuka_hills.wav
