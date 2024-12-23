@@ -1,0 +1,12 @@
+name: Continuous Scheduling
+on:
+  schedule:
+    - cron: 0 9 * * 1
+jobs:
+  restart-gaming-server:
+    name: Periodically restart the gaming server
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - uses: ./.github/actions/restart-gaming-server

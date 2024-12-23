@@ -1,0 +1,13 @@
+runs:
+  using: composite
+  steps:
+    - name: Setup OpenSSH
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.VPS_GAMESERVER_OPENSSH_PRIVATE_KEY }}" > ~/.ssh/${{ secrets.VPS_GAMESERVER_OPENSSH_ID }}
+        chmod 600 ~/.ssh/${{ secrets.VPS_GAMESERVER_OPENSSH_ID }}
+        ssh-keyscan ${{ secrets.VPS_HOSTNAME }} >> ~/.ssh/known_hosts
+      shell: bash
+    - name: Execute the restart command through OpenSSH
+      run: ssh -i ~/.ssh/${{ secrets.VPS_GAMESERVER_OPENSSH_ID }} ${{ secrets.VPS_GAMESERVER_USERNAME }}@${{ secrets.VPS_HOSTNAME }} -p 22 "${{ secrets.VPS_GAMESERVER_BINARY }} restart"
+      shell: bash
