@@ -1,0 +1,42 @@
+runs:
+  using: composite
+  steps:
+    - name: Setup OpenSSH
+      uses: ./.github/actions/_shared/setup-openssh
+    - name: Generate the 'mapcycle.txt' file
+      run: ls dodserver/serverfiles/dod/maps/*.bsp | awk -F'/' '{ print $(NF) }' | sed 's/\.bsp$//' | shuf > dodserver/serverfiles/dod/mapcycle.txt
+      shell: bash
+    - name: "LinuxGSM: Set random default map and max players"
+      run: |
+        DEFAULT_MAP=$(shuf -n 1 dodserver/serverfiles/dod/mapcycle.txt)
+        export VPS_GAMESERVER_CONFIG_DEFAULT_MAP="$DEFAULT_MAP"
+        export VPS_GAMESERVER_CONFIG_MAX_PLAYERS="${{ env.VPS_GAMESERVER_CONFIG_MAX_PLAYERS }}"
+        envsubst '$VPS_GAMESERVER_CONFIG_DEFAULT_MAP,$VPS_GAMESERVER_CONFIG_MAX_PLAYERS' < dodserver/lgsm/config-lgsm/dodserver/dodserver.cfg.template > dodserver/lgsm/config-lgsm/dodserver/dodserver.cfg
+        rm -f dodserver/lgsm/config-lgsm/dodserver/dodserver.cfg.template
+      shell: bash
+    - name: "Server configuration: Set hostname, RCON password, and download URL"
+      run: |
+        export VPS_GAMESERVER_CONFIG_HOSTNAME="${{ env.VPS_GAMESERVER_CONFIG_HOSTNAME }}"
+        export VPS_GAMESERVER_CONFIG_RCON_PASSWORD="${{ env.VPS_GAMESERVER_CONFIG_RCON_PASSWORD }}"
+        export VPS_GAMESERVER_CONFIG_DOWNLOAD_URL="${{ env.VPS_GAMESERVER_CONFIG_DOWNLOAD_URL }}"
+        envsubst '$VPS_GAMESERVER_CONFIG_HOSTNAME,$VPS_GAMESERVER_CONFIG_RCON_PASSWORD,$VPS_GAMESERVER_CONFIG_DOWNLOAD_URL' < dodserver/serverfiles/dod/dodserver.cfg.template > dodserver/serverfiles/dod/dodserver.cfg
+        rm -f dodserver/serverfiles/dod/dodserver.cfg.template
+      shell: bash
+    - name: "MOTD: Set meta title"
+      run: |
+        export VPS_GAMESERVER_CONFIG_HOSTNAME="${{ env.VPS_GAMESERVER_CONFIG_HOSTNAME }}"
+        envsubst '$VPS_GAMESERVER_CONFIG_HOSTNAME' < dodserver/serverfiles/dod/motd.html.template > dodserver/serverfiles/dod/motd.html
+        rm -f dodserver/serverfiles/dod/motd.html.template
+      shell: bash
+    - name: "AMX Mod X: Set admin and moderator users"
+      run: |
+        export VPS_GAMESERVER_CONFIG_AMX_ADMINS="${{ env.VPS_GAMESERVER_CONFIG_AMX_ADMINS }}"
+        envsubst '$VPS_GAMESERVER_CONFIG_AMX_ADMINS' < dodserver/serverfiles/dod/addons/amxmodx/configs/users.ini.template > dodserver/serverfiles/dod/addons/amxmodx/configs/users.ini
+        rm -f dodserver/serverfiles/dod/addons/amxmodx/configs/users.ini.template
+      shell: bash
+    - name: Set execute permissions for the gaming server files
+      run: find dodserver/serverfiles/dod -type f -exec chmod 755 {} \;
+      shell: bash
+    - name: Synchronize the gaming server files
+      run: rsync -e "ssh -i ~/.ssh/${{ env.VPS_GAMESERVER_OPENSSH_ID }}" -avvzP --delete --exclude='.*' ${{ env.VPS_GAMESERVER_RSYNC_SOURCE_PATH }} ${{ env.VPS_GAMESERVER_USERNAME }}@${{ env.VPS_HOSTNAME }}:${{ env.VPS_GAMESERVER_RSYNC_DEST_PATH }}
+      shell: bash

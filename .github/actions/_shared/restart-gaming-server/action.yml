@@ -1,0 +1,8 @@
+runs:
+  using: composite
+  steps:
+    - name: Setup OpenSSH
+      uses: ./.github/actions/_shared/setup-openssh
+    - name: Execute the restart command through OpenSSH
+      run: ssh -i ~/.ssh/${{ env.VPS_GAMESERVER_OPENSSH_ID }} ${{ env.VPS_GAMESERVER_USERNAME }}@${{ env.VPS_HOSTNAME }} -p 22 "${{ env.VPS_GAMESERVER_BINARY }} restart"
+      shell: bash

@@ -2,11 +2,18 @@ name: Continuous Scheduling
 on:
   schedule:
     - cron: 0 9 * * 1
+env:
+  VPS_GAMESERVER_BINARY: ${{ secrets.VPS_GAMESERVER_BINARY }}
+  VPS_GAMESERVER_OPENSSH_ID: ${{ secrets.VPS_GAMESERVER_OPENSSH_ID }}
+  VPS_GAMESERVER_OPENSSH_PRIVATE_KEY: ${{ secrets.VPS_GAMESERVER_OPENSSH_PRIVATE_KEY }}
+  VPS_GAMESERVER_USERNAME: ${{ secrets.VPS_GAMESERVER_USERNAME }}
+  VPS_HOSTNAME: ${{ secrets.VPS_HOSTNAME }}
 jobs:
   restart-gaming-server:
-    name: Periodically restart the gaming server
+    name: Restart the gaming server
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - uses: ./.github/actions/restart-gaming-server
+      - name: Restart the gaming server
+        uses: ./.github/actions/restart-gaming-server
