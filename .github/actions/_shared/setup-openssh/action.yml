@@ -1,8 +1,7 @@
 runs:
   using: composite
   steps:
-    - name: Setup OpenSSH
-      run: |
+    - run: |
         mkdir -p ~/.ssh
         echo "${{ env.VPS_GAMESERVER_OPENSSH_PRIVATE_KEY }}" > ~/.ssh/${{ env.VPS_GAMESERVER_OPENSSH_ID }}
         chmod 600 ~/.ssh/${{ env.VPS_GAMESERVER_OPENSSH_ID }}

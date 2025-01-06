@@ -1,7 +1,7 @@
 name: Continuous Scheduling
 on:
   schedule:
-    - cron: 0 9 * * 1
+    - cron: 0 5 * * *
 env:
   VPS_GAMESERVER_BINARY: ${{ secrets.VPS_GAMESERVER_BINARY }}
   VPS_GAMESERVER_OPENSSH_ID: ${{ secrets.VPS_GAMESERVER_OPENSSH_ID }}
@@ -16,4 +16,4 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Restart the gaming server
-        uses: ./.github/actions/restart-gaming-server
+        uses: ./.github/actions/_shared/restart-gaming-server
