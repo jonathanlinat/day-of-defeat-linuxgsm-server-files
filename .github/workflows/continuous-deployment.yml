@@ -33,5 +33,3 @@ jobs:
         uses: actions/checkout@v4
       - name: Restart the gaming server
         uses: ./.github/actions/_shared/restart-gaming-server
-      - name: Display the console output
-        uses: ./.github/actions/_shared/display-console-output

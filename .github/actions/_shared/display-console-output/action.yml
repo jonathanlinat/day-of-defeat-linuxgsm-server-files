@@ -1,6 +1,0 @@
-runs:
-  using: composite
-  steps:
-    - uses: ./.github/actions/_shared/setup-openssh
-    - run: ssh -i ~/.ssh/${{ env.VPS_GAMESERVER_OPENSSH_ID }} ${{ env.VPS_GAMESERVER_USERNAME }}@${{ env.VPS_HOSTNAME }} -p 22 "${{ env.VPS_GAMESERVER_BINARY }} console"
-      shell: bash
