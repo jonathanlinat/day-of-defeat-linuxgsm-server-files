@@ -11,3 +11,14 @@ These custom files are managed and maintained here to ensure consistent deployme
 | 💬 Join an Active Community |
 | --------------------------- |
 | [![](https://dcbadge.vercel.app/api/server/dodcommunity?style=plastic)](https://discord.gg/dodcommunity) |
+
+## Features
+
+This custom gaming server makes use of the following addons:
+
+- **AMX Mod X** (Commit `27f451a`) [[GitHub Repository](https://github.com/alliedmodders/amxmodx)]
+- **Metamod-r** (Commit `603a257`) [[GitHub Repository](https://github.com/rehlds/Metamod-R)]
+- **ReHLDS** (Commit `1571474`) [[GitHub Repository](https://github.com/rehlds/ReHLDS)]
+- **ReAPI** (Commit `66f6096`) [[GitHub Repository](https://github.com/rehlds/reapi)]
+- **ReUnion** (Commit `95d3e93`) [[GitHub Repository](https://github.com/rehlds/reunion)]
+- **VoiceTranscoder** (Commit `a9ae70b`) [[GitHub Repository](https://github.com/WPMGPRoSToTeMa/VoiceTranscoder)]
