@@ -12,7 +12,7 @@ The server setup follows the procedures outlined in the related [Day of Defeat 1
 
 ## Features
 
-This custom gaming server makes use of [LinuxGSM](https://linuxgsm.com/servers/dodserver/) (`1.24.5`) and the following third-party addons:
+This custom gaming server makes use of [LinuxGSM](https://linuxgsm.com/servers/dodserver/) (`24.1.5`) and the following third-party addons:
 
 - **AMX Mod X** (Commit `27f451a`) [[GitHub Repository](https://github.com/alliedmodders/amxmodx)]
 - **Metamod-r** (Commit `603a257`) [[GitHub Repository](https://github.com/rehlds/Metamod-R)]
