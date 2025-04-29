@@ -34,6 +34,12 @@ runs:
         envsubst '$VPS_GAMESERVER_CONFIG_AMX_ADMINS' < dodserver/serverfiles/dod/addons/amxmodx/configs/users.ini.template > dodserver/serverfiles/dod/addons/amxmodx/configs/users.ini
         rm -f dodserver/serverfiles/dod/addons/amxmodx/configs/users.ini.template
       shell: bash
+    - name: "ReUnion: Set the value of SteamIdHashSalt"
+      run: |
+        export VPS_GAMESERVER_CONFIG_REUNION_STEAMIDHASHSALT="${{ env.VPS_GAMESERVER_CONFIG_REUNION_STEAMIDHASHSALT }}"
+        envsubst '$VPS_GAMESERVER_CONFIG_REUNION_STEAMIDHASHSALT' < dodserver/serverfiles/dod/reunion.cfg.template > dodserver/serverfiles/dod/reunion.cfg
+        rm -f dodserver/serverfiles/dod/reunion.cfg.template
+      shell: bash
     - name: Set execute permissions for the gaming server files
       run: find dodserver/serverfiles/dod -type f -exec chmod 755 {} \;
       shell: bash
