@@ -23,8 +23,8 @@ mp_falldamage 1
 mp_flashlight 1
 mp_footsteps 1
 mp_fraglimit 0
-mp_friendlyfire 0
-mp_timelimit 20
+mp_friendlyfire $VPS_GAMESERVER_CONFIG_FRIENDLY_FIRE
+mp_timelimit $VPS_GAMESERVER_CONFIG_TIME_LIMIT
 
 pausable 0
 
@@ -40,12 +40,12 @@ sv_clienttrace 3.5
 sv_clipmode 0
 sv_friction 4
 sv_gravity 800
-sv_maxrate 0
+sv_maxrate $VPS_GAMESERVER_CONFIG_MAN_RATE
 sv_maxspectators 4
 sv_maxspeed 500
-sv_maxupdaterate 102
-sv_minrate 100000
-sv_minupdaterate 100
+sv_maxupdaterate $VPS_GAMESERVER_CONFIG_MAX_UPDATE_RATE
+sv_minrate $VPS_GAMESERVER_CONFIG_MIN_RATE
+sv_minupdaterate $VPS_GAMESERVER_CONFIG_MIN_UPDATE_RATE
 sv_region 0
 sv_stats 0
 sv_stepsize 18
@@ -57,7 +57,7 @@ sv_voiceenable 1
 sv_voicequality 5
 sv_wateraccelerate 10
 sv_waterfriction 1
-sys_ticrate 1000
+sys_ticrate $VPS_GAMESERVER_CONFIG_SYS_TIC_RATE
 
 traceralpha 0.45
 tracerblue 0.1

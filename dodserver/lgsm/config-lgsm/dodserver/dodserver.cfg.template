@@ -14,8 +14,8 @@ port="27015"
 clientport="27005"
 defaultmap="$VPS_GAMESERVER_CONFIG_DEFAULT_MAP"
 maxplayers="$VPS_GAMESERVER_CONFIG_MAX_PLAYERS"
-pingboost="3"
-zone="4096"
+pingboost="$VPS_GAMESERVER_CONFIG_PING_BOOST"
+zone="$VPS_GAMESERVER_CONFIG_ZONE"
 
 ## Server Parameters | https://docs.linuxgsm.com/configuration/start-parameters#additional-parameters
 startparameters="-game dod -strictportbind +ip ${ip} -port ${port} +clientport ${clientport} +map ${defaultmap} +servercfgfile ${servercfg} -maxplayers ${maxplayers} -pingboost ${pingboost} -zone ${zone}"

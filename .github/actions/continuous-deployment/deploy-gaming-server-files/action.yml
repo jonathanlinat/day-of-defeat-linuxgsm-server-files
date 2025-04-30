@@ -11,15 +11,24 @@ runs:
         DEFAULT_MAP=$(shuf -n 1 dodserver/serverfiles/dod/mapcycle.txt)
         export VPS_GAMESERVER_CONFIG_DEFAULT_MAP="$DEFAULT_MAP"
         export VPS_GAMESERVER_CONFIG_MAX_PLAYERS="${{ env.VPS_GAMESERVER_CONFIG_MAX_PLAYERS }}"
-        envsubst '$VPS_GAMESERVER_CONFIG_DEFAULT_MAP,$VPS_GAMESERVER_CONFIG_MAX_PLAYERS' < dodserver/lgsm/config-lgsm/dodserver/dodserver.cfg.template > dodserver/lgsm/config-lgsm/dodserver/dodserver.cfg
+        export VPS_GAMESERVER_CONFIG_PING_BOOST="${{ env.VPS_GAMESERVER_CONFIG_PING_BOOST }}"
+        export VPS_GAMESERVER_CONFIG_ZONE="${{ env.VPS_GAMESERVER_CONFIG_ZONE }}"
+        envsubst '$VPS_GAMESERVER_CONFIG_DEFAULT_MAP,$VPS_GAMESERVER_CONFIG_MAX_PLAYERS,$VPS_GAMESERVER_CONFIG_PING_BOOST,$VPS_GAMESERVER_CONFIG_ZONE' < dodserver/lgsm/config-lgsm/dodserver/dodserver.cfg.template > dodserver/lgsm/config-lgsm/dodserver/dodserver.cfg
         rm -f dodserver/lgsm/config-lgsm/dodserver/dodserver.cfg.template
       shell: bash
     - name: "Server configuration: Set hostname, RCON password, and download URL"
       run: |
-        export VPS_GAMESERVER_CONFIG_HOSTNAME="${{ env.VPS_GAMESERVER_CONFIG_HOSTNAME }}"
-        export VPS_GAMESERVER_CONFIG_RCON_PASSWORD="${{ env.VPS_GAMESERVER_CONFIG_RCON_PASSWORD }}"
         export VPS_GAMESERVER_CONFIG_DOWNLOAD_URL="${{ env.VPS_GAMESERVER_CONFIG_DOWNLOAD_URL }}"
-        envsubst '$VPS_GAMESERVER_CONFIG_HOSTNAME,$VPS_GAMESERVER_CONFIG_RCON_PASSWORD,$VPS_GAMESERVER_CONFIG_DOWNLOAD_URL' < dodserver/serverfiles/dod/dodserver.cfg.template > dodserver/serverfiles/dod/dodserver.cfg
+        export VPS_GAMESERVER_CONFIG_FRIENDLY_FIRE="${{ env.VPS_GAMESERVER_CONFIG_FRIENDLY_FIRE }}"
+        export VPS_GAMESERVER_CONFIG_HOSTNAME="${{ env.VPS_GAMESERVER_CONFIG_HOSTNAME }}"
+        export VPS_GAMESERVER_CONFIG_MAX_RATE="${{ env.VPS_GAMESERVER_CONFIG_MAX_RATE }}"
+        export VPS_GAMESERVER_CONFIG_MAX_UPDATE_RATE="${{ env.VPS_GAMESERVER_CONFIG_MAX_UPDATE_RATE }}"
+        export VPS_GAMESERVER_CONFIG_MIN_RATE="${{ env.VPS_GAMESERVER_CONFIG_MIN_RATE }}"
+        export VPS_GAMESERVER_CONFIG_MIN_UPDATE_RATE="${{ env.VPS_GAMESERVER_CONFIG_MIN_UPDATE_RATE }}"
+        export VPS_GAMESERVER_CONFIG_RCON_PASSWORD="${{ env.VPS_GAMESERVER_CONFIG_RCON_PASSWORD }}"
+        export VPS_GAMESERVER_CONFIG_SYS_TIC_RATE="${{ env.VPS_GAMESERVER_CONFIG_SYS_TIC_RATE }}"
+        export VPS_GAMESERVER_CONFIG_TIME_LIMIT="${{ env.VPS_GAMESERVER_CONFIG_TIME_LIMIT }}"
+        envsubst '$VPS_GAMESERVER_CONFIG_DOWNLOAD_URL,$VPS_GAMESERVER_CONFIG_FRIENDLY_FIRE,$VPS_GAMESERVER_CONFIG_HOSTNAME,$VPS_GAMESERVER_CONFIG_MAX_RATE,$VPS_GAMESERVER_CONFIG_MAX_UPDATE_RATE,$VPS_GAMESERVER_CONFIG_MIN_RATE,$VPS_GAMESERVER_CONFIG_MIN_UPDATE_RATE,$VPS_GAMESERVER_CONFIG_RCON_PASSWORD,$VPS_GAMESERVER_CONFIG_SYS_TIC_RATE,$VPS_GAMESERVER_CONFIG_TIME_LIMIT' < dodserver/serverfiles/dod/dodserver.cfg.template > dodserver/serverfiles/dod/dodserver.cfg
         rm -f dodserver/serverfiles/dod/dodserver.cfg.template
       shell: bash
     - name: "MOTD: Set meta title"
@@ -30,14 +39,14 @@ runs:
       shell: bash
     - name: "AMX Mod X: Set admin and moderator users"
       run: |
-        export VPS_GAMESERVER_CONFIG_AMX_ADMINS="${{ env.VPS_GAMESERVER_CONFIG_AMX_ADMINS }}"
-        envsubst '$VPS_GAMESERVER_CONFIG_AMX_ADMINS' < dodserver/serverfiles/dod/addons/amxmodx/configs/users.ini.template > dodserver/serverfiles/dod/addons/amxmodx/configs/users.ini
+        export VPS_GAMESERVER_CONFIG_AMXX_ADMINS="${{ env.VPS_GAMESERVER_CONFIG_AMXX_ADMINS }}"
+        envsubst '$VPS_GAMESERVER_CONFIG_AMXX_ADMINS' < dodserver/serverfiles/dod/addons/amxmodx/configs/users.ini.template > dodserver/serverfiles/dod/addons/amxmodx/configs/users.ini
         rm -f dodserver/serverfiles/dod/addons/amxmodx/configs/users.ini.template
       shell: bash
     - name: "ReUnion: Set the value of SteamIdHashSalt"
       run: |
-        export VPS_GAMESERVER_CONFIG_REUNION_STEAMIDHASHSALT="${{ env.VPS_GAMESERVER_CONFIG_REUNION_STEAMIDHASHSALT }}"
-        envsubst '$VPS_GAMESERVER_CONFIG_REUNION_STEAMIDHASHSALT' < dodserver/serverfiles/dod/reunion.cfg.template > dodserver/serverfiles/dod/reunion.cfg
+        export VPS_GAMESERVER_CONFIG_METAMOD_REUNION_STEAMIDHASHSALT="${{ env.VPS_GAMESERVER_CONFIG_METAMOD_REUNION_STEAMIDHASHSALT }}"
+        envsubst '$VPS_GAMESERVER_CONFIG_METAMOD_REUNION_STEAMIDHASHSALT' < dodserver/serverfiles/dod/reunion.cfg.template > dodserver/serverfiles/dod/reunion.cfg
         rm -f dodserver/serverfiles/dod/reunion.cfg.template
       shell: bash
     - name: Set execute permissions for the gaming server files
