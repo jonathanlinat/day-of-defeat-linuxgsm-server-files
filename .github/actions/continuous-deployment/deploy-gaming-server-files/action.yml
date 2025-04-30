@@ -31,11 +31,13 @@ runs:
         envsubst '$VPS_GAMESERVER_CONFIG_DOWNLOAD_URL,$VPS_GAMESERVER_CONFIG_FRIENDLY_FIRE,$VPS_GAMESERVER_CONFIG_HOSTNAME,$VPS_GAMESERVER_CONFIG_MAX_RATE,$VPS_GAMESERVER_CONFIG_MAX_UPDATE_RATE,$VPS_GAMESERVER_CONFIG_MIN_RATE,$VPS_GAMESERVER_CONFIG_MIN_UPDATE_RATE,$VPS_GAMESERVER_CONFIG_RCON_PASSWORD,$VPS_GAMESERVER_CONFIG_SYS_TIC_RATE,$VPS_GAMESERVER_CONFIG_TIME_LIMIT' < dodserver/serverfiles/dod/dodserver.cfg.template > dodserver/serverfiles/dod/dodserver.cfg
         rm -f dodserver/serverfiles/dod/dodserver.cfg.template
       shell: bash
-    - name: "MOTD: Set meta title"
+    - name: "MOTD: Set meta title and iframe source"
       run: |
         export VPS_GAMESERVER_CONFIG_HOSTNAME="${{ env.VPS_GAMESERVER_CONFIG_HOSTNAME }}"
+        export VPS_HOSTNAME="${{ env.VPS_HOSTNAME }}"
         envsubst '$VPS_GAMESERVER_CONFIG_HOSTNAME' < dodserver/serverfiles/dod/motd.html.template > dodserver/serverfiles/dod/motd.html
-        rm -f dodserver/serverfiles/dod/motd.html.template
+        envsubst '$VPS_GAMESERVER_CONFIG_HOSTNAME,$VPS_HOSTNAME' < dodserver/serverfiles/dod/motd.txt.template > dodserver/serverfiles/dod/motd.txt
+        rm -f dodserver/serverfiles/dod/motd.*.template
       shell: bash
     - name: "AMX Mod X: Set admin and moderator users"
       run: |

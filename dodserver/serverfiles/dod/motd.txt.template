@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>DoD 1.3 Community MOTD (https://discord.gg/dodcommunity)</title>
+        <title>$VPS_GAMESERVER_CONFIG_HOSTNAME MOTD</title>
         <style>
             html,
             body {
@@ -21,6 +21,6 @@
         </style>
     </head>
     <body>
-        <iframe src="http://108.61.151.70/motd.html" name="frame_main"></iframe>
+        <iframe src="http://$VPS_HOSTNAME/motd.html" name="frame_main"></iframe>
     </body>
 </html>
