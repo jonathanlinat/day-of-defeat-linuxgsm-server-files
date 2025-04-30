@@ -103,6 +103,7 @@ This custom gaming server is based on [LinuxGSM](https://linuxgsm.com/servers/do
 * **dod_railroad2_b2**, Insta (magstave@online.no)
 * **dod_saints_b7**, Day of Defeat 1.3 Community (https://discord.gg/dodcommunity)
 * **dod_sidestreets_b1**, marteew (https://dayofdefeat.home.blog)
+* **dod_siegen2_b2**, marteew (https://dayofdefeat.home.blog)
 * **dod_snowcity2_b1**, marteew (https://dayofdefeat.home.blog)
 * **dod_snowmountain_b2**, marteew (https://dayofdefeat.home.blog)
 * **dod_sulz**, Christian "DaKurt" Schulte zu Berge (cszb@cszb.net)

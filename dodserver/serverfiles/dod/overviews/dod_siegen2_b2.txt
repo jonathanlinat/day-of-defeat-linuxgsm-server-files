@@ -1,0 +1,14 @@
+// overview description file for dod_siegen2_b2.bsp
+
+global
+{
+  ZOOM 0.96
+  ORIGIN 192 -480 -321
+  ROTATED 1
+}
+
+layer
+{
+  IMAGE "overviews/dod_siegen2_b2.bmp"
+  HEIGHT -321
+}
