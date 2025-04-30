@@ -4,7 +4,7 @@
 #define URL "https://github.com/jonathanlinat"
 
 /*
- * This plugin eliminates stamina limitations for players,
+ * This plugin eliminates stamina limitations for players.
  *
  * It has been successfully tested with AMX Mod X v1.10+.
  */

@@ -14,14 +14,44 @@ The server setup follows the procedures outlined in the related [Day of Defeat 1
 
 This custom gaming server is based on [LinuxGSM](https://linuxgsm.com/servers/dodserver/) (`24.1.5`).
 
-### Third-party Addons and Modules
+### Addons and Modules
 
-* **AMX Mod X** (Commit `27f451a`) [[GitHub Repository](https://github.com/alliedmodders/amxmodx)]
-* **Metamod-r** (Commit `603a257`) [[GitHub Repository](https://github.com/rehlds/Metamod-R)]
-* **ReHLDS** (Commit `1571474`) [[GitHub Repository](https://github.com/rehlds/ReHLDS)]
-* **ReAPI** (Commit `66f6096`) [[GitHub Repository](https://github.com/rehlds/reapi)]
-* **ReUnion** (Commit `95d3e93`) [[GitHub Repository](https://github.com/rehlds/reunion)]
-* **VoiceTranscoder** (Commit `a9ae70b`) [[GitHub Repository](https://github.com/WPMGPRoSToTeMa/VoiceTranscoder)]
+* **AMX Mod X** (Commit `27f451a`), AlliedModders (https://github.com/alliedmodders/amxmodx)
+* **Metamod-r** (Commit `603a257`), ReHLDS (https://github.com/rehlds/Metamod-R)
+* **ReHLDS** (Commit `1571474`), ReHLDS (https://github.com/rehlds/ReHLDS)
+* **ReAPI** (Commit `66f6096`), ReHLDS (https://github.com/rehlds/reapi)
+* **ReUnion** (Commit `95d3e93`), ReHLDS (https://github.com/rehlds/reunion)
+* **VoiceTranscoder** (Commit `a9ae70b`), WPMGPRoSToTeMa (https://github.com/WPMGPRoSToTeMa/VoiceTranscoder)
+
+### Third-party AMX Mod X Plugins
+
+#### Enabled
+
+* **Away From Keyboard Kicker** (`1.0.0`), Jonathan Linat (https://github.com/jonathanlinat)
+   - Identifies and kicks players who are away from their keyboard (AFK) for a specified duration, enhancing game flow and fairness on multiplayer servers.
+* **Death Effect Enhancer** (`1.0.0`), Jonathan Linat (https://github.com/jonathanlinat)
+   - Significantly enriches the visual and gameplay experience upon a player's death in-game.
+* **Instant Spawner** (`1.0.0`), Jonathan Linat (https://github.com/jonathanlinat)
+   - Completely removes the spawn delay when players die. It allows for a more intense game and works on player death or when they type kill in console.
+* **Machine Gun Deployment Enhancer** (`1.0.0`), Jonathan Linat (https://github.com/jonathanlinat)
+   - Enhances the deployment mechanism for machine guns in-game.
+* **Parachute Provider** (`1.0.0`), Jonathan Linat (https://github.com/jonathanlinat)
+   - Provides a parachute to players when they are falling from a height, allowing for a slow and safe descent. Players can activate the parachute by pressing the 'use' key while in mid-air. It contributes to a fun and dynamic gameplay experience in the server.
+* **Player Healer** (`1.0.0`), Jonathan Linat (https://github.com/jonathanlinat)
+   - Enables automatic healing for players in-game, allowing server administrators to configure healing parameters such as maximum health points for auto-healing, medic call limits, and healing sounds.
+* **Scoreboard Hostname Slider** (`1.0.0`), Jonathan Linat (https://github.com/jonathanlinat)
+   - Dynamically updates the server's hostname on the scoreboard to create a sliding text effect.
+* **SVC Bad Preventer** (`1.0.0`), Jonathan Linat (https://github.com/jonathanlinat)
+   - Aims to prevent the following error: "Error: server failed to transmit file 'AY&SYea'".
+* **Weapons Registration Enhancer** (`1.0.0`), Jonathan Linat (https://github.com/jonathanlinat)
+   - Optimizes hit detection for various weapons in the game, ensuring more reliable and consistent registration of hits. It dynamically adjusts the likelihood of a hit being registered based on the type of weapon being used, thereby refining the gameplay experience. The plugin assigns different chances for hits to register based on weapon classes, ranging from melee weapons to heavy firearms, which aims to balance gameplay and align hit registration more closely with player expectations.
+
+#### Disabled
+
+* **Next Map Selection Randomizer** (`1.0.0`), Jonathan Linat (https://github.com/jonathanlinat)
+   - Aims to randomize the next map selection to enhance variety and player engagement by choosing from a specified map cycle list. Configurable options allow server administrators to exclude recently played maps and customize the map cycle file, ensuring players experience a wide range of environments without repetition.
+* **Stamina Unlimiter** (`1.0.0`), Jonathan Linat (https://github.com/jonathanlinat)
+   - Eliminates stamina limitations for players.
 
 ### Maps
 
