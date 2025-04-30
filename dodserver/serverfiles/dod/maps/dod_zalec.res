@@ -1,4 +1,4 @@
-// \dod_zalec.res - created with RESGen v2.0.2.
+// dod_zalec.res - created with RESGen v2.0.3.
 // RESGen is made by Jeroen "ShadowLord" Bogers,
 // with serveral improvements and additions by Zero3Cool.
 // For more info go to http://resgen.hltools.com
@@ -64,7 +64,7 @@ sound/weapons/Kar_shoot.wav
 sound/weapons/mortar.wav
 sprites/explosion1.spr
 sprites/gas_puff_01.spr
-sprites/mapsprites/fexplo.spr
+sprites/mapsprites//fexplo.spr
 sprites/mapsprites/beep.spr
 sprites/mapsprites/c2_5to1count.spr
 sprites/mapsprites/caparea.spr

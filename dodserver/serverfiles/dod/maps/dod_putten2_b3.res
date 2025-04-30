@@ -1,4 +1,4 @@
-// \dod_putten2_b3.res - created with RESGen v2.0.2.
+// dod_putten2_b3.res - created with RESGen v2.0.3.
 // RESGen is made by Jeroen "ShadowLord" Bogers,
 // with serveral improvements and additions by Zero3Cool.
 // For more info go to http://resgen.hltools.com
@@ -70,3 +70,4 @@ sound/ambience/waterrun.wav
 sprites/flames.spr
 sprites/mapsprites/caparea.spr
 sprites/obj_tnt.spr
+tempdecal.wad

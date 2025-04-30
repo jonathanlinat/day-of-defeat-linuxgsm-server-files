@@ -1,4 +1,4 @@
-// \dod_tensions2_b2.res - created with RESGen v2.0.2.
+// dod_tensions2_b2.res - created with RESGen v2.0.3.
 // RESGen is made by Jeroen "ShadowLord" Bogers,
 // with serveral improvements and additions by Zero3Cool.
 // For more info go to http://resgen.hltools.com
@@ -15,4 +15,4 @@ sound/ambience/uswin.wav
 sound/player/britgogogo.wav
 sprites/documents_red_hud.spr
 sprites/mapsprites/caparea.spr
-sprites/obj_icons/dod_tensions2_b2/icon_obj_custom2_allies.spr
+sprites/obj_icons/dod_jagd/icon_obj_custom2_allies.spr

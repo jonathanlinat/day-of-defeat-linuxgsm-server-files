@@ -1,4 +1,4 @@
-// overview description file for dod_saints.bsp
+// overview description file for dod_saints_b7.bsp
 
 global
 {
@@ -9,6 +9,6 @@ global
 
 layer
 {
- 	IMAGE "overviews/dod_saints.bmp"
+ 	IMAGE "overviews/dod_saints_b7.bmp"
  	HEIGHT -609.00
 }

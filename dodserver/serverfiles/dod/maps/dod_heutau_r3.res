@@ -1,4 +1,4 @@
-// \dod_heutau_r3.res - created with RESGen v2.0.2.
+// dod_heutau_r3.res - created with RESGen v2.0.3.
 // RESGen is made by Jeroen "ShadowLord" Bogers,
 // with serveral improvements and additions by Zero3Cool.
 // For more info go to http://resgen.hltools.com
@@ -59,3 +59,4 @@ sound/ambience/truck-1ka.wav
 sound/ambience/uspointcaptured.wav
 sound/ambience/uswin.wav
 sprites/glow01.spr
+tempdecal.wad

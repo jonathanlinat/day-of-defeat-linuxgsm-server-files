@@ -1,4 +1,4 @@
-// \dod_tiger2_r2.res - created with RESGen v2.0.2.
+// dod_tiger2_r2.res - created with RESGen v2.0.3.
 // RESGen is made by Jeroen "ShadowLord" Bogers,
 // with serveral improvements and additions by Zero3Cool.
 // For more info go to http://resgen.hltools.com
@@ -54,3 +54,4 @@ sound/ambience/uswin.wav
 sprites/glow01.spr
 sprites/mapsprites/caparea.spr
 sprites/obj_tnt.spr
+tempdecal.wad

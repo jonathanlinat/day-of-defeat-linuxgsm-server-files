@@ -1,4 +1,4 @@
-// \dod_advance.res - created with RESGen v2.0.2.
+// dod_advance.res - created with RESGen v2.0.3.
 // RESGen is made by Jeroen "ShadowLord" Bogers,
 // with serveral improvements and additions by Zero3Cool.
 // For more info go to http://resgen.hltools.com
@@ -45,10 +45,4 @@ sound/ambience/usareasecure.wav
 sound/ambience/uswin.wav
 sprites/glow01.spr
 sprites/mapsprites/caparea.spr
-sprites/obj_icons/dod_advance/icon_obj_custom1_allies.spr
-sprites/obj_icons/dod_advance/icon_obj_custom1_axis.spr
-sprites/obj_icons/dod_advance/icon_obj_custom1_neutral.spr
-sprites/obj_icons/dod_advance/icon_obj_custom2_allies.spr
-sprites/obj_icons/dod_advance/icon_obj_custom2_axis.spr
-sprites/obj_icons/dod_advance/icon_obj_custom2_neutral.spr
 sprites/obj_tnt.spr
