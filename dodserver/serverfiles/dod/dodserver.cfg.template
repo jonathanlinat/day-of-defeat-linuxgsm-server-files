@@ -1,6 +1,5 @@
 hostname "$VPS_GAMESERVER_CONFIG_HOSTNAME"
 rcon_password "$VPS_GAMESERVER_CONFIG_RCON_PASSWORD"
-sv_downloadurl "http://$VPS_HOSTNAME/"
 
 decalfrequency 30
 
@@ -38,6 +37,7 @@ sv_bounce 1
 sv_cheats 0
 sv_clienttrace 3.5
 sv_clipmode 0
+sv_downloadurl "http://$VPS_HOSTNAME/"
 sv_friction 4
 sv_gravity 800
 sv_maxrate $VPS_GAMESERVER_CONFIG_MAN_RATE
