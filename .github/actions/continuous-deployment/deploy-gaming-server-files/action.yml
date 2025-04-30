@@ -13,7 +13,8 @@ runs:
         export VPS_GAMESERVER_CONFIG_MAX_PLAYERS="${{ env.VPS_GAMESERVER_CONFIG_MAX_PLAYERS }}"
         export VPS_GAMESERVER_CONFIG_PING_BOOST="${{ env.VPS_GAMESERVER_CONFIG_PING_BOOST }}"
         export VPS_GAMESERVER_CONFIG_ZONE="${{ env.VPS_GAMESERVER_CONFIG_ZONE }}"
-        envsubst '$VPS_GAMESERVER_CONFIG_DEFAULT_MAP,$VPS_GAMESERVER_CONFIG_MAX_PLAYERS,$VPS_GAMESERVER_CONFIG_PING_BOOST,$VPS_GAMESERVER_CONFIG_ZONE' < dodserver/lgsm/config-lgsm/dodserver/dodserver.cfg.template > dodserver/lgsm/config-lgsm/dodserver/dodserver.cfg
+        export VPS_HOSTNAME="${{ env.VPS_HOSTNAME }}"
+        envsubst '$VPS_GAMESERVER_CONFIG_DEFAULT_MAP,$VPS_GAMESERVER_CONFIG_MAX_PLAYERS,$VPS_GAMESERVER_CONFIG_PING_BOOST,$VPS_GAMESERVER_CONFIG_ZONE,$VPS_HOSTNAME' < dodserver/lgsm/config-lgsm/dodserver/dodserver.cfg.template > dodserver/lgsm/config-lgsm/dodserver/dodserver.cfg
         rm -f dodserver/lgsm/config-lgsm/dodserver/dodserver.cfg.template
       shell: bash
     - name: "Server configuration: Set hostname, RCON password, and download URL"

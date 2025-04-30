@@ -9,7 +9,7 @@
 #### Game Server Settings ####
 
 ## Predefined Parameters | https://docs.linuxgsm.com/configuration/start-parameters
-ip="0.0.0.0"
+ip="$VPS_HOSTNAME"
 port="27015"
 clientport="27005"
 defaultmap="$VPS_GAMESERVER_CONFIG_DEFAULT_MAP"
