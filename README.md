@@ -55,6 +55,8 @@ This custom gaming server is based on [LinuxGSM](https://linuxgsm.com/servers/do
 
 ### Maps
 
+This gaming server hosts **53** original and custom maps.
+
 #### Official
 
 * **dod_anzio**, Davide "Chow_Yun_Fat" Pernigo (bido@halflifeitalia.com)
@@ -113,3 +115,8 @@ This custom gaming server is based on [LinuxGSM](https://linuxgsm.com/servers/do
 * **dod_veghel_b3**, Kyle "Siron" Florence (kyle@dork.cx)
 * **dod_volonne**, Jeremy "Izuno" Miller (izuno@planethalflife.com)
 * **dod_vonbrewski_b1**, marteew (https://dayofdefeat.home.blog)
+
+### Tools
+
+* **RESGen** (`2.0.3`), Sāfto "kriswema" Rangen (https://github.com/kriswema/resgen)
+   - Creates resource files for Half-Life and its mods. To generate all the resource files, execute the following command from the root location of the repository: `./tools/resgen -d dodserver/serverfiles/dod/maps/ -o`
