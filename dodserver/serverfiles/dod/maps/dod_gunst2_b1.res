@@ -64,4 +64,3 @@ sound/player/usfireinhole.wav
 sprites/glow01.spr
 sprites/mapsprites/caparea.spr
 sprites/obj_tnt.spr
-tempdecal.wad

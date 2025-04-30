@@ -54,4 +54,3 @@ sound/ambience/uswin.wav
 sprites/glow01.spr
 sprites/mapsprites/caparea.spr
 sprites/obj_tnt.spr
-tempdecal.wad

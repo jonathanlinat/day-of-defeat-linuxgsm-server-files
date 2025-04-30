@@ -64,7 +64,7 @@ sound/weapons/Kar_shoot.wav
 sound/weapons/mortar.wav
 sprites/explosion1.spr
 sprites/gas_puff_01.spr
-sprites/mapsprites//fexplo.spr
+sprites/mapsprites/fexplo.spr
 sprites/mapsprites/beep.spr
 sprites/mapsprites/c2_5to1count.spr
 sprites/mapsprites/caparea.spr

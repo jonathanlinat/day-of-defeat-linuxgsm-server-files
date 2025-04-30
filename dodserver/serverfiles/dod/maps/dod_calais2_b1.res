@@ -51,4 +51,3 @@ sound/ambience/gerpointcaptured.wav
 sound/ambience/windy.wav
 sprites/flames.spr
 sprites/mapsprites/caparea.spr
-tempdecal.wad

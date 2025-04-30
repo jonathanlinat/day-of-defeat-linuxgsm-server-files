@@ -61,4 +61,3 @@ sound/ambience/usobjectivesecure.wav
 sound/ambience/uspointcaptured.wav
 sound/ambience/uswin.wav
 sprites/mapsprites/caparea.spr
-tempdecal.wad

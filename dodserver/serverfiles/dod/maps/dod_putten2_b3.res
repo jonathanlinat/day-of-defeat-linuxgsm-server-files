@@ -70,4 +70,3 @@ sound/ambience/waterrun.wav
 sprites/flames.spr
 sprites/mapsprites/caparea.spr
 sprites/obj_tnt.spr
-tempdecal.wad

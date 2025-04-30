@@ -58,4 +58,17 @@ sound/mapsounds/uspointcaptured.wav
 sprites/glow01.spr
 sprites/glow04.spr
 sprites/mapsprites/caparea.spr
+sprites/obj_icons/dod_veghel_b3/icon_obj_custom2_neutral.spr
+sprites/obj_icons/dod_veghel_b3/icon_obj_custom2_allies.spr
+sprites/obj_icons/dod_veghel_b3/icon_obj_custom2_axis.spr
+sprites/obj_icons/dod_veghel_b3/icon_obj_custom1_allies.spr
+sprites/obj_icons/dod_veghel_b3/icon_obj_custom1_axis.spr
+sprites/obj_icons/dod_veghel_b3/icon_obj_custom5_allies.spr
+sprites/obj_icons/dod_veghel_b3/icon_obj_custom5_axis.spr
+sprites/obj_icons/dod_veghel_b3/icon_obj_custom4_neutral.spr
+sprites/obj_icons/dod_veghel_b3/icon_obj_custom4_allies.spr
+sprites/obj_icons/dod_veghel_b3/icon_obj_custom4_axis.spr
+sprites/obj_icons/dod_veghel_b3/icon_obj_custom3_neutral.spr
+sprites/obj_icons/dod_veghel_b3/icon_obj_custom3_allies.spr
+sprites/obj_icons/dod_veghel_b3/icon_obj_custom3_axis.spr
 sprites/obj_tnt.spr

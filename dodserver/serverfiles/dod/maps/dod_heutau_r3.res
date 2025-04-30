@@ -59,4 +59,3 @@ sound/ambience/truck-1ka.wav
 sound/ambience/uspointcaptured.wav
 sound/ambience/uswin.wav
 sprites/glow01.spr
-tempdecal.wad
