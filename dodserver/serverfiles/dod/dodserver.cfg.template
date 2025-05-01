@@ -44,7 +44,7 @@ sv_maxrate $VPS_GAMESERVER_CONFIG_MAXRATE
 sv_maxspectators 4
 sv_maxspeed 500
 sv_maxupdaterate $VPS_GAMESERVER_CONFIG_MAXUPDATERATE
-sv_minrate $VPS_GAMESERVER_CONFIG_MIN_RATE
+sv_minrate $VPS_GAMESERVER_CONFIG_MINRATE
 sv_minupdaterate $VPS_GAMESERVER_CONFIG_MINUPDATERATE
 sv_region 0
 sv_stats 0
