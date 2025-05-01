@@ -1,20 +1,23 @@
 # Day of Defeat 1.3: Custom LinuxGSM Server Files
 
-This repository contains all custom files used for the **Day of Defeat 1.3 Community** gaming server, hosted at `108.61.151.70:27015`.
+This repository contains all custom files used for the **Day of Defeat 1.3 Community** server, hosted at `108.61.151.70:27015`.
 
 ![](https://github.com/user-attachments/assets/de60caca-a783-4d64-adeb-b1281d01cfb8)
 
 The server setup follows the procedures outlined in the related [Day of Defeat 1.3: Set Up a Server with LinuxGSM](https://github.com/jonathanlinat/day-of-defeat-linuxgsm-server-setup) guide. Its custom files are managed and maintained here to ensure consistent deployment and easy updates for the community server.
 
 | 💬 Join an Active Community |
-| --------------------------- |
+| -- |
 | [![](https://dcbadge.vercel.app/api/server/dodcommunity?style=plastic)](https://discord.gg/dodcommunity) |
 
-## Features
+## Features and Architecture
 
-This custom gaming server is based on [LinuxGSM](https://linuxgsm.com/servers/dodserver/) (`24.1.5`).
+This custom server is based on [LinuxGSM](https://linuxgsm.com/servers/dodserver/) (`24.1.5`).
 
 ### Addons and Modules
+
+> [!NOTE]
+> All the addons and modules are located in the `dodserver/serverfiles/dod/addons/` directory.
 
 * **AMX Mod X** (Commit `27f451a`), AlliedModders (https://github.com/alliedmodders/amxmodx)
 * **Metamod-r** (Commit `603a257`), ReHLDS (https://github.com/rehlds/Metamod-R)
@@ -25,7 +28,10 @@ This custom gaming server is based on [LinuxGSM](https://linuxgsm.com/servers/do
 
 ### Third-party AMX Mod X Plugins
 
-#### Enabled
+> [!NOTE]
+> All the plugins and related scripts are located in the `dodserver/serverfiles/dod/addons/amxmodx/` directory.
+
+#### ✅ Enabled
 
 * **Away From Keyboard Kicker** (`1.0.0`), Jonathan Linat (https://github.com/jonathanlinat)
    - Identifies and kicks players who are away from their keyboard (AFK) for a specified duration, enhancing game flow and fairness on multiplayer servers.
@@ -46,7 +52,7 @@ This custom gaming server is based on [LinuxGSM](https://linuxgsm.com/servers/do
 * **Weapons Registration Enhancer** (`1.0.0`), Jonathan Linat (https://github.com/jonathanlinat)
    - Optimizes hit detection for various weapons in the game, ensuring more reliable and consistent registration of hits. It dynamically adjusts the likelihood of a hit being registered based on the type of weapon being used, thereby refining the gameplay experience. The plugin assigns different chances for hits to register based on weapon classes, ranging from melee weapons to heavy firearms, which aims to balance gameplay and align hit registration more closely with player expectations.
 
-#### Disabled
+#### ❌ Disabled
 
 * **Next Map Selection Randomizer** (`1.0.0`), Jonathan Linat (https://github.com/jonathanlinat)
    - Aims to randomize the next map selection to enhance variety and player engagement by choosing from a specified map cycle list. Configurable options allow server administrators to exclude recently played maps and customize the map cycle file, ensuring players experience a wide range of environments without repetition.
@@ -55,7 +61,10 @@ This custom gaming server is based on [LinuxGSM](https://linuxgsm.com/servers/do
 
 ### Maps
 
-This gaming server hosts **53** original and custom maps.
+This server hosts `22` original and `31` custom maps.
+
+> [!NOTE]
+> All the maps are located in the `dodserver/serverfiles/dod/maps/` directory.
 
 #### Official
 
@@ -116,7 +125,48 @@ This gaming server hosts **53** original and custom maps.
 * **dod_volonne**, Jeremy "Izuno" Miller (izuno@planethalflife.com)
 * **dod_vonbrewski_b1**, marteew (https://dayofdefeat.home.blog)
 
-### Tools
+## Server Settings and Environment Variables
 
-* **RESGen** (`2.0.3`), Sāfto "kriswema" Rangen (https://github.com/kriswema/resgen)
-   - Creates resource files for Half-Life and its mods. To generate all the resource files, execute the following command from the root location of the repository: `./tools/resgen -d dodserver/serverfiles/dod/maps/ -o`
+Some of the server settings are managed through environment variables. These variables are configured in **GitHub** and automatically injected into the appropriate files via **GitHub Actions** workflows whenever a commit is pushed to the repository.
+
+> [!NOTE]
+> All the environment variables are set in the `Settings` section of this repository and are manageable only by official contributors.
+
+| Environment Variable Name | Game Variable Name | Assigned Value |
+| -- | -- | -- |
+| `VPS_GAMESERVER_CONFIG_FRIENDLYFIRE` | `mp_friendlyfire` | `0` |
+| `VPS_GAMESERVER_CONFIG_HOSTNAME` | `hostname` | `[DoD 1.3 Community] US (https://discord.gg/dodcommunity)` |
+| `VPS_GAMESERVER_CONFIG_MAXPLAYERS` | `maxplayers` | `32` |
+| `VPS_GAMESERVER_CONFIG_MAXRATE` | `sv_maxrate` | `0` |
+| `VPS_GAMESERVER_CONFIG_MAXUPDATERATE` | `sv_maxupdaterate` | `102` |
+| `VPS_GAMESERVER_CONFIG_MINRATE` | `sv_minrate` | `100000` |
+| `VPS_GAMESERVER_CONFIG_MINUPDATERATE` | `sv_minupdaterate` | `100` |
+| `VPS_GAMESERVER_CONFIG_PINGBOOST` | `pingboost` | `3` |
+| `VPS_GAMESERVER_CONFIG_SYSTICRATE` | `sys_ticrate` | `10000` |
+| `VPS_GAMESERVER_CONFIG_TIMELIMIT` | `mp_timelimit` | `20` |
+| `VPS_GAMESERVER_CONFIG_ZONE` | `zone` | `4096` |
+
+### Secrets
+
+| Environment Variable Name |
+| -- |
+| `VPS_GAMESERVER_CONFIG_AMXX_ADMINS` |
+| `VPS_GAMESERVER_BINARY` |
+| `VPS_GAMESERVER_CONFIG_METAMOD_REUNION_STEAMIDHASHSALT` |
+| `VPS_GAMESERVER_CONFIG_RCON_PASSWORD` |
+| `VPS_GAMESERVER_OPENSSH_ID` |
+| `VPS_GAMESERVER_OPENSSH_PRIVATE_KEY` |
+| `VPS_GAMESERVER_RSYNC_DEST_PATH` |
+| `VPS_GAMESERVER_RSYNC_SOURCE_PATH` |
+| `VPS_GAMESERVER_USERNAME` |
+| `VPS_HOSTNAME` |
+
+## Extra Tools
+
+Several tools are included to help manage the server files locally.
+
+> [!NOTE]
+> All the tools are located in the `tools/` directory.
+
+* **RESGen** (`2.0.3`), created by Sāfto "kriswema" Rangen (https://github.com/kriswema/resgen)
+   - Generates resource (`.res`) files for Half-Life and its mods. To generate all resource files, run the following command from the root of the repository: `./tools/resgen -d dodserver/serverfiles/dod/maps/ -o`. For more information about available commands, execute `./tools/resgen -h`.
