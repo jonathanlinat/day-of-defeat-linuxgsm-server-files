@@ -173,7 +173,10 @@ This server hosts `22` original and `31` custom maps.
 Some of the server settings are managed through environment variables. These variables are configured in **GitHub** and automatically injected into the appropriate files via **GitHub Actions** workflows whenever a commit is pushed to the repository.
 
 > [!NOTE]
-> All the environment variables are set in the `Settings` section of this repository and are manageable only by official contributors.
+> All the environment variables are set in this repository's `Settings` section and are manageable only by official contributors.
+
+> [!WARNING]
+> `sys_ticrate` cannot surpass `1500` because of intense _vCPU_ usage.
 
 | Environment Variable Name | Game Variable Name | Assigned Value |
 | -- | -- | -- |
@@ -185,7 +188,7 @@ Some of the server settings are managed through environment variables. These var
 | `VPS_GAMESERVER_CONFIG_MINRATE` | `sv_minrate` | `100000` |
 | `VPS_GAMESERVER_CONFIG_MINUPDATERATE` | `sv_minupdaterate` | `100` |
 | `VPS_GAMESERVER_CONFIG_PINGBOOST` | `pingboost` | `3` |
-| `VPS_GAMESERVER_CONFIG_SYSTICRATE` | `sys_ticrate` | `2500` |
+| `VPS_GAMESERVER_CONFIG_SYSTICRATE` | `sys_ticrate` | `1500` |
 | `VPS_GAMESERVER_CONFIG_TIMELIMIT` | `mp_timelimit` | `20` |
 | `VPS_GAMESERVER_CONFIG_ZONE` | `zone` | `4096` |
 
