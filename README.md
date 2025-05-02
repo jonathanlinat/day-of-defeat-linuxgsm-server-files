@@ -8,7 +8,7 @@ The server setup follows the procedures outlined in the related [Day of Defeat 1
 
 | 💬 Join an Active Community |
 | -- |
-| [![](https://dcbadge.vercel.app/api/server/dodcommunity?style=plastic)](https://discord.gg/dodcommunity) |
+| [![DoD Game Info](https://dcbadge.vercel.app/api/server/dodcommunity?style=plastic)](https://discord.gg/dodcommunity) |
 
 ## Features and Architecture
 
@@ -176,7 +176,10 @@ Some of the server settings are managed through environment variables. These var
 > All the environment variables are set in this repository's `Settings` section and are manageable only by official contributors.
 
 > [!WARNING]
-> `sys_ticrate` cannot surpass `1500` because of intense _vCPU_ usage.
+> `sys_ticrate` cannot surpass `1000` because of intense _vCPU_ usage.
+>
+> ![Vultr.com Intense vCPU Usage](https://github.com/user-attachments/assets/727bae49-3f9c-454b-abae-cc9882db108d)
+
 
 | Environment Variable Name | Game Variable Name | Assigned Value |
 | -- | -- | -- |
@@ -188,7 +191,7 @@ Some of the server settings are managed through environment variables. These var
 | `VPS_GAMESERVER_CONFIG_MINRATE` | `sv_minrate` | `100000` |
 | `VPS_GAMESERVER_CONFIG_MINUPDATERATE` | `sv_minupdaterate` | `100` |
 | `VPS_GAMESERVER_CONFIG_PINGBOOST` | `pingboost` | `3` |
-| `VPS_GAMESERVER_CONFIG_SYSTICRATE` | `sys_ticrate` | `1500` |
+| `VPS_GAMESERVER_CONFIG_SYSTICRATE` | `sys_ticrate` | `1000` |
 | `VPS_GAMESERVER_CONFIG_TIMELIMIT` | `mp_timelimit` | `20` |
 | `VPS_GAMESERVER_CONFIG_ZONE` | `zone` | `4096` |
 
