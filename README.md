@@ -185,7 +185,7 @@ Some of the server settings are managed through environment variables. These var
 | `VPS_GAMESERVER_CONFIG_MINRATE` | `sv_minrate` | `100000` |
 | `VPS_GAMESERVER_CONFIG_MINUPDATERATE` | `sv_minupdaterate` | `100` |
 | `VPS_GAMESERVER_CONFIG_PINGBOOST` | `pingboost` | `3` |
-| `VPS_GAMESERVER_CONFIG_SYSTICRATE` | `sys_ticrate` | `1000` |
+| `VPS_GAMESERVER_CONFIG_SYSTICRATE` | `sys_ticrate` | `2500` |
 | `VPS_GAMESERVER_CONFIG_TIMELIMIT` | `mp_timelimit` | `20` |
 | `VPS_GAMESERVER_CONFIG_ZONE` | `zone` | `4096` |
 
