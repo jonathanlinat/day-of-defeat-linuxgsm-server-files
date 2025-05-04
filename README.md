@@ -25,7 +25,6 @@ This custom server is based on [LinuxGSM](https://linuxgsm.com/servers/dodserver
 * **ReHLDS** (`3.15.0.866-dev`, commit `1571474`), ReHLDS (https://github.com/rehlds/ReHLDS)
 * **ReAPI** (`5.29.0.345-dev`, commit `66f6096`), ReHLDS (https://github.com/rehlds/reapi)
 * **ReUnion** (`0.2.0.27`, commit `95d3e93`), ReHLDS (https://github.com/rehlds/reunion)
-* **SafeNameAndChat** (`1.2 Beta 3`, commit `a9241b2`), WPMGPRoSToTeMa (https://github.com/WPMGPRoSToTeMa/SafeNameAndChat)
 * **VoiceTranscoder** (`2017RC5`, commit `a9ae70b`), WPMGPRoSToTeMa (https://github.com/WPMGPRoSToTeMa/VoiceTranscoder)
 
 ### Third-party AMX Mod X Plugins
