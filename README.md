@@ -21,6 +21,7 @@ This custom server is based on [LinuxGSM](https://linuxgsm.com/servers/dodserver
 
 * **AMX Mod X** (`1.10.0.5467`, commit `27f451a`), AlliedModders (https://github.com/alliedmodders/amxmodx)
 * **Metamod-r** (`1.3.0.149`, commit `603a257`), ReHLDS (https://github.com/rehlds/Metamod-R)
+* **NetBufExtender** (`1.0`), PRoSToTeM@ (https://cs.rin.ru/forum/viewtopic.php?f=10&t=66907)
 * **ReHLDS** (`3.15.0.866-dev`, commit `1571474`), ReHLDS (https://github.com/rehlds/ReHLDS)
 * **ReAPI** (`5.29.0.345-dev`, commit `66f6096`), ReHLDS (https://github.com/rehlds/reapi)
 * **ReUnion** (`0.2.0.27`, commit `95d3e93`), ReHLDS (https://github.com/rehlds/reunion)

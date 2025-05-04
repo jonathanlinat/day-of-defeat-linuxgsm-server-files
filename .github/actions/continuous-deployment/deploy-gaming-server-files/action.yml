@@ -43,8 +43,8 @@ runs:
     - name: "AMX Mod X: Set admin and moderator users"
       run: |
         export VPS_GAMESERVER_CONFIG_AMXX_ADMINS="${{ env.VPS_GAMESERVER_CONFIG_AMXX_ADMINS }}"
-        envsubst '$VPS_GAMESERVER_CONFIG_AMXX_ADMINS' < dodserver/serverfiles/dod/addons/amxmodx/configs/users.ini.template > dodserver/serverfiles/dod/addons/amxmodx/configs/users.ini
-        rm -f dodserver/serverfiles/dod/addons/amxmodx/configs/users.ini.template
+        envsubst '$VPS_GAMESERVER_CONFIG_AMXX_ADMINS' < dodserver/serverfiles/dod/addons/metamod/plugins/amxmodx/configs/users.ini.template > dodserver/serverfiles/dod/addons/metamod/plugins/amxmodx/configs/users.ini
+        rm -f dodserver/serverfiles/dod/addons/metamod/plugins/amxmodx/configs/users.ini.template
       shell: bash
     - name: "ReUnion: Set the value of SteamIdHashSalt"
       run: |
