@@ -24,50 +24,8 @@ This custom server is based on [LinuxGSM](https://linuxgsm.com/servers/dodserver
 * **ReHLDS** (`3.15.0.866-dev`, commit `1571474`), ReHLDS (https://github.com/rehlds/ReHLDS)
 * **ReAPI** (`5.29.0.345-dev`, commit `66f6096`), ReHLDS (https://github.com/rehlds/reapi)
 * **ReUnion** (`0.2.0.27`, commit `95d3e93`), ReHLDS (https://github.com/rehlds/reunion)
+* **SafeNameAndChat** (`1.2 Beta 3`, commit `a9241b2`), WPMGPRoSToTeMa (https://github.com/WPMGPRoSToTeMa/SafeNameAndChat)
 * **VoiceTranscoder** (`2017RC5`, commit `a9ae70b`), WPMGPRoSToTeMa (https://github.com/WPMGPRoSToTeMa/VoiceTranscoder)
-
-#### AMX Mod X
-
-```bash
-AMX Mod X 1.10.0.5467 (http://www.amxmodx.org)
-Authors:
-        David "BAILOPAN" Anderson, Pavol "PM OnoTo" Marko
-        Felix "SniperBeamer" Geyer, Jonny "Got His Gun" Bergstrom
-        Lukasz "SidLuke" Wlasinski, Christian "Basic-Master" Hammacher
-        Borja "faluco" Ferrer, Scott "DS" Ehlert
-Compiled: Jan 21 2023 20:27:33
-Built from: https://github.com/alliedmodders/amxmodx/commit/27f451a
-Build ID: 5467:27f451a
-Core mode: JIT+ASM32
-```
-
-#### Metamod-r
-
-```bash
-Metamod-r v1.3.0.149, API (5:13)
-Metamod-r build: 11:31:17 Apr 23 2024
-Metamod-r from: https://github.com/theAsmodai/metamod-r/commit/603a257
-```
-
-#### ReHLDS
-
-```bash
-Protocol version 48
-Exe version 1.1.2.6/Stdio (dod)
-ReHLDS version: 3.15.0.866-dev
-Build date: 15:27:46 Apr 25 2025 (4031)
-Build from: https://github.com/rehlds/ReHLDS/commit/1571474
-```
-
-#### ReUnion, ReAPI and VoiceTranscoder
-
-```bash
-Currently loaded plugins:
-      description      stat pend  file                        vers             src  load  unload
- [ 1] ReAPI            RUN   -    reapi_amxx_i386.so          v5.29.0.345-dev  pl2  ANY   Never
- [ 2] Reunion          RUN   -    reunion_mm_i386.so          v0.2.0.27        ini  Start Never
- [ 3] VoiceTranscoder  RUN   -    voicetranscoder_mm_i386.so  v2017RC5         ini  ANY   ANY
-```
 
 ### Third-party AMX Mod X Plugins
 
