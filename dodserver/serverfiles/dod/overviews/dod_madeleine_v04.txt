@@ -1,0 +1,14 @@
+// overview description file for dod_madeleine_v04.bsp
+
+global
+{
+  ZOOM 1.15
+  ORIGIN -144 -376 256
+  ROTATED 0
+}
+
+layer
+{
+  IMAGE "overviews/dod_madeleine_v04.bmp"
+  HEIGHT -65
+}

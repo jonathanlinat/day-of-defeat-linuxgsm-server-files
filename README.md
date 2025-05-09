@@ -110,6 +110,7 @@ This server hosts `22` original and `31` custom maps.
 * **dod_heutau_r3**, marteew (https://dayofdefeat.home.blog)
 * **dod_lennon2**, Jordon "Lerfooled" Lervold and Stephen "Hisey" Lerf
 * **dod_liberte_b2**, J "KR8" L (KR34T3@gmail.com)
+* **dod_madeleine_v04**, Day of Defeat 1.3 Community (https://discord.gg/dodcommunity)
 * **dod_putten2_b3**, marteew (https://dayofdefeat.home.blog)
 * **dod_railroad**, Instacrome (instacrome@hotmail.com)
 * **dod_railroad2_b2**, Insta (magstave@online.no)

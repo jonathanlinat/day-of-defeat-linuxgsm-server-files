@@ -1,4 +1,4 @@
-// overview made by acetamino for dod_thunder2_b5a.bsp
+// overview description file for dod_thunder2_b5a.bsp
 
 global
 {
